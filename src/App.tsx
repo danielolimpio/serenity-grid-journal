@@ -8,6 +8,7 @@ import Article from "./pages/Article";
 import Category from "./pages/Category";
 import About from "./pages/About";
 import Sitemap from "./pages/Sitemap";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/categoria/:slug" element={<Category />} />
           <Route path="/sobre" element={<About />} />
           <Route path="/sitemap" element={<Sitemap />} />
+          <Route path="/politica-privacidade" element={<PrivacyPolicy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
