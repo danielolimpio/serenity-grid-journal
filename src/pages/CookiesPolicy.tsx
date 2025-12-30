@@ -148,19 +148,19 @@ const CookiesPolicy = () => {
       
       <main className="pt-32">
         {/* Hero Section */}
-        <section className="py-12 md:py-16 bg-gradient-to-b from-muted/50 to-background">
+        <section className="py-12 md:py-16 bg-gradient-to-b from-muted/50 to-background animate-fade-in">
           <div className="container-editorial text-center space-y-6">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-2">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-2 animate-scale-in" style={{ animationDelay: "0.1s" }}>
               <Cookie className="w-8 h-8 text-primary" />
             </div>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-light">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-light animate-fade-in" style={{ animationDelay: "0.2s" }}>
               Política de Cookies
             </h1>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: "0.3s" }}>
               Esta Política de Cookies explica como <strong>The Art of Yoga</strong> utiliza cookies e tecnologias 
               semelhantes para reconhecê-lo quando você visita nosso site.
             </p>
-            <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+            <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground animate-fade-in" style={{ animationDelay: "0.4s" }}>
               <Clock className="w-4 h-4" />
               <span>Última atualização: 17 de dezembro de 2025</span>
             </div>
@@ -168,7 +168,7 @@ const CookiesPolicy = () => {
         </section>
 
         {/* Intro Card */}
-        <section className="py-8 md:py-12">
+        <section className="py-8 md:py-12 animate-fade-in" style={{ animationDelay: "0.3s" }}>
           <div className="container-editorial max-w-4xl">
             <div className="bg-card rounded-lg p-6 md:p-8 shadow-soft border border-border/50">
               <div className="flex items-start gap-4 mb-4">
@@ -202,7 +202,7 @@ const CookiesPolicy = () => {
         </section>
 
         {/* Cookie Types Summary */}
-        <section className="py-8 md:py-12 bg-muted/30">
+        <section className="py-8 md:py-12 bg-muted/30 animate-fade-in" style={{ animationDelay: "0.4s" }}>
           <div className="container-editorial">
             <div className="text-center mb-8">
               <h2 className="font-display text-2xl md:text-3xl font-light mb-3">
@@ -239,7 +239,7 @@ const CookiesPolicy = () => {
           <div className="container mx-auto px-4 max-w-7xl">
             <div className="flex gap-8">
               {/* Sticky Sidebar */}
-              <aside className="hidden lg:block w-72 flex-shrink-0">
+              <aside className="hidden lg:block w-72 flex-shrink-0 animate-fade-in-left" style={{ animationDelay: "0.5s" }}>
                 <div className="sticky top-28">
                   <div className="bg-card rounded-lg p-5 shadow-soft border border-border/50 max-h-[calc(100vh-140px)] overflow-y-auto">
                     <div className="flex items-center gap-2 mb-4 pb-3 border-b border-border/50">
@@ -273,7 +273,7 @@ const CookiesPolicy = () => {
               </aside>
 
               {/* Main Content */}
-              <div className="flex-1 max-w-4xl space-y-8">
+              <div className="flex-1 max-w-4xl space-y-8 animate-fade-in-right" style={{ animationDelay: "0.5s" }}>
                 {/* Section 1 - O que são cookies */}
                 <section id="o-que-sao" className="scroll-mt-28">
                   <div className="flex items-center gap-3 mb-4">
