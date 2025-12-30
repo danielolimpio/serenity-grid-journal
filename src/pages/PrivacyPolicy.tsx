@@ -1010,11 +1010,11 @@ const PrivacyPolicy = () => {
                   </div>
 
                   <div className="bg-card rounded-lg p-5 shadow-soft border border-border/30">
-                    <p className="text-xs text-muted-foreground italic mb-4">
+                    <p className="text-sm text-muted-foreground italic mb-4">
                       Resumindo: Sim, atualizaremos este aviso conforme necessário para cumprir as leis aplicáveis.
                     </p>
                     
-                    <div className="prose-editorial space-y-3 text-sm text-muted-foreground">
+                    <div className="prose-editorial space-y-3 text-base text-muted-foreground">
                       <p>
                         Podemos atualizar este Aviso de Privacidade periodicamente. A versão atualizada será indicada por uma nova data de "Revisado" no topo deste Aviso de Privacidade. Caso façamos alterações substanciais a este Aviso de Privacidade, podemos notificá-lo por e-mail ou por meio de uma notificação em nosso site. Recomendamos que você revise este Aviso de Privacidade com frequência para se manter informado sobre como protegemos suas informações.
                       </p>
@@ -1032,27 +1032,27 @@ const PrivacyPolicy = () => {
                   </div>
 
                   <div className="bg-card rounded-lg p-5 shadow-soft border border-border/30">
-                    <p className="text-sm text-muted-foreground mb-4">
+                    <p className="text-base text-muted-foreground mb-4">
                       Se você tiver dúvidas ou comentários sobre este aviso, pode entrar em contato conosco.
                     </p>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="p-4 bg-muted/50 rounded-lg">
                         <div className="flex items-center gap-2 mb-2">
-                          <Mail className="w-4 h-4 text-primary" />
-                          <h4 className="font-medium text-foreground text-sm">E-mail</h4>
+                          <Mail className="w-5 h-5 text-primary" />
+                          <h4 className="font-medium text-foreground text-base">E-mail</h4>
                         </div>
-                        <a href="mailto:contato@theartofyoga.org" className="text-primary hover:underline text-sm">
+                        <a href="mailto:contato@theartofyoga.org" className="text-primary hover:underline text-base">
                           contato@theartofyoga.org
                         </a>
                       </div>
                       
                       <div className="p-4 bg-muted/50 rounded-lg">
                         <div className="flex items-center gap-2 mb-2">
-                          <MapPin className="w-4 h-4 text-primary" />
-                          <h4 className="font-medium text-foreground text-sm">Endereço</h4>
+                          <MapPin className="w-5 h-5 text-primary" />
+                          <h4 className="font-medium text-foreground text-base">Endereço</h4>
                         </div>
-                        <address className="not-italic text-muted-foreground text-xs">
+                        <address className="not-italic text-muted-foreground text-sm">
                           The Art of Yoga<br />
                           Av. Júlia Freire, 1200 - Expedicionários<br />
                           João Pessoa - PB, 58041-000<br />
@@ -1061,7 +1061,7 @@ const PrivacyPolicy = () => {
                       </div>
                     </div>
 
-                    <p className="text-xs text-muted-foreground mt-4 italic">
+                    <p className="text-sm text-muted-foreground mt-4 italic">
                       (Observação: você pode substituir o endereço físico acima pelo endereço real da organização, se desejar.)
                     </p>
                   </div>
@@ -1077,7 +1077,7 @@ const PrivacyPolicy = () => {
                   </div>
 
                   <div className="bg-card rounded-lg p-5 shadow-soft border border-border/30">
-                    <div className="prose-editorial space-y-3 text-sm text-muted-foreground">
+                    <div className="prose-editorial space-y-3 text-base text-muted-foreground">
                       <p>
                         Você tem o direito de solicitar acesso às informações que coletamos sobre você, corrigir imprecisões, obter uma cópia ou excluir suas informações pessoais. Você também pode ter o direito de revogar seu consentimento para o processamento de suas informações pessoais. Esses direitos podem ser limitados em algumas circunstâncias pela legislação aplicável.
                       </p>
@@ -1086,8 +1086,8 @@ const PrivacyPolicy = () => {
                         <div className="flex items-start gap-2">
                           <FileText className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                           <div>
-                            <p className="font-medium text-foreground text-sm mb-1">Solicitar acesso aos seus dados</p>
-                            <p className="text-xs">
+                            <p className="font-medium text-foreground text-base mb-1">Solicitar acesso aos seus dados</p>
+                            <p className="text-sm">
                               Para solicitar acesso, atualização, exclusão ou limitação das suas informações pessoais, por favor, preencha e envie uma solicitação de acesso ao titular dos dados (disponível em nosso site ou mediante contato com <a href="mailto:privacidade@theartofyoga.org" className="text-primary hover:underline">privacidade@theartofyoga.org</a>).
                             </p>
                           </div>
