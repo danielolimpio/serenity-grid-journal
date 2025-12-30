@@ -1,6 +1,4 @@
 import { useParams } from "react-router-dom";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { Calendar, Clock, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import meditationImage from "@/assets/meditation.jpg";
@@ -48,74 +46,68 @@ const Article = () => {
   };
 
   return (
-    <div className="min-h-screen">
-      <Header />
-      
-      <main className="pt-24">
-        {/* Hero Image */}
-        <div className="relative h-[60vh] min-h-[500px]">
-          <img
-            src={article.image}
-            alt={article.title}
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
-        </div>
+    <main className="pt-24">
+      {/* Hero Image */}
+      <div className="relative h-[60vh] min-h-[500px]">
+        <img
+          src={article.image}
+          alt={article.title}
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+      </div>
 
-        {/* Article Content */}
-        <article className="prose-editorial -mt-32 relative z-10">
-          <div className="bg-background/95 backdrop-blur-sm p-8 md:p-12 max-w-4xl mx-auto shadow-medium">
-            {/* Meta */}
-            <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-6">
-              <span className="px-3 py-1 bg-primary/10 text-primary font-body uppercase tracking-wider">
-                {article.category}
-              </span>
-              <div className="flex items-center gap-2">
-                <Calendar className="h-4 w-4" />
-                <time>{article.date}</time>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="h-4 w-4" />
-                <span>{article.readTime} de leitura</span>
-              </div>
+      {/* Article Content */}
+      <article className="prose-editorial -mt-32 relative z-10">
+        <div className="bg-background/95 backdrop-blur-sm p-8 md:p-12 max-w-4xl mx-auto shadow-medium">
+          {/* Meta */}
+          <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-6">
+            <span className="px-3 py-1 bg-primary/10 text-primary font-body uppercase tracking-wider">
+              {article.category}
+            </span>
+            <div className="flex items-center gap-2">
+              <Calendar className="h-4 w-4" />
+              <time>{article.date}</time>
             </div>
-
-            {/* Title */}
-            <h1 className="font-display text-4xl md:text-6xl font-light mb-8 text-balance">
-              {article.title}
-            </h1>
-
-            {/* Share */}
-            <div className="flex items-center gap-4 pb-8 mb-8 border-b border-border/50">
-              <Button variant="outline" size="sm" className="gap-2">
-                <Share2 className="h-4 w-4" />
-                Compartilhar
-              </Button>
+            <div className="flex items-center gap-2">
+              <Clock className="h-4 w-4" />
+              <span>{article.readTime} de leitura</span>
             </div>
-
-            {/* Content */}
-            <div 
-              className="space-y-6 text-lg leading-relaxed"
-              dangerouslySetInnerHTML={{ __html: article.content }}
-            />
           </div>
-        </article>
 
-        {/* Related Articles CTA */}
-        <section className="section-spacing">
-          <div className="container-editorial text-center">
-            <h2 className="font-display text-3xl md:text-4xl font-light mb-4">
-              Continue Explorando
-            </h2>
-            <Button size="lg" variant="outline">
-              Ver Mais Artigos
+          {/* Title */}
+          <h1 className="font-display text-4xl md:text-6xl font-light mb-8 text-balance">
+            {article.title}
+          </h1>
+
+          {/* Share */}
+          <div className="flex items-center gap-4 pb-8 mb-8 border-b border-border/50">
+            <Button variant="outline" size="sm" className="gap-2">
+              <Share2 className="h-4 w-4" />
+              Compartilhar
             </Button>
           </div>
-        </section>
-      </main>
 
-      <Footer />
-    </div>
+          {/* Content */}
+          <div 
+            className="space-y-6 text-lg leading-relaxed"
+            dangerouslySetInnerHTML={{ __html: article.content }}
+          />
+        </div>
+      </article>
+
+      {/* Related Articles CTA */}
+      <section className="section-spacing">
+        <div className="container-editorial text-center">
+          <h2 className="font-display text-3xl md:text-4xl font-light mb-4">
+            Continue Explorando
+          </h2>
+          <Button size="lg" variant="outline">
+            Ver Mais Artigos
+          </Button>
+        </div>
+      </section>
+    </main>
   );
 };
 

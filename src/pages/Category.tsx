@@ -1,6 +1,4 @@
 import { useParams } from "react-router-dom";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import ArticleCard from "@/components/ArticleCard";
 import meditationImage from "@/assets/meditation.jpg";
 import philosophyImage from "@/assets/philosophy.jpg";
@@ -53,36 +51,30 @@ const Category = () => {
   const category = categoryData[slug || ""] || categoryData.pratica;
 
   return (
-    <div className="min-h-screen">
-      <Header />
-      
-      <main className="pt-32">
-        {/* Category Header */}
-        <section className="section-spacing bg-muted/30">
-          <div className="container-editorial text-center space-y-4">
-            <h1 className="font-display text-5xl md:text-7xl font-light">
-              {category.name}
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              {category.description}
-            </p>
-          </div>
-        </section>
+    <main className="pt-32">
+      {/* Category Header */}
+      <section className="section-spacing bg-muted/30">
+        <div className="container-editorial text-center space-y-4">
+          <h1 className="font-display text-5xl md:text-7xl font-light">
+            {category.name}
+          </h1>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            {category.description}
+          </p>
+        </div>
+      </section>
 
-        {/* Articles Grid */}
-        <section className="section-spacing">
-          <div className="container-editorial">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {mockArticles.map((article) => (
-                <ArticleCard key={article.slug} {...article} />
-              ))}
-            </div>
+      {/* Articles Grid */}
+      <section className="section-spacing">
+        <div className="container-editorial">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {mockArticles.map((article) => (
+              <ArticleCard key={article.slug} {...article} />
+            ))}
           </div>
-        </section>
-      </main>
-
-      <Footer />
-    </div>
+        </div>
+      </section>
+    </main>
   );
 };
 

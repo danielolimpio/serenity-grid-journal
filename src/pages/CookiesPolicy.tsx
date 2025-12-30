@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { 
   Cookie, 
   Shield, 
@@ -143,10 +141,7 @@ const CookiesPolicy = () => {
   };
 
   return (
-    <div className="min-h-screen">
-      <Header />
-      
-      <main className="pt-32">
+    <main className="pt-32">
         {/* Hero Section */}
         <section className="py-12 md:py-16 bg-gradient-to-b from-muted/50 to-background animate-fade-in">
           <div className="container-editorial text-center space-y-6">
@@ -738,10 +733,7 @@ const CookiesPolicy = () => {
           </button>
         )}
       </main>
-      
-      <Footer />
-    </div>
-  );
+    );
 };
 
 export default CookiesPolicy;
