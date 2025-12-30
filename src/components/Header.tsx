@@ -45,7 +45,7 @@ const Header = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className="text-sm font-body font-light tracking-wide text-foreground/80 hover:text-primary transition-editorial"
+                className="text-base font-body font-semibold tracking-wide text-foreground/80 hover:text-primary transition-editorial"
               >
                 {link.name}
               </Link>
@@ -76,7 +76,7 @@ const Header = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className="block text-base font-body font-light text-foreground/80 hover:text-primary transition-editorial"
+                className="block text-lg font-body font-semibold text-foreground/80 hover:text-primary transition-editorial"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.name}
