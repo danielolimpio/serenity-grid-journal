@@ -178,15 +178,15 @@ const PrivacyPolicy = () => {
                 </div>
                 <div>
                   <h2 className="font-display text-xl font-light mb-3">Quando este Aviso se aplica?</h2>
-                  <div className="space-y-3 text-muted-foreground leading-relaxed text-sm">
+                  <div className="space-y-3 text-muted-foreground leading-relaxed text-base">
                     <p>Este Aviso de Privacidade se aplica quando você:</p>
                     <ul className="space-y-2">
                       <li className="flex items-start gap-2">
-                        <ChevronRight className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <ChevronRight className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
                         <span>Visita nosso site em <a href="https://theartofyoga.org" className="text-primary hover:underline">https://theartofyoga.org</a> ou qualquer outro site que contenha um link para este Aviso de Privacidade.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <ChevronRight className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <ChevronRight className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
                         <span>Interage conosco de outras maneiras relacionadas, incluindo ações de marketing ou eventos.</span>
                       </li>
                     </ul>
@@ -196,8 +196,8 @@ const PrivacyPolicy = () => {
               
               <div className="mt-6 p-4 bg-muted/50 rounded-lg">
                 <div className="flex items-start gap-2">
-                  <AlertCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                  <p className="text-xs text-muted-foreground leading-relaxed">
+                  <AlertCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <p className="text-sm text-muted-foreground leading-relaxed">
                     <strong className="text-foreground">Tem dúvidas ou preocupações?</strong> A leitura deste Aviso de Privacidade ajudará você a entender seus direitos e opções em relação à privacidade. Somos responsáveis por tomar decisões sobre como suas informações pessoais são processadas. Se você não concordar com nossas políticas e práticas, por favor, não utilize nossos Serviços. Caso ainda tenha dúvidas ou preocupações, entre em contato conosco pelo endereço: <a href="mailto:privacidade@theartofyoga.org" className="text-primary hover:underline">privacidade@theartofyoga.org</a>.
                   </p>
                 </div>
@@ -213,7 +213,7 @@ const PrivacyPolicy = () => {
               <h2 className="font-display text-2xl md:text-3xl font-light mb-3">
                 Resumo dos Pontos Principais
               </h2>
-              <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-base text-muted-foreground max-w-2xl mx-auto">
                 Este resumo apresenta os pontos principais do nosso Aviso de Privacidade. Você pode obter mais detalhes sobre qualquer um desses tópicos nas seções abaixo.
               </p>
             </div>
@@ -229,8 +229,8 @@ const PrivacyPolicy = () => {
                       <point.icon className="w-5 h-5 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-display text-base font-medium mb-1">{point.title}</h3>
-                      <p className="text-xs text-muted-foreground leading-relaxed">{point.description}</p>
+                      <h3 className="font-display text-lg font-medium mb-1">{point.title}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{point.description}</p>
                     </div>
                   </div>
                 </div>
@@ -238,7 +238,7 @@ const PrivacyPolicy = () => {
             </div>
 
             <div className="mt-6 text-center">
-              <p className="text-sm text-muted-foreground">
+              <p className="text-base text-muted-foreground">
                 Quer saber mais sobre o que fazemos com as informações que coletamos? Leia o Aviso de Privacidade na íntegra abaixo.
               </p>
             </div>
@@ -299,17 +299,17 @@ const PrivacyPolicy = () => {
                       <div className="flex items-start gap-3 mb-4">
                         <Database className="w-5 h-5 text-primary flex-shrink-0" />
                         <div>
-                          <h3 className="font-display text-lg font-light mb-1">Informações pessoais que você nos divulga</h3>
-                          <p className="text-xs text-muted-foreground italic mb-3">Resumindo: Coletamos informações pessoais que você nos fornece.</p>
+                          <h3 className="font-display text-xl font-light mb-1">Informações pessoais que você nos divulga</h3>
+                          <p className="text-sm text-muted-foreground italic mb-3">Resumindo: Coletamos informações pessoais que você nos fornece.</p>
                         </div>
                       </div>
                       
-                      <div className="prose-editorial space-y-3 text-sm text-muted-foreground">
+                      <div className="prose-editorial space-y-3 text-base text-muted-foreground">
                         <p>
                           Coletamos informações pessoais que você nos fornece voluntariamente quando você participar de atividades nos Serviços ou ao entrar em contato conosco, você demonstra interesse em obter informações sobre nós, nossos produtos e serviços.
                         </p>
                         
-                        <h4 className="font-display text-base text-foreground mt-4 mb-2">Informações pessoais fornecidas por você</h4>
+                        <h4 className="font-display text-lg text-foreground mt-4 mb-2">Informações pessoais fornecidas por você</h4>
                         <p>
                           As informações pessoais que coletamos dependem do contexto de suas interações conosco e com os Serviços, das escolhas que você faz e dos produtos e recursos que você utiliza. As informações pessoais que coletamos podem incluir o seguinte:
                         </p>
@@ -324,8 +324,8 @@ const PrivacyPolicy = () => {
                       <div className="flex items-start gap-3">
                         <ShieldCheck className="w-5 h-5 text-accent-foreground flex-shrink-0" />
                         <div>
-                          <h4 className="font-display text-base font-light mb-1">Informação sensível</h4>
-                          <p className="text-sm text-muted-foreground">
+                          <h4 className="font-display text-lg font-light mb-1">Informação sensível</h4>
+                          <p className="text-base text-muted-foreground">
                             <strong>Não processamos informações sensíveis.</strong>
                           </p>
                         </div>
@@ -336,8 +336,8 @@ const PrivacyPolicy = () => {
                       <div className="flex items-start gap-3">
                         <Smartphone className="w-5 h-5 text-primary flex-shrink-0" />
                         <div>
-                          <h4 className="font-display text-base font-light mb-1">Dados de login de redes sociais</h4>
-                          <p className="text-sm text-muted-foreground leading-relaxed">
+                          <h4 className="font-display text-lg font-light mb-1">Dados de login de redes sociais</h4>
+                          <p className="text-base text-muted-foreground leading-relaxed">
                             Podemos oferecer a opção de você se cadastrar conosco usando os dados da sua conta de rede social, como Facebook, X ou outra. Se você optar por se cadastrar dessa forma, coletaremos algumas informações do seu perfil do provedor da rede social, conforme descrito na seção intitulada "Como lidamos com seus logins em redes sociais?" abaixo.
                           </p>
                         </div>
@@ -346,8 +346,8 @@ const PrivacyPolicy = () => {
 
                     <div className="p-4 bg-accent/10 rounded-lg border border-accent/20">
                       <div className="flex items-start gap-2">
-                        <AlertCircle className="w-4 h-4 text-accent-foreground flex-shrink-0 mt-0.5" />
-                        <p className="text-xs text-muted-foreground">
+                        <AlertCircle className="w-5 h-5 text-accent-foreground flex-shrink-0 mt-0.5" />
+                        <p className="text-sm text-muted-foreground">
                           Todas as informações pessoais que você nos fornecer devem ser verdadeiras, completas e precisas, e você deve nos notificar sobre quaisquer alterações nessas informações pessoais.
                         </p>
                       </div>
@@ -365,18 +365,18 @@ const PrivacyPolicy = () => {
                   </div>
 
                   <div className="bg-card rounded-lg p-5 shadow-soft border border-border/30">
-                    <p className="text-xs text-muted-foreground italic mb-4">
+                    <p className="text-sm text-muted-foreground italic mb-4">
                       Resumindo: Processamos suas informações para fornecer, aprimorar e administrar nossos Serviços, comunicar-nos com você, para fins de segurança e prevenção de fraudes, e para cumprir a lei. Processamos as informações pessoais para os seguintes fins listados abaixo. Também podemos processar suas informações para outros fins somente com sua prévia autorização explícita/consentimento.
                     </p>
                     
-                    <div className="prose-editorial space-y-3 text-sm text-muted-foreground">
+                    <div className="prose-editorial space-y-3 text-base text-muted-foreground">
                       <p>
                         Processamos suas informações pessoais por diversos motivos, dependendo de como você interage com nossos Serviços, incluindo:
                       </p>
                       
                       <div className="flex items-start gap-2 p-3 bg-muted/50 rounded-lg">
-                        <Shield className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                        <p className="text-xs">
+                        <Shield className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                        <p className="text-sm">
                           <strong className="text-foreground">Para salvaguardar ou proteger os interesses vitais de um indivíduo.</strong> Podemos processar suas informações quando necessário para salvaguardar ou proteger os interesses vitais de um indivíduo, como, por exemplo, para prevenir danos.
                         </p>
                       </div>
@@ -395,7 +395,7 @@ const PrivacyPolicy = () => {
 
                   <div className="space-y-4">
                     <div className="bg-card rounded-lg p-5 shadow-soft border border-border/30">
-                      <p className="text-xs text-muted-foreground italic">
+                      <p className="text-sm text-muted-foreground italic">
                         Resumindo: Só processamos as suas informações pessoais quando acreditamos ser necessário e temos uma razão legal válida (ou seja, uma justificativa legal), fundamento jurídico para fazê-lo de acordo com a legislação aplicável, como com o seu consentimento, para cumprir as leis, para prestar serviços ou para celebrar um contrato ou completar nossas obrigações contratuais, para proteger seus direitos, ou para complementarmos legítimos interesses comerciais.
                       </p>
                     </div>
@@ -404,36 +404,36 @@ const PrivacyPolicy = () => {
                     <div className="bg-card rounded-lg p-5 shadow-soft border border-border/30">
                       <div className="flex items-center gap-2 mb-4">
                         <Globe className="w-5 h-5 text-primary" />
-                        <h3 className="font-display text-lg font-light">Se você estiver localizado na UE ou no Reino Unido</h3>
+                        <h3 className="font-display text-xl font-light">Se você estiver localizado na UE ou no Reino Unido</h3>
                       </div>
                       
-                      <div className="prose-editorial space-y-3 text-sm text-muted-foreground">
+                      <div className="prose-editorial space-y-3 text-base text-muted-foreground">
                         <p>
                           O Regulamento Geral de Proteção de Dados (RGPD) e o RGPD do Reino Unido exigem que expliquemos as bases legais válidas em que nos apoiamos para processar as suas informações pessoais. Assim, podemos nos basear nas seguintes bases legais para processar as suas informações pessoais:
                         </p>
                         
                         <div className="space-y-3 mt-4">
                           <div className="flex items-start gap-2 p-3 bg-muted/50 rounded-lg">
-                            <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                            <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                             <div>
-                              <p className="font-medium text-foreground text-xs">Consentimento</p>
-                              <p className="text-xs mt-1">Podemos processar suas informações se você nos tiver dado permissão (ou seja, Consentimento) para usar suas informações pessoais para uma finalidade específica. Você pode retirar seu consentimento a qualquer momento.</p>
+                              <p className="font-medium text-foreground text-sm">Consentimento</p>
+                              <p className="text-sm mt-1">Podemos processar suas informações se você nos tiver dado permissão (ou seja, Consentimento) para usar suas informações pessoais para uma finalidade específica. Você pode retirar seu consentimento a qualquer momento.</p>
                             </div>
                           </div>
                           
                           <div className="flex items-start gap-2 p-3 bg-muted/50 rounded-lg">
-                            <Scale className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                            <Scale className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                             <div>
-                              <p className="font-medium text-foreground text-xs">Obrigações Legais</p>
-                              <p className="text-xs mt-1">Podemos processar suas informações quando acreditamos ser necessário para cumprir nossas obrigações legais, como cooperar com um órgão de aplicação da lei ou agência reguladora, exercer ou defender nossos direitos legais ou divulgar suas informações como prova em litígios nos quais estejamos envolvidos.</p>
+                              <p className="font-medium text-foreground text-sm">Obrigações Legais</p>
+                              <p className="text-sm mt-1">Podemos processar suas informações quando acreditamos ser necessário para cumprir nossas obrigações legais, como cooperar com um órgão de aplicação da lei ou agência reguladora, exercer ou defender nossos direitos legais ou divulgar suas informações como prova em litígios nos quais estejamos envolvidos.</p>
                             </div>
                           </div>
                           
                           <div className="flex items-start gap-2 p-3 bg-muted/50 rounded-lg">
-                            <Shield className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                            <Shield className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                             <div>
-                              <p className="font-medium text-foreground text-xs">Interesses vitais</p>
-                              <p className="text-xs mt-1">Podemos processar suas informações quando acreditarmos ser necessário para proteger seus interesses vitais ou os interesses vitais de terceiros, como em situações que envolvam ameaças potenciais à segurança de qualquer pessoa.</p>
+                              <p className="font-medium text-foreground text-sm">Interesses vitais</p>
+                              <p className="text-sm mt-1">Podemos processar suas informações quando acreditarmos ser necessário para proteger seus interesses vitais ou os interesses vitais de terceiros, como em situações que envolvam ameaças potenciais à segurança de qualquer pessoa.</p>
                             </div>
                           </div>
                         </div>
@@ -444,10 +444,10 @@ const PrivacyPolicy = () => {
                     <div className="bg-card rounded-lg p-5 shadow-soft border border-border/30">
                       <div className="flex items-center gap-2 mb-4">
                         <MapPin className="w-5 h-5 text-primary" />
-                        <h3 className="font-display text-lg font-light">Se você estiver localizado no Canadá</h3>
+                        <h3 className="font-display text-xl font-light">Se você estiver localizado no Canadá</h3>
                       </div>
                       
-                      <div className="prose-editorial space-y-3 text-sm text-muted-foreground">
+                      <div className="prose-editorial space-y-3 text-base text-muted-foreground">
                         <p>
                           Podemos processar as suas informações se nos tiver dado permissão específica (ou seja, consentimento expresso) para usar suas informações pessoais para uma finalidade específica ou em situações em que sua permissão possa ser inferida (ou seja, "consentimento implícito"). Você pode retirar seu consentimento a qualquer momento.
                         </p>
@@ -456,7 +456,7 @@ const PrivacyPolicy = () => {
                           Em alguns casos excepcionais, podemos estar legalmente autorizados, de acordo com a legislação aplicável, a processar suas informações sem o seu consentimento, incluindo, por exemplo:
                         </p>
                         
-                        <ul className="list-disc list-inside space-y-1 ml-4 text-xs">
+                        <ul className="list-disc list-inside space-y-1 ml-4 text-sm">
                           <li>Se a coleta for claramente do interesse de um indivíduo e o consentimento não puder ser obtido em tempo hábil</li>
                           <li>Para investigações, detecção e prevenção de fraudes</li>
                           <li>Para transações comerciais, desde que determinadas condições sejam atendidas</li>
@@ -488,20 +488,20 @@ const PrivacyPolicy = () => {
                   </div>
 
                   <div className="bg-card rounded-lg p-5 shadow-soft border border-border/30">
-                    <p className="text-xs text-muted-foreground italic mb-4">
+                    <p className="text-sm text-muted-foreground italic mb-4">
                       Resumindo: Podemos compartilhar informações em situações específicas descritas nesta seção e/ou com os seguintes terceiros.
                     </p>
                     
-                    <div className="prose-editorial space-y-3 text-sm text-muted-foreground">
+                    <div className="prose-editorial space-y-3 text-base text-muted-foreground">
                       <p>
                         Nós poderemos precisar compartilhar suas informações pessoais nas seguintes situações:
                       </p>
                       
                       <div className="flex items-start gap-2 p-3 bg-muted/50 rounded-lg mt-3">
-                        <Share2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <Share2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                         <div>
-                          <p className="font-medium text-foreground text-xs">Transferências de Negócios</p>
-                          <p className="text-xs mt-1">Podemos compartilhar ou transferir suas informações em conexão com, ou durante negociações de, qualquer fusão, venda de ativos da empresa, financiamento ou aquisição de toda ou parte de nossa empresa por outra empresa.</p>
+                          <p className="font-medium text-foreground text-sm">Transferências de Negócios</p>
+                          <p className="text-sm mt-1">Podemos compartilhar ou transferir suas informações em conexão com, ou durante negociações de, qualquer fusão, venda de ativos da empresa, financiamento ou aquisição de toda ou parte de nossa empresa por outra empresa.</p>
                         </div>
                       </div>
                     </div>
@@ -518,11 +518,11 @@ const PrivacyPolicy = () => {
                   </div>
 
                   <div className="bg-card rounded-lg p-5 shadow-soft border border-border/30">
-                    <p className="text-xs text-muted-foreground italic mb-4">
+                    <p className="text-sm text-muted-foreground italic mb-4">
                       Resumindo: Não nos responsabilizamos pela segurança de quaisquer informações que você compartilhe com terceiros aos quais possamos fornecer links ou que anunciem em nossos Serviços, mas que não sejam afiliados a eles.
                     </p>
                     
-                    <div className="prose-editorial space-y-3 text-sm text-muted-foreground">
+                    <div className="prose-editorial space-y-3 text-base text-muted-foreground">
                       <p>
                         Os Serviços podem conter links para sites, serviços online ou aplicativos móveis de terceiros e/ou anúncios de terceiros que não são afiliados a nós, que podem direcionar para outros sites, serviços ou aplicativos. Portanto, não oferecemos nenhuma garantia em relação a esses terceiros e não nos responsabilizamos por quaisquer perdas ou danos causados pelo uso de tais sites, serviços ou aplicativos de terceiros.
                       </p>
@@ -551,12 +551,12 @@ const PrivacyPolicy = () => {
                     <div className="bg-card rounded-lg p-5 shadow-soft border border-border/30">
                       <div className="flex items-center gap-2 mb-3">
                         <Cookie className="w-5 h-5 text-primary" />
-                        <p className="text-xs text-muted-foreground italic">
+                        <p className="text-sm text-muted-foreground italic">
                           Resumindo: Podemos usar cookies e outras tecnologias de rastreamento para coletar e armazenar suas informações.
                         </p>
                       </div>
                       
-                      <div className="prose-editorial space-y-3 text-sm text-muted-foreground">
+                      <div className="prose-editorial space-y-3 text-base text-muted-foreground">
                         <p>
                           Podemos usar cookies e tecnologias de rastreamento semelhantes (como web beacons e pixels) para coletar informações quando você interage com nossos Serviços. Algumas tecnologias de rastreamento online nos ajudam a manter a segurança de nossos Serviços, previne falhas, corrige erros, salva suas preferências e auxilia nas funções básicas do site.
                         </p>
@@ -581,7 +581,7 @@ const PrivacyPolicy = () => {
                         <h3 className="font-display text-lg font-light">Google Analytics</h3>
                       </div>
                       
-                      <div className="prose-editorial space-y-3 text-sm text-muted-foreground">
+                      <div className="prose-editorial space-y-3 text-base text-muted-foreground">
                         <p>
                           Podemos compartilhar suas informações com o Google Analytics para rastrear e analisar a utilização dos Serviços. Os recursos de publicidade do Google Analytics que podemos usar incluem: Relatórios de dados demográficos e interesses do Google Analytics.
                         </p>
@@ -608,11 +608,11 @@ const PrivacyPolicy = () => {
                   </div>
 
                   <div className="bg-card rounded-lg p-5 shadow-soft border border-border/30">
-                    <p className="text-xs text-muted-foreground italic mb-4">
+                    <p className="text-sm text-muted-foreground italic mb-4">
                       Resumindo: Se você optar por se cadastrar ou fazer login em nossos Serviços usando uma conta de mídia social, poderemos ter acesso a certas informações sobre você.
                     </p>
                     
-                    <div className="prose-editorial space-y-3 text-sm text-muted-foreground">
+                    <div className="prose-editorial space-y-3 text-base text-muted-foreground">
                       <p>
                         Nossos Serviços oferecem a você a possibilidade de se cadastrar e fazer login usando os dados da sua conta de mídia social de terceiros (como seu login do Facebook ou X). Ao optar por essa opção, receberemos algumas informações do seu perfil do provedor da mídia social. As informações de perfil que recebemos podem variar dependendo do provedor da mídia social em questão, mas geralmente incluem seu nome, endereço de e-mail, lista de amigos e foto de perfil, bem como outras informações que você optar por tornar públicas nessa plataforma de mídia social.
                       </p>
@@ -634,11 +634,11 @@ const PrivacyPolicy = () => {
                   </div>
 
                   <div className="bg-card rounded-lg p-5 shadow-soft border border-border/30">
-                    <p className="text-xs text-muted-foreground italic mb-4">
+                    <p className="text-sm text-muted-foreground italic mb-4">
                       Resumindo: Mantemos suas informações pelo tempo necessário para completar as finalidades descritas neste Aviso de Privacidade, a menos que exigido de outra forma por lei.
                     </p>
                     
-                    <div className="prose-editorial space-y-3 text-sm text-muted-foreground">
+                    <div className="prose-editorial space-y-3 text-base text-muted-foreground">
                       <p>
                         Conservaremos suas informações pessoais apenas pelo tempo necessário para os fins descritos neste Aviso de Privacidade, a menos que um período de retenção mais longo seja exigido ou permitido por lei (como para fins fiscais, contábeis ou outros requisitos legais).
                       </p>
@@ -660,11 +660,11 @@ const PrivacyPolicy = () => {
                   </div>
 
                   <div className="bg-card rounded-lg p-5 shadow-soft border border-border/30">
-                    <p className="text-xs text-muted-foreground italic mb-4">
+                    <p className="text-sm text-muted-foreground italic mb-4">
                       Resumindo: Nosso objetivo é proteger suas informações pessoais por meio de um sistema de medidas de segurança técnica e organizacional.
                     </p>
                     
-                    <div className="prose-editorial space-y-3 text-sm text-muted-foreground">
+                    <div className="prose-editorial space-y-3 text-base text-muted-foreground">
                       <p>
                         Implementamos medidas técnicas apropriadas e razoáveis, organizacionais e implementamos medidas de segurança para proteger a segurança de quaisquer informações pessoais que processamos. No entanto, apesar de nossas medidas de segurança e esforços para proteger suas informações, nenhuma transmissão eletrônica pela Internet ou tecnologia de armazenamento de informações pode ser garantida como 100% segura. Portanto, não podemos prometer ou garantir que hackers, cibercriminosos ou outros agentes maliciosos não consigam acessar ou acessar suas informações, não poderão burlar nossa segurança nem coletar, acessar, roubar ou modificar suas informações indevidamente.
                       </p>
@@ -686,11 +686,11 @@ const PrivacyPolicy = () => {
                   </div>
 
                   <div className="bg-card rounded-lg p-5 shadow-soft border border-border/30">
-                    <p className="text-xs text-muted-foreground italic mb-4">
+                    <p className="text-sm text-muted-foreground italic mb-4">
                       Resumindo: Não coletamos dados de pessoas intencionalmente descritas nem realizamos marketing direcionado a elas. Crianças menores de 18 anos de idade ou a idade equivalente conforme especificado por lei em sua jurisdição não são nosso público-alvo.
                     </p>
                     
-                    <div className="prose-editorial space-y-3 text-sm text-muted-foreground">
+                    <div className="prose-editorial space-y-3 text-base text-muted-foreground">
                       <p>
                         Não coletamos, solicitamos dados ou direcionamos marketing a crianças menores de 18 anos de idade, de forma consciente ou a idade equivalente conforme especificado por lei em sua jurisdição. Nem vendemos intencionalmente essas informações pessoais. Ao usar os Serviços, você declara ter pelo menos 18 anos de idade ou a idade equivalente conforme especificado por lei em sua jurisdição, ou que você é o pai ou responsável legal de um menor de idade e consente com o uso dos Serviços por esse menor.
                       </p>
@@ -717,35 +717,35 @@ const PrivacyPolicy = () => {
 
                   <div className="space-y-4">
                     <div className="bg-card rounded-lg p-5 shadow-soft border border-border/30">
-                      <p className="text-xs text-muted-foreground italic mb-4">
+                      <p className="text-sm text-muted-foreground italic mb-4">
                         Resumindo: Dependendo do seu estado de residência nos EUA ou em algumas regiões, como Espaço Econômico Europeu (EEE), Reino Unido (RU), Suíça e Canadá, você possui direitos que lhe permitem maior acesso e controle sobre suas informações pessoais. Você pode revisar, alterar ou encerrar sua conta a qualquer momento, dependendo do seu país, província ou estado de residência.
                       </p>
                       
-                      <div className="prose-editorial space-y-3 text-sm text-muted-foreground">
+                      <div className="prose-editorial space-y-3 text-base text-muted-foreground">
                         <p>
                           Em algumas regiões (como EEE, Reino Unido, Suíça e Canadá) Você tem certos direitos de acordo com as leis de proteção de dados aplicáveis. Esses direitos podem incluir o direito de:
                         </p>
                         
                         <ul className="space-y-2 mt-3">
                           <li className="flex items-start gap-2">
-                            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center text-[10px] font-medium text-primary">i</span>
-                            <span className="text-xs">solicitar acesso e obter uma cópia de suas informações pessoais</span>
+                            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center text-xs font-medium text-primary">i</span>
+                            <span className="text-sm">solicitar acesso e obter uma cópia de suas informações pessoais</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center text-[10px] font-medium text-primary">ii</span>
-                            <span className="text-xs">solicitar a retificação ou o apagamento</span>
+                            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center text-xs font-medium text-primary">ii</span>
+                            <span className="text-sm">solicitar a retificação ou o apagamento</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center text-[10px] font-medium text-primary">iii</span>
-                            <span className="text-xs">restringir o processamento de suas informações pessoais</span>
+                            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center text-xs font-medium text-primary">iii</span>
+                            <span className="text-sm">restringir o processamento de suas informações pessoais</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center text-[10px] font-medium text-primary">iv</span>
-                            <span className="text-xs">se aplicável, à portabilidade dos dados</span>
+                            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center text-xs font-medium text-primary">iv</span>
+                            <span className="text-sm">se aplicável, à portabilidade dos dados</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center text-[10px] font-medium text-primary">v</span>
-                            <span className="text-xs">não ser submetido a decisões automatizadas</span>
+                            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center text-xs font-medium text-primary">v</span>
+                            <span className="text-sm">não ser submetido a decisões automatizadas</span>
                           </li>
                         </ul>
                         
@@ -766,31 +766,31 @@ const PrivacyPolicy = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                       <div className="bg-card rounded-lg p-4 shadow-soft border border-border/30">
                         <div className="flex items-center gap-2 mb-2">
-                          <Globe className="w-4 h-4 text-primary" />
-                          <h4 className="font-display text-sm font-light">EEE ou Reino Unido</h4>
+                          <Globe className="w-5 h-5 text-primary" />
+                          <h4 className="font-display text-base font-light">EEE ou Reino Unido</h4>
                         </div>
-                        <p className="text-xs text-muted-foreground">
+                        <p className="text-sm text-muted-foreground">
                           Se você estiver localizado no Espaço Econômico Europeu (EEE) ou no Reino Unido e acreditar que estamos processando suas informações pessoais de forma ilegal, você também tem o direito de apresentar uma reclamação à autoridade de proteção de dados do seu Estado-Membro ou à autoridade de proteção de dados do Reino Unido.
                         </p>
                       </div>
                       
                       <div className="bg-card rounded-lg p-4 shadow-soft border border-border/30">
                         <div className="flex items-center gap-2 mb-2">
-                          <MapPin className="w-4 h-4 text-primary" />
-                          <h4 className="font-display text-sm font-light">Suíça</h4>
+                          <MapPin className="w-5 h-5 text-primary" />
+                          <h4 className="font-display text-base font-light">Suíça</h4>
                         </div>
-                        <p className="text-xs text-muted-foreground">
+                        <p className="text-sm text-muted-foreground">
                           Se você estiver localizado na Suíça, poderá entrar em contato com o Comissário Federal de Proteção de Dados e Informação.
                         </p>
                       </div>
                     </div>
 
                     <div className="bg-card rounded-lg p-5 shadow-soft border border-border/30">
-                      <h4 className="font-display text-base font-light mb-3 flex items-center gap-2">
-                        <RefreshCw className="w-4 h-4 text-primary" />
+                      <h4 className="font-display text-lg font-light mb-3 flex items-center gap-2">
+                        <RefreshCw className="w-5 h-5 text-primary" />
                         Retirada do seu consentimento
                       </h4>
-                      <div className="prose-editorial text-sm text-muted-foreground space-y-2">
+                      <div className="prose-editorial text-base text-muted-foreground space-y-2">
                         <p>
                           Se estivermos dependendo do seu consentimento para processar suas informações pessoais, que pode ser consentimento expresso e/ou implícito, dependendo da legislação aplicável, você tem o direito de retirar seu consentimento a qualquer momento. Você pode retirar seu consentimento a qualquer momento entrando em contato conosco através dos dados de contato fornecidos na seção 16.
                         </p>
@@ -801,27 +801,27 @@ const PrivacyPolicy = () => {
                     </div>
 
                     <div className="bg-card rounded-lg p-5 shadow-soft border border-border/30">
-                      <h4 className="font-display text-base font-light mb-3 flex items-center gap-2">
-                        <Mail className="w-4 h-4 text-primary" />
+                      <h4 className="font-display text-lg font-light mb-3 flex items-center gap-2">
+                        <Mail className="w-5 h-5 text-primary" />
                         Cancelamento de comunicações de marketing
                       </h4>
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-base text-muted-foreground">
                         Você pode cancelar a assinatura de nossas comunicações de marketing e promocionais a qualquer momento clicando no link de cancelamento de inscrição nos e-mails que enviamos, ou entrando em contato conosco através dos dados fornecidos na seção 16. Você será então removido das listas de marketing. No entanto, ainda poderemos entrar em contato com você — por exemplo, para enviar mensagens relacionadas ao serviço que sejam necessárias para a administração e uso da sua conta, para responder a solicitações de serviço ou para outros fins não relacionados a marketing.
                       </p>
                     </div>
 
                     <div className="bg-card rounded-lg p-5 shadow-soft border border-border/30">
-                      <h4 className="font-display text-base font-light mb-3 flex items-center gap-2">
-                        <Cookie className="w-4 h-4 text-primary" />
+                      <h4 className="font-display text-lg font-light mb-3 flex items-center gap-2">
+                        <Cookie className="w-5 h-5 text-primary" />
                         Cookies e tecnologias semelhantes
                       </h4>
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-base text-muted-foreground">
                         A maioria dos navegadores da Web está configurada para aceitar cookies por padrão. Se preferir, você geralmente pode configurar seu navegador para remover e rejeitar cookies. Caso opte por remover ou rejeitar cookies, isso poderá afetar determinadas funcionalidades ou serviços dos nossos Serviços. Você também pode optar por não receber anúncios com base em seus interesses exibidos por anunciantes em nossos Serviços.
                       </p>
                     </div>
 
                     <div className="p-4 bg-accent/10 rounded-lg border border-accent/20">
-                      <p className="text-xs text-muted-foreground">
+                      <p className="text-sm text-muted-foreground">
                         Se você tiver dúvidas ou comentários sobre seus direitos de privacidade, pode nos enviar um e-mail para <a href="mailto:privacidade@theartofyoga.org" className="text-primary hover:underline">privacidade@theartofyoga.org</a>.
                       </p>
                     </div>
@@ -839,7 +839,7 @@ const PrivacyPolicy = () => {
 
                   <div className="space-y-4">
                     <div className="bg-card rounded-lg p-5 shadow-soft border border-border/30">
-                      <div className="prose-editorial space-y-3 text-sm text-muted-foreground">
+                      <div className="prose-editorial space-y-3 text-base text-muted-foreground">
                         <p>
                           A maioria dos navegadores da web e alguns sistemas operacionais móveis e aplicativos móveis incluem um recurso "Não rastrear" (Do-Not-Track, "DNT") recurso ou configuração que você pode ativar para sinalizar sua preferência de privacidade de não ter seus dados sobre suas atividades de navegação online monitorados e coletados.
                         </p>
@@ -859,11 +859,11 @@ const PrivacyPolicy = () => {
                     </div>
 
                     <div className="bg-card rounded-lg p-5 shadow-soft border border-border/30">
-                      <h4 className="font-display text-base font-light mb-3 flex items-center gap-2">
-                        <Shield className="w-4 h-4 text-primary" />
+                      <h4 className="font-display text-lg font-light mb-3 flex items-center gap-2">
+                        <Shield className="w-5 h-5 text-primary" />
                         Controle Global de Privacidade
                       </h4>
-                      <div className="prose-editorial text-sm text-muted-foreground space-y-2">
+                      <div className="prose-editorial text-base text-muted-foreground space-y-2">
                         <p>
                           Reconhecemos e respeitamos os sinais do Controle Global de Privacidade (GPC). Se você usa um navegador ou extensão que oferece suporte ao GPC, trataremos isso como uma solicitação válida para optar por não permitir a venda ou o compartilhamento de suas informações pessoais para fins de publicidade direcionada, conforme as leis de privacidade estaduais dos EUA, incluindo a Lei de Privacidade do Consumidor da Califórnia (CCPA).
                         </p>
@@ -886,19 +886,19 @@ const PrivacyPolicy = () => {
 
                   <div className="space-y-4">
                     <div className="bg-card rounded-lg p-5 shadow-soft border border-border/30">
-                      <p className="text-xs text-muted-foreground italic">
+                      <p className="text-sm text-muted-foreground italic">
                         Resumindo: Se você reside em Califórnia, Colorado, Connecticut, Delaware, Flórida, Indiana, Iowa, Kentucky, Maryland, Minnesota, Montana, Nebraska, Nova Hampshire, Nova Jersey, Oregon, Rhode Island, Tennessee, Texas, Utah ou Virgínia, você pode ter o direito de solicitar acesso e receber detalhes sobre as informações pessoais que mantemos a seu respeito e como as processamos, corrigir imprecisões, obter uma cópia ou excluir suas informações pessoais. Você também pode ter o direito de revogar seu consentimento para o processamento de suas informações pessoais. Esses direitos podem ser limitados em algumas circunstâncias pela legislação aplicável. Mais informações são fornecidas abaixo.
                       </p>
                     </div>
 
                     <div className="bg-card rounded-lg p-5 shadow-soft border border-border/30">
-                      <h3 className="font-display text-lg font-light mb-4">Categorias de informações pessoais que coletamos</h3>
-                      <p className="text-sm text-muted-foreground mb-4">
+                      <h3 className="font-display text-xl font-light mb-4">Categorias de informações pessoais que coletamos</h3>
+                      <p className="text-base text-muted-foreground mb-4">
                         A tabela abaixo mostra as categorias de informações pessoais que coletamos nos últimos doze (12) meses. A tabela inclui exemplos ilustrativos de cada categoria e não reflete as informações pessoais que coletamos de você. Para obter um inventário completo de todas as informações pessoais que processamos, consulte a seção "QUE INFORMAÇÕES COLETAMOS?"
                       </p>
                       
                       <div className="overflow-x-auto">
-                        <table className="w-full text-xs">
+                        <table className="w-full text-sm">
                           <thead>
                             <tr className="border-b border-border">
                               <th className="text-left py-2 px-3 font-medium text-foreground">Categoria</th>
@@ -912,7 +912,7 @@ const PrivacyPolicy = () => {
                                 <td className="py-2 px-3 font-medium text-foreground align-top">{item.category}</td>
                                 <td className="py-2 px-3 text-muted-foreground align-top">{item.examples}</td>
                                 <td className="py-2 px-3 text-center align-top">
-                                  <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] ${item.collected ? 'bg-primary/20 text-primary' : 'bg-muted text-muted-foreground'}`}>
+                                  <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${item.collected ? 'bg-primary/20 text-primary' : 'bg-muted text-muted-foreground'}`}>
                                     {item.collected ? 'SIM' : 'NÃO'}
                                   </span>
                                 </td>
@@ -924,10 +924,10 @@ const PrivacyPolicy = () => {
                     </div>
 
                     <div className="bg-card rounded-lg p-5 shadow-soft border border-border/30">
-                      <p className="text-sm text-muted-foreground mb-3">
+                      <p className="text-base text-muted-foreground mb-3">
                         Também podemos coletar outras informações pessoais fora dessas categorias por meio de interações suas conosco pessoalmente, online, por telefone ou por correio, no contexto de:
                       </p>
-                      <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground ml-4">
+                      <ul className="list-disc list-inside space-y-1 text-base text-muted-foreground ml-4">
                         <li>Receber ajuda através dos nossos canais de apoio ao cliente</li>
                         <li>Participação em pesquisas ou concursos com clientes</li>
                         <li>Facilitar a prestação dos nossos serviços e responder às suas solicitações</li>
@@ -952,7 +952,7 @@ const PrivacyPolicy = () => {
                         <Globe className="w-5 h-5 text-primary" />
                         <h3 className="font-display text-lg font-light">Austrália e Nova Zelândia</h3>
                       </div>
-                      <div className="prose-editorial space-y-3 text-sm text-muted-foreground">
+                      <div className="prose-editorial space-y-3 text-base text-muted-foreground">
                         <p>
                           Coletamos e processamos suas informações pessoais de acordo com as obrigações e condições estabelecidas pela Lei de Privacidade da Austrália de 1988 e Lei de Privacidade da Nova Zelândia de 2020.
                         </p>
@@ -979,9 +979,9 @@ const PrivacyPolicy = () => {
                     <div className="bg-card rounded-lg p-5 shadow-soft border border-border/30">
                       <div className="flex items-center gap-2 mb-3">
                         <MapPin className="w-5 h-5 text-primary" />
-                        <h3 className="font-display text-lg font-light">República da África do Sul</h3>
+                        <h3 className="font-display text-xl font-light">República da África do Sul</h3>
                       </div>
-                      <div className="prose-editorial space-y-3 text-sm text-muted-foreground">
+                      <div className="prose-editorial space-y-3 text-base text-muted-foreground">
                         <p>
                           A qualquer momento, você tem o direito de solicitar acesso, correção e exclusão de suas informações pessoais. Você pode fazer essa solicitação entrando em contato conosco através dos dados de contato fornecidos na seção 17.
                         </p>
@@ -989,8 +989,8 @@ const PrivacyPolicy = () => {
                           Caso esteja insatisfeito com a forma como tratamos qualquer reclamação relativa ao nosso processamento de informações pessoais, pode contactar a entidade reguladora:
                         </p>
                         <div className="p-3 bg-muted/50 rounded-lg mt-3">
-                          <p className="font-medium text-foreground text-xs mb-2">Regulador de Informação (África do Sul)</p>
-                          <ul className="text-xs space-y-1">
+                          <p className="font-medium text-foreground text-sm mb-2">Regulador de Informação (África do Sul)</p>
+                          <ul className="text-sm space-y-1">
                             <li>Para informações gerais: enquires@inforegulator.org.za</li>
                             <li>Reclamações (preencher o formulário POP/PAIA): PAIACComplaints@inforegulator.org.za e POPIAComplaints@inforegulator.org.za</li>
                           </ul>
