@@ -12,7 +12,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <Link to="/">
-              <img src={logo} alt="A Arte do Yoga" className="h-14 w-auto" />
+              <img src={logo} alt="A Arte do Yoga" className="h-20 w-auto" />
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Explorando a filosofia, prática e bem-estar através do yoga. Conteúdo editorial premium sobre mindfulness e transformação.
