@@ -8,7 +8,10 @@ import {
   Users,
   Shield,
   Clock,
-  Mail
+  Mail,
+  Package,
+  HomeIcon,
+  Wind
 } from "lucide-react";
 import {
   Accordion,
@@ -105,6 +108,76 @@ const FAQ = () => {
         {
           question: "Posso usar o conteúdo do site em outros lugares?",
           answer: "Nosso conteúdo é protegido por direitos autorais. Para uso pessoal e não comercial, você pode compartilhar links para nossos artigos. Para reprodução de conteúdo, citações extensas ou uso comercial, é necessário solicitar autorização prévia através de nosso e-mail de contato."
+        }
+      ]
+    },
+    {
+      icon: Package,
+      title: "Equipamentos e Acessórios",
+      questions: [
+        {
+          question: "Qual tapete de yoga devo escolher?",
+          answer: "O tapete ideal depende do seu estilo de prática. Para iniciantes, um tapete de 4-6mm de espessura com boa aderência é suficiente. Praticantes de estilos dinâmicos como Vinyasa devem priorizar tapetes antiderrapantes. Para Yin Yoga ou práticas restaurativas, tapetes mais grossos (6-8mm) oferecem mais conforto. Materiais como borracha natural, TPE ou PVC reciclado são boas opções. Evite tapetes muito finos se tiver sensibilidade nos joelhos."
+        },
+        {
+          question: "Que roupa devo usar para praticar yoga?",
+          answer: "Use roupas confortáveis que permitam liberdade de movimento e respirabilidade. Tecidos que absorvem suor são ideais para práticas intensas. Evite roupas muito largas que podem atrapalhar em inversões ou posturas de equilíbrio. Para mulheres, tops com bom suporte são recomendados. Cores escuras ou estampadas disfarçam o suor. O mais importante é sentir-se confortável e livre para se movimentar."
+        },
+        {
+          question: "Preciso de blocos e cintos de yoga?",
+          answer: "Blocos e cintos são acessórios muito úteis, especialmente para iniciantes. Os blocos ajudam a alcançar o chão em posturas onde a flexibilidade ainda não permite, mantendo o alinhamento correto. Cintos auxiliam em alongamentos e posturas que exigem segurar os pés. Mesmo praticantes avançados usam esses props para aprofundar posturas. Recomendamos ter pelo menos 2 blocos de cortiça ou espuma de alta densidade."
+        },
+        {
+          question: "Vale a pena investir em um bolster?",
+          answer: "Bolsters são cilindros ou almofadas alongadas essenciais para práticas restaurativas, Yin Yoga e yoga pré-natal. Eles oferecem suporte confortável em posturas relaxantes, permitindo que você permaneça mais tempo em cada posição. Se você pratica regularmente esses estilos ou busca relaxamento profundo, vale muito o investimento. Alternativamente, almofadas firmes ou cobertores dobrados podem substituir temporariamente."
+        },
+        {
+          question: "Quais outros acessórios são úteis?",
+          answer: "Além dos básicos, outros acessórios úteis incluem: cobertores de yoga para apoio e aquecimento; almofadas de meditação (zafu) para práticas sentadas; rodas de yoga para trabalhar flexibilidade da coluna; luvas e meias antiderrapantes para quem prefere não praticar descalço; spray limpador para higienizar o tapete; e bolsas para transportar seus equipamentos. Comece com o essencial e adicione conforme sua prática evolui."
+        }
+      ]
+    },
+    {
+      icon: HomeIcon,
+      title: "Prática em Casa",
+      questions: [
+        {
+          question: "Como criar um espaço de prática em casa?",
+          answer: "Escolha um local tranquilo, limpo e com boa ventilação. O espaço deve ter área suficiente para estender seu tapete e movimentar os braços livremente (cerca de 2m x 2m). Minimize distrações removendo eletrônicos ou virando-os de costas. Iluminação natural é ideal, mas velas ou luzes suaves também funcionam. Mantenha seus acessórios organizados e acessíveis. Um canto dedicado, mesmo que pequeno, ajuda a criar o hábito."
+        },
+        {
+          question: "Qual o melhor horário para praticar yoga?",
+          answer: "O melhor horário é aquele que você consegue manter consistentemente. Tradicionalmente, a prática matinal (antes do café) é considerada ideal pois a mente está mais calma e o corpo se beneficia do alongamento após o sono. Práticas noturnas ajudam a relaxar e melhorar o sono. Evite praticar logo após refeições pesadas. Experimente diferentes horários e observe quando você se sente mais presente e energizado."
+        },
+        {
+          question: "Como manter a motivação praticando sozinho?",
+          answer: "Estabeleça uma rotina fixa, mesmo que curta. Comece com sessões de 15-20 minutos para criar o hábito. Use aplicativos ou vídeos para guiar suas práticas. Defina metas realistas e celebre pequenas conquistas. Mantenha um diário de prática anotando como se sente antes e depois. Varie os estilos para evitar monotonia. Conecte-se com comunidades online de praticantes. Lembre-se: qualquer prática é melhor que nenhuma."
+        },
+        {
+          question: "Posso aprender yoga apenas por vídeos online?",
+          answer: "É possível começar com vídeos online, mas tem limitações. Vídeos não corrigem seu alinhamento, o que pode levar a lesões. Recomendamos combinar prática em casa com aulas presenciais ocasionais, onde um professor pode oferecer ajustes personalizados. Escolha canais de instrutores certificados e comece com vídeos para iniciantes. Preste atenção às instruções de segurança e nunca force posturas que causem dor."
+        }
+      ]
+    },
+    {
+      icon: Wind,
+      title: "Meditação e Respiração",
+      questions: [
+        {
+          question: "Como começar a meditar?",
+          answer: "Comece com sessões curtas de 5-10 minutos. Sente-se confortavelmente com a coluna ereta, feche os olhos e foque na respiração natural. Quando pensamentos surgirem, gentilmente retorne a atenção à respiração sem julgamento. Use aplicativos de meditação guiada para iniciantes. Pratique no mesmo horário diariamente para criar hábito. A consistência é mais importante que a duração. Com o tempo, aumente gradualmente para 15-20 minutos."
+        },
+        {
+          question: "O que é pranayama?",
+          answer: "Pranayama são técnicas de controle da respiração do yoga. 'Prana' significa energia vital e 'ayama' significa expansão ou controle. Diferentes técnicas têm efeitos distintos: Ujjayi (respiração oceânica) aquece e acalma; Nadi Shodhana (respiração alternada) equilibra os hemisférios cerebrais; Kapalabhati (respiração do fogo) energiza e purifica; Bhramari (respiração da abelha) acalma profundamente. Pratique com orientação inicial para aprender corretamente."
+        },
+        {
+          question: "Meditação e yoga são a mesma coisa?",
+          answer: "São práticas complementares mas distintas. Yoga tradicionalmente inclui 8 ramos, sendo as posturas (asanas) apenas um deles, e meditação (dhyana) outro. As posturas físicas preparam o corpo para sentar em meditação. Muitas aulas de yoga incluem momentos meditativos. Você pode praticar meditação independentemente do yoga físico. Ambas as práticas se potencializam quando combinadas, trabalhando corpo e mente de forma integrada."
+        },
+        {
+          question: "Como lidar com a mente agitada na meditação?",
+          answer: "Mente agitada é completamente normal e faz parte do processo. Não tente 'esvaziar' a mente - isso é um mito. O objetivo é observar pensamentos sem se envolver com eles, como nuvens passando no céu. Use âncoras como respiração, sons ou sensações corporais para retornar ao presente. Seja gentil consigo mesmo. A prática regular naturalmente acalma a mente com o tempo. Dias difíceis fazem parte da jornada."
         }
       ]
     }
