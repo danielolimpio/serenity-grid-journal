@@ -1,8 +1,6 @@
-import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import ArticleCard from "@/components/ArticleCard";
 import CategoryGrid from "@/components/CategoryGrid";
-import Footer from "@/components/Footer";
 import meditationImage from "@/assets/meditation.jpg";
 import philosophyImage from "@/assets/philosophy.jpg";
 import wellnessImage from "@/assets/wellness.jpg";
@@ -37,54 +35,48 @@ const featuredArticles = [
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
-      <Header />
-      
-      <main>
-        <HeroSection />
+    <main>
+      <HeroSection />
 
-        {/* Featured Articles */}
-        <section className="section-spacing">
-          <div className="container-editorial space-y-12">
-            {/* Main Featured */}
-            <ArticleCard {...featuredArticles[0]} />
+      {/* Featured Articles */}
+      <section className="section-spacing">
+        <div className="container-editorial space-y-12">
+          {/* Main Featured */}
+          <ArticleCard {...featuredArticles[0]} />
 
-            {/* Secondary Articles Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {featuredArticles.slice(1).map((article) => (
-                <ArticleCard key={article.slug} {...article} />
-              ))}
-            </div>
+          {/* Secondary Articles Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {featuredArticles.slice(1).map((article) => (
+              <ArticleCard key={article.slug} {...article} />
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        <CategoryGrid />
+      <CategoryGrid />
 
-        {/* Newsletter CTA */}
-        <section className="section-spacing bg-card">
-          <div className="container-editorial max-w-3xl text-center space-y-6">
-            <h2 className="font-display text-4xl md:text-5xl font-light">
-              Receba Inspiração Semanal
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Insights sobre yoga, meditação e bem-estar direto na sua caixa de entrada
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto pt-4">
-              <input
-                type="email"
-                placeholder="Seu melhor e-mail"
-                className="flex-1 px-4 py-3 bg-background border border-border/50 focus:border-primary focus:outline-none transition-editorial"
-              />
-              <button className="px-8 py-3 bg-primary text-primary-foreground font-body tracking-wide hover:bg-primary/90 transition-editorial">
-                Inscrever
-              </button>
-            </div>
+      {/* Newsletter CTA */}
+      <section className="section-spacing bg-card">
+        <div className="container-editorial max-w-3xl text-center space-y-6">
+          <h2 className="font-display text-4xl md:text-5xl font-light">
+            Receba Inspiração Semanal
+          </h2>
+          <p className="text-lg text-muted-foreground">
+            Insights sobre yoga, meditação e bem-estar direto na sua caixa de entrada
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto pt-4">
+            <input
+              type="email"
+              placeholder="Seu melhor e-mail"
+              className="flex-1 px-4 py-3 bg-background border border-border/50 focus:border-primary focus:outline-none transition-editorial"
+            />
+            <button className="px-8 py-3 bg-primary text-primary-foreground font-body tracking-wide hover:bg-primary/90 transition-editorial">
+              Inscrever
+            </button>
           </div>
-        </section>
-      </main>
-
-      <Footer />
-    </div>
+        </div>
+      </section>
+    </main>
   );
 };
 

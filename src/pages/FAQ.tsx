@@ -1,5 +1,3 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { 
   HelpCircle,
   ChevronDown,
@@ -184,89 +182,83 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="min-h-screen">
-      <Header />
-      
-      <main className="pt-32">
-        {/* Hero Section */}
-        <section className="py-12 md:py-16 bg-gradient-to-b from-muted/50 to-background animate-fade-in">
-          <div className="container-editorial text-center space-y-6">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-2 animate-scale-in" style={{ animationDelay: "0.1s" }}>
-              <HelpCircle className="w-8 h-8 text-primary" />
-            </div>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-light animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              Perguntas Frequentes
-            </h1>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: "0.3s" }}>
-              Encontre respostas para as dúvidas mais comuns sobre yoga, nossa plataforma e como podemos ajudar em sua jornada.
-            </p>
+    <main className="pt-32">
+      {/* Hero Section */}
+      <section className="py-12 md:py-16 bg-gradient-to-b from-muted/50 to-background animate-fade-in">
+        <div className="container-editorial text-center space-y-6">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-2 animate-scale-in" style={{ animationDelay: "0.1s" }}>
+            <HelpCircle className="w-8 h-8 text-primary" />
           </div>
-        </section>
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-light animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            Perguntas Frequentes
+          </h1>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: "0.3s" }}>
+            Encontre respostas para as dúvidas mais comuns sobre yoga, nossa plataforma e como podemos ajudar em sua jornada.
+          </p>
+        </div>
+      </section>
 
-        {/* FAQ Content */}
-        <section className="py-12 md:py-16">
-          <div className="container mx-auto px-4 max-w-4xl">
-            <div className="space-y-8">
-              {faqCategories.map((category, categoryIndex) => (
-                <div 
-                  key={categoryIndex}
-                  className="bg-card rounded-lg p-6 md:p-8 shadow-soft border border-border/50 animate-fade-in"
-                  style={{ animationDelay: `${0.2 + categoryIndex * 0.1}s` }}
-                >
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                      <category.icon className="w-5 h-5 text-primary" />
-                    </div>
-                    <h2 className="font-display text-2xl font-light">{category.title}</h2>
-                  </div>
-
-                  <Accordion type="single" collapsible className="space-y-2">
-                    {category.questions.map((item, questionIndex) => (
-                      <AccordionItem 
-                        key={questionIndex} 
-                        value={`${categoryIndex}-${questionIndex}`}
-                        className="border border-border/50 rounded-lg px-4 data-[state=open]:bg-muted/30"
-                      >
-                        <AccordionTrigger className="text-left font-display text-base md:text-lg font-medium hover:no-underline py-4">
-                          {item.question}
-                        </AccordionTrigger>
-                        <AccordionContent className="text-muted-foreground leading-relaxed pb-4">
-                          {item.answer}
-                        </AccordionContent>
-                      </AccordionItem>
-                    ))}
-                  </Accordion>
-                </div>
-              ))}
-            </div>
-
-            {/* Contact CTA */}
-            <div 
-              className="mt-12 bg-primary/5 rounded-lg p-8 border border-primary/20 text-center animate-fade-in"
-              style={{ animationDelay: "0.6s" }}
-            >
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-4">
-                <Mail className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="font-display text-2xl font-light mb-3">Não encontrou sua resposta?</h3>
-              <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
-                Se você tem uma pergunta que não foi respondida aqui, ficaremos felizes em ajudar. 
-                Entre em contato conosco e responderemos o mais breve possível.
-              </p>
-              <Link 
-                to="/contato"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-md font-medium hover:bg-primary/90 transition-editorial"
+      {/* FAQ Content */}
+      <section className="py-12 md:py-16">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="space-y-8">
+            {faqCategories.map((category, categoryIndex) => (
+              <div 
+                key={categoryIndex}
+                className="bg-card rounded-lg p-6 md:p-8 shadow-soft border border-border/50 animate-fade-in"
+                style={{ animationDelay: `${0.2 + categoryIndex * 0.1}s` }}
               >
-                <Mail className="w-4 h-4" />
-                Fale Conosco
-              </Link>
-            </div>
-          </div>
-        </section>
-      </main>
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                    <category.icon className="w-5 h-5 text-primary" />
+                  </div>
+                  <h2 className="font-display text-2xl font-light">{category.title}</h2>
+                </div>
 
-      <Footer />
-    </div>
+                <Accordion type="single" collapsible className="space-y-2">
+                  {category.questions.map((item, questionIndex) => (
+                    <AccordionItem 
+                      key={questionIndex} 
+                      value={`${categoryIndex}-${questionIndex}`}
+                      className="border border-border/50 rounded-lg px-4 data-[state=open]:bg-muted/30"
+                    >
+                      <AccordionTrigger className="text-left font-display text-base md:text-lg font-medium hover:no-underline py-4">
+                        {item.question}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground leading-relaxed pb-4">
+                        {item.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </div>
+            ))}
+          </div>
+
+          {/* Contact CTA */}
+          <div 
+            className="mt-12 bg-primary/5 rounded-lg p-8 border border-primary/20 text-center animate-fade-in"
+            style={{ animationDelay: "0.6s" }}
+          >
+            <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-4">
+              <Mail className="w-6 h-6 text-primary" />
+            </div>
+            <h3 className="font-display text-2xl font-light mb-3">Não encontrou sua resposta?</h3>
+            <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
+              Se você tem uma pergunta que não foi respondida aqui, ficaremos felizes em ajudar. 
+              Entre em contato conosco e responderemos o mais breve possível.
+            </p>
+            <Link 
+              to="/contato"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-md font-medium hover:bg-primary/90 transition-editorial"
+            >
+              <Mail className="w-4 h-4" />
+              Fale Conosco
+            </Link>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 };
 
