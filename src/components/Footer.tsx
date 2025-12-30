@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Instagram, Facebook, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -10,7 +11,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="font-display text-2xl font-light">A Arte do Yoga</h3>
+            <Link to="/">
+              <img src={logo} alt="A Arte do Yoga" className="h-14 w-auto" />
+            </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Explorando a filosofia, prática e bem-estar através do yoga. Conteúdo editorial premium sobre mindfulness e transformação.
             </p>
