@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Menu, X, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,10 +35,8 @@ const Header = () => {
       <div className="container-editorial">
         <nav className="flex items-center justify-between py-6">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <span className="font-display text-2xl font-light tracking-tight text-foreground">
-              A Arte do Yoga
-            </span>
+          <Link to="/" className="flex items-center">
+            <img src={logo} alt="A Arte do Yoga" className="h-12 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
