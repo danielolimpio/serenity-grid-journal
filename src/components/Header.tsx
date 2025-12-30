@@ -36,7 +36,7 @@ const Header = () => {
         <nav className="flex items-center justify-between py-6">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img src={logo} alt="A Arte do Yoga" className="h-12 w-auto" />
+            <img src={logo} alt="A Arte do Yoga" className="h-16 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
