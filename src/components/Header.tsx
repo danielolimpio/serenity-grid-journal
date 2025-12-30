@@ -23,6 +23,8 @@ const Header = () => {
     { name: "Filosofia", path: "/categoria/filosofia" },
     { name: "Bem-Estar", path: "/categoria/bem-estar" },
     { name: "Sobre", path: "/sobre" },
+    { name: "FAQ", path: "/faq" },
+    { name: "Contato", path: "/contato" },
   ];
 
   return (
