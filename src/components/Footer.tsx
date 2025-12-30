@@ -66,6 +66,11 @@ const Footer = () => {
                   Política de Cookies
                 </Link>
               </li>
+              <li>
+                <Link to="/sitemap" className="text-sm text-muted-foreground hover:text-primary transition-editorial">
+                  Sitemap
+                </Link>
+              </li>
             </ul>
           </div>
 
