@@ -1,9 +1,27 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, memo } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import logo from "@/assets/logo.png";
+
+// Memoized logo component to prevent re-renders
+const Logo = memo(() => (
+  <img 
+    src={logo} 
+    alt="A Arte do Yoga" 
+    className="h-16 w-auto"
+    loading="eager"
+    decoding="async"
+    style={{ 
+      contentVisibility: 'auto',
+      minHeight: '64px',
+      minWidth: '64px'
+    }}
+  />
+));
+
+Logo.displayName = 'Logo';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,7 +56,7 @@ const Header = () => {
         <nav className="flex items-center justify-between py-6">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img src={logo} alt="A Arte do Yoga" className="h-16 w-auto" />
+            <Logo />
           </Link>
 
           {/* Desktop Navigation */}
