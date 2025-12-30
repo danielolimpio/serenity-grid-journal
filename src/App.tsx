@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Article from "./pages/Article";
 import Category from "./pages/Category";
 import About from "./pages/About";
+import Contact from "./pages/Contact";
 import Sitemap from "./pages/Sitemap";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfUse from "./pages/TermsOfUse";
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/artigo/:slug" element={<Article />} />
           <Route path="/categoria/:slug" element={<Category />} />
           <Route path="/sobre" element={<About />} />
+          <Route path="/contato" element={<Contact />} />
           <Route path="/sitemap" element={<Sitemap />} />
           <Route path="/politica-privacidade" element={<PrivacyPolicy />} />
           <Route path="/termos" element={<TermsOfUse />} />
