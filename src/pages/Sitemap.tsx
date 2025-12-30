@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 
 const Sitemap = () => {
+  const currentDate = new Date();
+  const monthNames = [
+    "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+    "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+  ];
+  const lastUpdate = `${monthNames[currentDate.getMonth()]} ${currentDate.getFullYear()}`;
   const siteStructure = [
     {
       title: "Páginas Principais",
@@ -104,7 +110,7 @@ const Sitemap = () => {
       <section className="section-spacing bg-card">
         <div className="container-editorial max-w-3xl text-center space-y-4">
           <p className="text-sm text-muted-foreground leading-relaxed">
-            Esta página é atualizada regularmente para refletir o conteúdo mais recente do site. Última atualização: Dezembro 2024.
+            Esta página é atualizada regularmente para refletir o conteúdo mais recente do site. Última atualização: {lastUpdate}.
           </p>
         </div>
       </section>
