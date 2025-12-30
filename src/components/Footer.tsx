@@ -101,7 +101,15 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-border/30 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-muted-foreground">
-            © 2024 A Arte do Yoga. Todos os direitos reservados.
+            © 2025 | The Art of Yoga | Todos os direitos reservados | Desenvolvido por{" "}
+            <a 
+              href="https://danielolimpio.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-editorial underline"
+            >
+              DanielOlimpio
+            </a>
           </p>
           
           <div className="flex items-center gap-4">
