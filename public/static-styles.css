@@ -791,3 +791,145 @@ img {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+
+/* ------------------------------------------------------------
+   Compatibility layer
+   (Mantém o CSS funcionando com as classes do HTML estático)
+------------------------------------------------------------- */
+
+/* Header markup (public/index.html) */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-desktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .nav-desktop {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+.nav-desktop a {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--foreground);
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.nav-desktop a:hover {
+  color: var(--primary);
+  opacity: 1;
+}
+
+/* O HTML usa .logo no <a> e um <img> dentro */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--foreground);
+}
+
+.logo:hover {
+  color: var(--foreground);
+}
+
+.logo img {
+  display: block;
+}
+
+.logo span {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+/* Buttons */
+.btn-secondary {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--foreground);
+}
+
+.btn-secondary:hover {
+  background: var(--muted);
+}
+
+/* Section variants */
+.section-alt {
+  background: var(--muted);
+}
+
+.section-newsletter {
+  background: var(--card);
+}
+
+/* Footer markup */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1.25fr 2fr;
+    align-items: start;
+  }
+}
+
+.footer-brand p {
+  color: var(--muted-foreground);
+  margin-top: 0.75rem;
+}
+
+.footer-links {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .footer-links {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.footer-column h4 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  color: var(--foreground);
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-column a {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.footer-column a:hover {
+  color: var(--primary);
+}
+
