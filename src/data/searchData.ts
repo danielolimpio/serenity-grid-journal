@@ -75,6 +75,15 @@ export const articles: Article[] = [
     image: wellnessImage,
     slug: "yoga-e-alimentacao-consciente",
   },
+  {
+    title: "Asanas Essenciais para Aliviar a Tensão nas Costas",
+    excerpt: "Descubra as posturas de yoga mais eficazes para aliviar dores nas costas, com instruções detalhadas e dicas de segurança para praticar em casa.",
+    category: "Prática",
+    categorySlug: "pratica",
+    date: "3 de Janeiro, 2026",
+    image: meditationImage,
+    slug: "asanas-essenciais-para-aliviar-a-tensao-nas-costas",
+  },
 ];
 
 export const categories: Category[] = [
