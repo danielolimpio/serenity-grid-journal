@@ -56,7 +56,7 @@ const Search = () => {
                   {categoryResults.map((result) => (
                     <Link
                       key={result.url}
-                      to={result.url}
+                      to={result.url.replace(/\/$/, "")}
                       className="group p-6 bg-card border border-border/50 rounded-lg hover:border-primary/50 transition-all"
                     >
                       <h3 className="font-display text-xl font-medium group-hover:text-primary transition-colors">
@@ -80,16 +80,18 @@ const Search = () => {
                 </h2>
                 <div className="space-y-6">
                   {articleResults.map((result) => (
-                    <Link
+                    <a
                       key={result.url}
-                      to={result.url}
+                      href={result.url}
                       className="group flex gap-6 p-4 bg-card border border-border/50 rounded-lg hover:border-primary/50 transition-all"
+                      aria-label={`Ler artigo: ${result.title}`}
                     >
                       {result.image && (
                         <div className="flex-shrink-0 w-32 h-24 overflow-hidden rounded-md">
                           <img
                             src={result.image}
-                            alt={result.title}
+                            alt={`Capa do artigo: ${result.title}`}
+                            loading="lazy"
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                           />
                         </div>
@@ -107,11 +109,12 @@ const Search = () => {
                           {result.description}
                         </p>
                       </div>
-                    </Link>
+                    </a>
                   ))}
                 </div>
               </section>
             )}
+
 
             {/* No Results State */}
             {results.length === 0 && (
