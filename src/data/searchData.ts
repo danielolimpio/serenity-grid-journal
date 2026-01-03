@@ -1,6 +1,7 @@
 import meditationImage from "@/assets/meditation.jpg";
 import philosophyImage from "@/assets/philosophy.jpg";
 import wellnessImage from "@/assets/wellness.jpg";
+import asanasCostasImage from "@/assets/asanas-costas.jpg";
 
 export interface Article {
   title: string;
@@ -81,7 +82,7 @@ export const articles: Article[] = [
     category: "Prática",
     categorySlug: "pratica",
     date: "3 de Janeiro, 2026",
-    image: meditationImage,
+    image: asanasCostasImage,
     slug: "asanas-essenciais-para-aliviar-a-tensao-nas-costas",
   },
 ];
@@ -140,7 +141,7 @@ export function searchContent(query: string): SearchResult[] {
         type: "article",
         title: article.title,
         description: article.excerpt,
-        url: `/artigo/${article.slug}`,
+        url: `/artigo/${article.slug}/`,
         category: article.category,
         image: article.image,
       });
@@ -157,7 +158,7 @@ export function searchContent(query: string): SearchResult[] {
         type: "category",
         title: category.name,
         description: category.description,
-        url: `/categoria/${category.slug}`,
+        url: `/categoria/${category.slug}/`,
       });
     }
   });
