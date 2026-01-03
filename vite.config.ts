@@ -26,10 +26,30 @@ function useStaticSite() {
         console.warn("⚠ public/index.html não encontrado!");
       }
 
-      // 2. Remover pasta assets/ gerada pelo Vite (contém JS/CSS com hash não usados)
+      // 2. Remover APENAS os bundles JS/CSS gerados pelo Vite (preserva /assets com imagens do public/)
       if (fs.existsSync(distAssets)) {
-        fs.rmSync(distAssets, { recursive: true, force: true });
-        console.log("✓ dist/assets/ removido (bundles JS/CSS não utilizados)");
+        const extsToDelete = new Set([".js", ".css", ".map"]);
+
+        const deleteViteBundles = (dir: string) => {
+          for (const item of fs.readdirSync(dir)) {
+            const fullPath = path.join(dir, item);
+            const stat = fs.statSync(fullPath);
+            if (stat.isDirectory()) {
+              deleteViteBundles(fullPath);
+              // Remove diretórios vazios após limpeza
+              if (fs.readdirSync(fullPath).length === 0) fs.rmdirSync(fullPath);
+              continue;
+            }
+
+            const ext = path.extname(item).toLowerCase();
+            if (extsToDelete.has(ext)) {
+              fs.rmSync(fullPath, { force: true });
+            }
+          }
+        };
+
+        deleteViteBundles(distAssets);
+        console.log("✓ bundles Vite (.js/.css/.map) removidos de dist/assets/ (imagens preservadas)");
       }
 
       // 3. Listar arquivos finais em dist/
