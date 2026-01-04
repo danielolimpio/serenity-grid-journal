@@ -27,10 +27,11 @@ const Sitemap = () => {
     {
       title: "Artigos em Destaque",
       links: [
-        { name: "Despertar Através da Respiração Consciente", url: "/artigo/despertar-atraves-da-respiracao-consciente" },
-        { name: "Os Oito Membros do Yoga", url: "/artigo/os-oito-membros-do-yoga" },
-        { name: "Meditação para Iniciantes", url: "/artigo/meditacao-para-iniciantes" },
-        { name: "Yoga e Alimentação Consciente", url: "/artigo/yoga-e-alimentacao-consciente" },
+        { name: "Despertar Através da Respiração Consciente", url: "/artigo/despertar-atraves-da-respiracao-consciente/index.html" },
+        { name: "Os Oito Membros do Yoga", url: "/artigo/os-oito-membros-do-yoga/index.html" },
+        { name: "Meditação para Iniciantes", url: "/artigo/meditacao-para-iniciantes/index.html" },
+        { name: "Yoga e Alimentação Consciente", url: "/artigo/yoga-e-alimentacao-consciente/index.html" },
+        { name: "Asanas Essenciais para Aliviar a Tensão nas Costas", url: "/artigo/asanas-essenciais-para-aliviar-a-tensao-nas-costas/index.html" },
       ]
     },
     {
@@ -68,17 +69,31 @@ const Sitemap = () => {
                   {section.title}
                 </h2>
                 <ul className="space-y-3">
-                  {section.links.map((link, linkIndex) => (
-                    <li key={linkIndex}>
-                      <Link 
-                        to={link.url}
-                        className="text-lg text-muted-foreground hover:text-primary transition-editorial flex items-center gap-2 group"
-                      >
-                        <span className="w-1.5 h-1.5 bg-primary/40 rounded-full group-hover:bg-primary transition-editorial"></span>
-                        {link.name}
-                      </Link>
-                    </li>
-                  ))}
+                  {section.links.map((link, linkIndex) => {
+                    const isStaticHtml = link.url.endsWith("/index.html");
+
+                    return (
+                      <li key={linkIndex}>
+                        {isStaticHtml ? (
+                          <a
+                            href={link.url}
+                            className="text-lg text-muted-foreground hover:text-primary transition-editorial flex items-center gap-2 group"
+                          >
+                            <span className="w-1.5 h-1.5 bg-primary/40 rounded-full group-hover:bg-primary transition-editorial" />
+                            {link.name}
+                          </a>
+                        ) : (
+                          <Link
+                            to={link.url}
+                            className="text-lg text-muted-foreground hover:text-primary transition-editorial flex items-center gap-2 group"
+                          >
+                            <span className="w-1.5 h-1.5 bg-primary/40 rounded-full group-hover:bg-primary transition-editorial" />
+                            {link.name}
+                          </Link>
+                        )}
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             ))}
