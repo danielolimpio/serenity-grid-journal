@@ -141,7 +141,7 @@ export function searchContent(query: string): SearchResult[] {
         type: "article",
         title: article.title,
         description: article.excerpt,
-        url: `/artigo/${article.slug}/`,
+        url: `/artigo/${article.slug}/index.html`,
         category: article.category,
         image: article.image,
       });
