@@ -101,9 +101,12 @@ img {
   z-index: 50;
   background: var(--background);
   border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
-.header-inner {
+.header-inner,
+.header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -112,32 +115,66 @@ img {
   margin: 0 auto;
 }
 
-.logo {
-  height: 64px;
-  width: auto;
+/* Logo styling */
+a.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--foreground);
+  text-decoration: none;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
 }
 
-.nav {
+a.logo:hover {
+  color: var(--foreground);
+}
+
+a.logo img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+a.logo span {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  a.logo span {
+    display: inline;
+  }
+}
+
+.nav,
+.nav-desktop {
   display: none;
 }
 
 @media (min-width: 768px) {
-  .nav {
+  .nav,
+  .nav-desktop {
     display: flex;
     gap: 2rem;
   }
 }
 
-.nav a {
+.nav a,
+.nav-desktop a {
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--foreground);
   opacity: 0.8;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-.nav a:hover {
+.nav a:hover,
+.nav-desktop a:hover {
   color: var(--primary);
   opacity: 1;
 }
@@ -792,68 +829,6 @@ img {
   border: 0;
 }
 
-/* ------------------------------------------------------------
-   Compatibility layer
-   (Mantém o CSS funcionando com as classes do HTML estático)
-------------------------------------------------------------- */
-
-/* Header markup (public/index.html) */
-.header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 1.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.nav-desktop {
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .nav-desktop {
-    display: flex;
-    gap: 2rem;
-  }
-}
-
-.nav-desktop a {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--foreground);
-  opacity: 0.8;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.nav-desktop a:hover {
-  color: var(--primary);
-  opacity: 1;
-}
-
-/* O HTML usa .logo no <a> e um <img> dentro */
-.logo {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  color: var(--foreground);
-}
-
-.logo:hover {
-  color: var(--foreground);
-}
-
-.logo img {
-  display: block;
-}
-
-.logo span {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 400;
-  letter-spacing: -0.02em;
-}
-
 /* Buttons */
 .btn-secondary {
   background: transparent;
@@ -878,14 +853,44 @@ img {
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.footer-container .footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 2rem;
+  margin-bottom: 1.5rem;
+  list-style: none;
+}
+
+.footer-container .footer-links a {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-container .footer-links a:hover {
+  color: var(--primary);
+}
+
+.footer-container .copyright {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+/* Footer with columns (structured layout) */
+.footer-columns {
   display: grid;
   gap: 2rem;
   margin-bottom: 3rem;
 }
 
 @media (min-width: 768px) {
-  .footer-container {
+  .footer-columns {
     grid-template-columns: 1.25fr 2fr;
     align-items: start;
   }
@@ -894,17 +899,6 @@ img {
 .footer-brand p {
   color: var(--muted-foreground);
   margin-top: 0.75rem;
-}
-
-.footer-links {
-  display: grid;
-  gap: 2rem;
-}
-
-@media (min-width: 768px) {
-  .footer-links {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 
 .footer-column h4 {
@@ -932,4 +926,3 @@ img {
 .footer-column a:hover {
   color: var(--primary);
 }
-
