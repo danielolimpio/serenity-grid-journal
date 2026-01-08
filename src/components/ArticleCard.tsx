@@ -20,7 +20,7 @@ const ArticleCard = ({
   slug,
   featured = false,
 }: ArticleCardProps) => {
-  const articleUrl = `/artigo/${slug}/index.html`;
+  const articleUrl = `/artigo/${slug}/`;
 
   return (
     <a href={articleUrl} className="group" aria-label={`Ler artigo: ${title}`}>

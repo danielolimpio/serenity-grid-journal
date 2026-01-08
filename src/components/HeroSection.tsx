@@ -31,7 +31,7 @@ const HeroSection = () => {
         </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-          <Link to="/categoria/pratica">
+          <Link to="/sitemap/">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-body tracking-wide">
               Explorar Artigos
               <ArrowRight className="ml-2 h-4 w-4" />

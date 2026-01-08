@@ -644,12 +644,13 @@ a.logo span {
 
 .article-content {
   max-width: 800px;
-  margin: -6rem auto 0;
-  position: relative;
-  z-index: 10;
-  background: var(--card);
-  padding: 3rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  margin: 0 auto;
+  padding: 6rem 1.5rem 3rem;
+  background: var(--background);
+}
+
+.article-header {
+  padding-top: 2rem;
 }
 
 .article-meta {

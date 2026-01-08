@@ -47,7 +47,7 @@ export const articles: Article[] = [
     category: "Bem-Estar",
     categorySlug: "bem-estar",
     date: "10 de Novembro, 2024",
-    image: wellnessImage,
+    image: meditationImage,
     slug: "mindfulness-cotidiano",
   },
   {
@@ -151,7 +151,7 @@ export function searchContent(query: string): SearchResult[] {
         type: "article",
         title: article.title,
         description: article.excerpt,
-        url: `/artigo/${article.slug}/index.html`,
+        url: `/artigo/${article.slug}/`,
         category: article.category,
         image: article.image,
       });
