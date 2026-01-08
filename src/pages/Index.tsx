@@ -3,16 +3,16 @@ import ArticleCard from "@/components/ArticleCard";
 import CategoryGrid from "@/components/CategoryGrid";
 import meditationImage from "@/assets/meditation.jpg";
 import philosophyImage from "@/assets/philosophy.jpg";
-import wellnessImage from "@/assets/wellness.jpg";
+import asanasCostasImage from "@/assets/asanas-costas.jpg";
 
 const featuredArticles = [
   {
-    title: "A Prática Diária de Yoga: Transformando Corpo e Mente",
-    excerpt: "Descubra como estabelecer uma rotina consistente de yoga pode transformar não apenas seu corpo, mas também sua mente e espírito. Exploramos as práticas essenciais para iniciantes e praticantes avançados.",
+    title: "Asanas Essenciais para Aliviar a Tensão nas Costas",
+    excerpt: "Descubra as posturas de yoga mais eficazes para aliviar dores nas costas, com instruções detalhadas e dicas de segurança para praticar em casa.",
     category: "Prática",
-    date: "15 de Novembro, 2024",
-    image: meditationImage,
-    slug: "pratica-diaria-yoga",
+    date: "3 de Janeiro, 2026",
+    image: asanasCostasImage,
+    slug: "asanas-essenciais-para-aliviar-a-tensao-nas-costas",
     featured: true,
   },
   {
@@ -21,15 +21,15 @@ const featuredArticles = [
     category: "Filosofia",
     date: "12 de Novembro, 2024",
     image: philosophyImage,
-    slug: "oito-membros-yoga",
+    slug: "os-oito-membros-do-yoga",
   },
   {
-    title: "Mindfulness no Cotidiano: Práticas Simples",
-    excerpt: "Aprenda técnicas práticas de mindfulness que podem ser integradas facilmente ao seu dia a dia, trazendo mais presença, calma e clareza mental para cada momento.",
-    category: "Bem-Estar",
-    date: "10 de Novembro, 2024",
-    image: wellnessImage,
-    slug: "mindfulness-cotidiano",
+    title: "Meditação para Iniciantes: Primeiros Passos",
+    excerpt: "Um guia completo para quem deseja começar a meditar, com técnicas simples e eficazes para encontrar paz interior.",
+    category: "Meditação",
+    date: "8 de Novembro, 2024",
+    image: meditationImage,
+    slug: "meditacao-para-iniciantes",
   },
 ];
 
