@@ -2,6 +2,7 @@ import meditationImage from "@/assets/meditation.jpg";
 import philosophyImage from "@/assets/philosophy.jpg";
 import wellnessImage from "@/assets/wellness.jpg";
 import asanasCostasImage from "@/assets/asanas-costas.jpg";
+import yogaMaosPunhosImage from "@/assets/yoga-maos-punhos.jpg";
 
 export interface Article {
   title: string;
@@ -84,6 +85,15 @@ export const articles: Article[] = [
     date: "3 de Janeiro, 2026",
     image: asanasCostasImage,
     slug: "asanas-essenciais-para-aliviar-a-tensao-nas-costas",
+  },
+  {
+    title: "Yoga para Mãos e Punhos: Exercícios para Aliviar o Estresse Digital",
+    excerpt: "Combatendo a tensão causada por teclados e telas, este guia oferece sequências de yoga específicas para relaxar e fortalecer mãos e punhos.",
+    category: "Bem-Estar",
+    categorySlug: "bem-estar",
+    date: "8 de Janeiro, 2026",
+    image: yogaMaosPunhosImage,
+    slug: "yoga-para-maos-e-punhos-exercicios-para-aliviar-o-estresse-digital",
   },
 ];
 
