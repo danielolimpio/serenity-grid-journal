@@ -52,10 +52,8 @@ const Header = () => {
 
   const navLinks = [
     { name: "Início", path: "/" },
-    { name: "Prática", path: "/categoria/pratica" },
-    { name: "Filosofia", path: "/categoria/filosofia" },
-    { name: "Bem-Estar", path: "/categoria/bem-estar" },
     { name: "Sobre", path: "/sobre" },
+    { name: "Quizz", path: "/quizz" },
     { name: "FAQ", path: "/faq" },
     { name: "Contato", path: "/contato" },
   ];

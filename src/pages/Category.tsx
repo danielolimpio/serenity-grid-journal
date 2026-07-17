@@ -19,6 +19,14 @@ const categoryData: Record<string, { name: string; description: string }> = {
     name: "Meditação",
     description: "Técnicas de meditação para acalmar a mente e encontrar paz interior",
   },
+  ayurveda: {
+    name: "Ayurveda",
+    description: "A ciência milenar indiana da saúde e longevidade: doshas, alimentação e rotinas terapêuticas.",
+  },
+  programas: {
+    name: "Programas",
+    description: "Programas guiados de yoga e bem-estar para acompanhar sua jornada passo a passo.",
+  },
 };
 
 const Category = () => {
