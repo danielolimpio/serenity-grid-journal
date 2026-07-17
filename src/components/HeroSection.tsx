@@ -4,13 +4,6 @@ const HeroSection = () => {
   return (
     <section className="relative bg-hero-soft pt-28 md:pt-32 pb-0 overflow-hidden">
       <div className="container max-w-7xl px-6">
-        <p
-          className="ml-2 md:ml-8 mb-2 md:mb-4 animate-fade-in text-3xl md:text-5xl text-ink/80 italic"
-          style={{ fontFamily: '"Cormorant Garamond", "Playfair Display", Georgia, serif', fontWeight: 500 }}
-        >
-          Bem-vindo à
-        </p>
-
         <div className="relative flex items-end justify-center">
           {/* Lotus flower lines behind woman */}
           <svg
