@@ -196,6 +196,7 @@ a.logo span {
   position: relative;
   text-align: center;
   padding: 8rem 1.5rem 4rem;
+  background: var(--gradient-hero);
 }
 
 .hero-bg {
@@ -258,6 +259,9 @@ a.logo span {
 .btn-primary {
   background: var(--primary);
   color: var(--primary-foreground);
+  border-radius: 999px;
+  padding: 0.85rem 1.75rem;
+  font-weight: 600;
 }
 
 .btn-primary:hover {
@@ -267,12 +271,16 @@ a.logo span {
 
 .btn-outline {
   background: transparent;
-  border: 1px solid var(--border);
-  color: var(--foreground);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  border-radius: 999px;
+  padding: 0.85rem 1.75rem;
+  font-weight: 600;
 }
 
 .btn-outline:hover {
-  background: var(--muted);
+  background: var(--primary);
+  color: var(--primary-foreground);
 }
 
 /* Cards */
