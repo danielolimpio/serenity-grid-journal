@@ -870,18 +870,18 @@ a.logo span {
 
 .footer-container .footer-links a {
   font-size: 0.875rem;
-  color: var(--muted-foreground);
+  color: rgba(255,255,255,0.7);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-container .footer-links a:hover {
-  color: var(--primary);
+  color: var(--coral);
 }
 
 .footer-container .copyright {
   font-size: 0.75rem;
-  color: var(--muted-foreground);
+  color: rgba(255,255,255,0.6);
 }
 
 /* Footer with columns (structured layout) */
@@ -899,7 +899,7 @@ a.logo span {
 }
 
 .footer-brand p {
-  color: var(--muted-foreground);
+  color: rgba(255,255,255,0.7);
   margin-top: 0.75rem;
 }
 
@@ -909,7 +909,7 @@ a.logo span {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 1rem;
-  color: var(--foreground);
+  color: var(--coral);
 }
 
 .footer-column ul {
@@ -922,9 +922,9 @@ a.logo span {
 
 .footer-column a {
   font-size: 0.875rem;
-  color: var(--muted-foreground);
+  color: rgba(255,255,255,0.7);
 }
 
 .footer-column a:hover {
-  color: var(--primary);
+  color: var(--coral);
 }
