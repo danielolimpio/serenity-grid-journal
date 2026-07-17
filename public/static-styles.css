@@ -402,8 +402,8 @@ a.logo span {
 
 /* Footer */
 .footer {
-  background: var(--card);
-  border-top: 1px solid var(--border);
+  background: var(--navy);
+  color: #fff;
   padding: 4rem 0 2rem;
 }
 
@@ -425,7 +425,7 @@ a.logo span {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 1rem;
-  color: var(--foreground);
+  color: var(--coral);
 }
 
 .footer-links {
@@ -438,19 +438,19 @@ a.logo span {
 
 .footer-links a {
   font-size: 0.875rem;
-  color: var(--muted-foreground);
+  color: rgba(255,255,255,0.7);
 }
 
 .footer-links a:hover {
-  color: var(--primary);
+  color: var(--coral);
 }
 
 .footer-bottom {
   padding-top: 2rem;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid rgba(255,255,255,0.1);
   text-align: center;
   font-size: 0.75rem;
-  color: var(--muted-foreground);
+  color: rgba(255,255,255,0.6);
 }
 
 /* Newsletter */
