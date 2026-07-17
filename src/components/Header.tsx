@@ -64,8 +64,8 @@ const Header = () => {
     <>
       <header
         className={cn(
-          "fixed top-0 w-full z-50 transition-editorial",
-          isScrolled ? "bg-background/95 backdrop-blur-md shadow-subtle" : "bg-transparent"
+          "fixed top-0 w-full z-50 transition-editorial bg-background/95 backdrop-blur-md",
+          isScrolled ? "shadow-subtle" : ""
         )}
       >
         <div className="container max-w-7xl px-6">
