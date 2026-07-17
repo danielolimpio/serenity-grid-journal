@@ -8,48 +8,54 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Editorial Premium Color System - Neutral & Earthy Tones */
-    --background: 35 25% 96%;
-    --foreground: 215 25% 20%;
+    /* Zenyoga System - Pink / Coral / Purple / Navy */
+    --background: 0 0% 100%;
+    --foreground: 240 15% 18%;
 
-    --card: 30 20% 98%;
-    --card-foreground: 215 25% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 15% 18%;
 
-    --popover: 30 20% 98%;
-    --popover-foreground: 215 25% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 15% 18%;
 
-    --primary: 150 20% 45%;
-    --primary-foreground: 30 20% 98%;
+    --primary: 271 55% 37%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 30 30% 85%;
-    --secondary-foreground: 215 25% 20%;
+    --secondary: 340 60% 96%;
+    --secondary-foreground: 240 15% 18%;
 
-    --muted: 35 15% 90%;
-    --muted-foreground: 215 15% 50%;
+    --muted: 300 20% 96%;
+    --muted-foreground: 240 6% 45%;
 
-    --accent: 220 20% 60%;
-    --accent-foreground: 30 20% 98%;
+    --accent: 15 82% 76%;
+    --accent-foreground: 240 20% 15%;
 
-    --destructive: 0 60% 50%;
-    --destructive-foreground: 30 20% 98%;
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 30 15% 88%;
-    --input: 30 15% 88%;
-    --ring: 150 20% 45%;
+    --border: 300 15% 92%;
+    --input: 300 15% 92%;
+    --ring: 271 55% 37%;
 
-    --radius: 0.25rem;
-    
-    /* Editorial Design Tokens */
-    --sage: 150 20% 45%;
-    --ochre: 35 50% 55%;
-    --slate: 215 25% 35%;
-    --cream: 35 25% 96%;
-    --sand: 30 30% 85%;
-    --stone: 30 10% 65%;
-    
-    /* Typography Scale */
-    --font-display: 'Cormorant Garamond', serif;
-    --font-body: 'Inter', sans-serif;
+    --radius: 0.75rem;
+
+    /* Zenyoga tokens */
+    --coral: 15 82% 76%;
+    --coral-foreground: 240 20% 15%;
+    --lavender: 285 35% 92%;
+    --blush: 340 60% 96%;
+    --navy: 240 22% 15%;
+    --navy-foreground: 0 0% 100%;
+    --ink: 240 15% 18%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(340 60% 97%) 0%, hsl(285 40% 95%) 100%);
+    --gradient-title: linear-gradient(90deg, hsl(15 82% 68%) 0%, hsl(320 55% 78%) 100%);
+    --gradient-card-accent: linear-gradient(90deg, hsl(15 82% 78%) 0%, hsl(285 45% 82%) 100%);
+
+    /* Typography */
+    --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
     
     /* Spacing Scale - Generous */
     --space-xs: 0.5rem;
@@ -60,9 +66,9 @@ All colors MUST be HSL.
     --space-2xl: 6rem;
     
     /* Shadows - Subtle */
-    --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.04);
-    --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.06);
-    --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.08);
+    --shadow-subtle: 0 1px 3px rgba(30, 30, 44, 0.04);
+    --shadow-soft: 0 8px 24px rgba(30, 30, 44, 0.06);
+    --shadow-medium: 0 16px 40px rgba(30, 30, 44, 0.08);
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -86,33 +92,25 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 215 25% 12%;
-    --foreground: 30 20% 95%;
-
-    --card: 215 25% 15%;
-    --card-foreground: 30 20% 95%;
-
-    --popover: 215 25% 15%;
-    --popover-foreground: 30 20% 95%;
-
-    --primary: 150 25% 50%;
-    --primary-foreground: 215 25% 12%;
-
-    --secondary: 215 20% 20%;
-    --secondary-foreground: 30 20% 95%;
-
-    --muted: 215 20% 20%;
-    --muted-foreground: 30 15% 65%;
-
-    --accent: 220 25% 55%;
-    --accent-foreground: 30 20% 95%;
-
-    --destructive: 0 60% 45%;
-    --destructive-foreground: 30 20% 95%;
-
-    --border: 215 20% 25%;
-    --input: 215 20% 25%;
-    --ring: 150 25% 50%;
+    --background: 240 22% 10%;
+    --foreground: 0 0% 96%;
+    --card: 240 22% 14%;
+    --card-foreground: 0 0% 96%;
+    --popover: 240 22% 14%;
+    --popover-foreground: 0 0% 96%;
+    --primary: 271 60% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 15% 20%;
+    --secondary-foreground: 0 0% 96%;
+    --muted: 240 15% 20%;
+    --muted-foreground: 240 5% 65%;
+    --accent: 15 82% 76%;
+    --accent-foreground: 240 22% 10%;
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 15% 22%;
+    --input: 240 15% 22%;
+    --ring: 271 60% 60%;
   }
 }
 
@@ -126,21 +124,13 @@ All colors MUST be HSL.
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display font-light tracking-tight;
+    @apply font-display font-bold tracking-tight text-foreground;
   }
-  
-  h1 {
-    @apply text-5xl md:text-7xl leading-tight;
-  }
-  
-  h2 {
-    @apply text-4xl md:text-5xl leading-tight;
-  }
-  
-  h3 {
-    @apply text-3xl md:text-4xl leading-snug;
-  }
-  
+
+  h1 { @apply text-4xl md:text-6xl leading-tight; }
+  h2 { @apply text-3xl md:text-5xl leading-tight; }
+  h3 { @apply text-2xl md:text-3xl leading-snug; }
+
   p {
     @apply leading-relaxed;
   }
@@ -150,7 +140,25 @@ All colors MUST be HSL.
   .text-balance {
     text-wrap: balance;
   }
-  
+
+  .text-gradient-coral {
+    background: var(--gradient-title);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .bg-hero-soft {
+    background: var(--gradient-hero);
+  }
+
+  .bg-coral { background-color: hsl(var(--coral)); }
+  .text-coral { color: hsl(var(--coral)); }
+  .bg-navy { background-color: hsl(var(--navy)); }
+  .text-navy { color: hsl(var(--navy)); }
+  .bg-blush { background-color: hsl(var(--blush)); }
+  .bg-lavender { background-color: hsl(var(--lavender)); }
+
   .section-spacing {
     @apply py-12 md:py-20 lg:py-28;
   }

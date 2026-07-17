@@ -1,142 +1,79 @@
 import { Link } from "react-router-dom";
-import { Instagram, Facebook, Youtube } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Instagram, Facebook, Youtube, Twitter, Mail, Phone, MapPin, Clock } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-border/50 bg-card">
-      <div className="container-editorial section-spacing">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+    <footer className="bg-navy text-navy-foreground">
+      <div className="container max-w-7xl px-6 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div className="space-y-4">
-            <Link to="/">
-              <img src={logo} alt="A Arte do Yoga" className="h-20 w-auto" />
+            <Link to="/" className="inline-block">
+              <img src={logo} alt="A Arte do Yoga" className="h-12 w-auto brightness-0 invert" />
             </Link>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Explorando a filosofia, prática e bem-estar através do yoga. Conteúdo editorial premium sobre mindfulness e transformação.
+            <p className="text-sm text-white/70 leading-relaxed">
+              Explorando a jornada interior através da prática milenar do yoga. Filosofia, prática e bem-estar.
             </p>
           </div>
 
-          {/* Quick Links */}
+          {/* Yoga Studio */}
           <div className="space-y-4">
-            <h4 className="font-body text-sm font-medium uppercase tracking-wider text-foreground/80">
-              Navegação
-            </h4>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/" className="text-sm text-muted-foreground hover:text-primary transition-editorial">
-                  Início
-                </Link>
-              </li>
-              <li>
-                <Link to="/categoria/pratica" className="text-sm text-muted-foreground hover:text-primary transition-editorial">
-                  Prática
-                </Link>
-              </li>
-              <li>
-                <Link to="/categoria/filosofia" className="text-sm text-muted-foreground hover:text-primary transition-editorial">
-                  Filosofia
-                </Link>
-              </li>
-              <li>
-                <Link to="/sobre" className="text-sm text-muted-foreground hover:text-primary transition-editorial">
-                  Sobre
-                </Link>
-              </li>
+            <h4 className="font-display text-lg font-bold text-coral">Navegação</h4>
+            <ul className="space-y-3 text-sm text-white/70">
+              <li><Link to="/" className="hover:text-coral transition-editorial">Início</Link></li>
+              <li><Link to="/sobre" className="hover:text-coral transition-editorial">Sobre</Link></li>
+              <li><Link to="/contato" className="hover:text-coral transition-editorial">Contato</Link></li>
+              <li><Link to="/faq" className="hover:text-coral transition-editorial">FAQ</Link></li>
+              <li><Link to="/busca" className="hover:text-coral transition-editorial">Buscar</Link></li>
             </ul>
           </div>
 
-          {/* Legal */}
+          {/* Categorias */}
           <div className="space-y-4">
-            <h4 className="font-body text-sm font-medium uppercase tracking-wider text-foreground/80">
-              Legal
-            </h4>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/politica-privacidade" className="text-sm text-muted-foreground hover:text-primary transition-editorial">
-                  Política de Privacidade
-                </Link>
-              </li>
-              <li>
-                <Link to="/termos" className="text-sm text-muted-foreground hover:text-primary transition-editorial">
-                  Termos de Uso
-                </Link>
-              </li>
-              <li>
-                <Link to="/cookies" className="text-sm text-muted-foreground hover:text-primary transition-editorial">
-                  Política de Cookies
-                </Link>
-              </li>
-              <li>
-                <Link to="/sitemap" className="text-sm text-muted-foreground hover:text-primary transition-editorial">
-                  Sitemap
-                </Link>
-              </li>
+            <h4 className="font-display text-lg font-bold text-coral">Categorias</h4>
+            <ul className="space-y-3 text-sm text-white/70">
+              <li><Link to="/categoria/pratica" className="hover:text-coral transition-editorial">Prática</Link></li>
+              <li><Link to="/categoria/filosofia" className="hover:text-coral transition-editorial">Filosofia</Link></li>
+              <li><Link to="/categoria/bem-estar" className="hover:text-coral transition-editorial">Bem-Estar</Link></li>
+              <li><Link to="/categoria/meditacao" className="hover:text-coral transition-editorial">Meditação</Link></li>
             </ul>
           </div>
 
-          {/* Newsletter */}
+          {/* Contato */}
           <div className="space-y-4">
-            <h4 className="font-body text-sm font-medium uppercase tracking-wider text-foreground/80">
-              Newsletter
-            </h4>
-            <p className="text-sm text-muted-foreground">
-              Receba insights semanais sobre yoga e bem-estar.
-            </p>
-            <div className="flex gap-2">
-              <Input 
-                type="email" 
-                placeholder="seu@email.com" 
-                className="text-sm"
-              />
-              <Button size="sm" className="bg-primary hover:bg-primary/90">
-                Inscrever
-              </Button>
+            <h4 className="font-display text-lg font-bold text-coral">Contato</h4>
+            <ul className="space-y-3 text-sm text-white/70">
+              <li className="flex items-start gap-2">
+                <Mail className="h-4 w-4 text-coral shrink-0 mt-0.5" />
+                <span>contato@theartofyoga.org</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <Clock className="h-4 w-4 text-coral shrink-0 mt-0.5" />
+                <span>Seg – Sáb: 10h às 17h</span>
+              </li>
+            </ul>
+            <div className="flex items-center gap-2 pt-2">
+              {[Facebook, Instagram, Twitter, Youtube].map((Icon, i) => (
+                <a
+                  key={i}
+                  href="#"
+                  className="w-9 h-9 rounded-full bg-white/10 hover:bg-coral hover:text-navy text-white flex items-center justify-center transition-editorial"
+                  aria-label="social"
+                >
+                  <Icon className="h-4 w-4" />
+                </a>
+              ))}
             </div>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-8 border-t border-border/30 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-muted-foreground">
-            © 2025 | The Art of Yoga | Todos os direitos reservados | Desenvolvido por{" "}
-            <a 
-              href="https://danielolimpio.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="hover:text-primary transition-editorial underline"
-            >
-              DanielOlimpio
-            </a>
-          </p>
-          
-          <div className="flex items-center gap-4">
-            <a 
-              href="https://instagram.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-editorial"
-            >
-              <Instagram className="h-5 w-5" />
-            </a>
-            <a 
-              href="https://facebook.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-editorial"
-            >
-              <Facebook className="h-5 w-5" />
-            </a>
-            <a 
-              href="https://youtube.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-editorial"
-            >
-              <Youtube className="h-5 w-5" />
-            </a>
+        <div className="pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/60">
+          <p>© 2025 A Arte do Yoga. Todos os direitos reservados.</p>
+          <div className="flex gap-4">
+            <Link to="/politica-privacidade" className="hover:text-coral transition-editorial">Privacidade</Link>
+            <Link to="/termos" className="hover:text-coral transition-editorial">Termos</Link>
+            <Link to="/cookies" className="hover:text-coral transition-editorial">Cookies</Link>
           </div>
         </div>
       </div>

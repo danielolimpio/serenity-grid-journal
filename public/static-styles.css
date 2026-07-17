@@ -1,33 +1,25 @@
-/* The Art of Yoga - Static Site Styles */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap');
+/* The Art of Yoga - Static Site Styles (Zenyoga) */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --background: hsl(35, 25%, 96%);
-  --foreground: hsl(215, 25%, 20%);
-  --card: hsl(30, 20%, 98%);
-  --card-foreground: hsl(215, 25%, 20%);
-  --primary: hsl(150, 20%, 45%);
-  --primary-foreground: hsl(30, 20%, 98%);
-  --secondary: hsl(30, 30%, 85%);
-  --muted: hsl(35, 15%, 90%);
-  --muted-foreground: hsl(215, 15%, 50%);
-  --border: hsl(30, 15%, 88%);
-  --radius: 0.25rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: hsl(215, 25%, 12%);
-    --foreground: hsl(30, 20%, 95%);
-    --card: hsl(215, 25%, 15%);
-    --card-foreground: hsl(30, 20%, 95%);
-    --primary: hsl(150, 25%, 50%);
-    --primary-foreground: hsl(215, 25%, 12%);
-    --secondary: hsl(215, 20%, 20%);
-    --muted: hsl(215, 20%, 20%);
-    --muted-foreground: hsl(30, 15%, 65%);
-    --border: hsl(215, 20%, 25%);
-  }
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(240, 15%, 18%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(240, 15%, 18%);
+  --primary: hsl(271, 55%, 37%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(340, 60%, 96%);
+  --muted: hsl(300, 20%, 96%);
+  --muted-foreground: hsl(240, 6%, 45%);
+  --border: hsl(300, 15%, 92%);
+  --coral: hsl(15, 82%, 76%);
+  --coral-foreground: hsl(240, 20%, 15%);
+  --navy: hsl(240, 22%, 15%);
+  --blush: hsl(340, 60%, 97%);
+  --lavender: hsl(285, 40%, 95%);
+  --radius: 0.75rem;
+  --gradient-hero: linear-gradient(135deg, hsl(340, 60%, 97%) 0%, hsl(285, 40%, 95%) 100%);
+  --gradient-title: linear-gradient(90deg, hsl(15, 82%, 68%) 0%, hsl(320, 55%, 78%) 100%);
 }
 
 * {
@@ -37,7 +29,7 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   background-color: var(--background);
   color: var(--foreground);
   line-height: 1.6;
@@ -45,9 +37,10 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 300;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-weight: 700;
   letter-spacing: -0.02em;
+  color: var(--foreground);
 }
 
 h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); line-height: 1.1; }
@@ -203,6 +196,7 @@ a.logo span {
   position: relative;
   text-align: center;
   padding: 8rem 1.5rem 4rem;
+  background: var(--gradient-hero);
 }
 
 .hero-bg {
@@ -265,6 +259,9 @@ a.logo span {
 .btn-primary {
   background: var(--primary);
   color: var(--primary-foreground);
+  border-radius: 999px;
+  padding: 0.85rem 1.75rem;
+  font-weight: 600;
 }
 
 .btn-primary:hover {
@@ -274,12 +271,16 @@ a.logo span {
 
 .btn-outline {
   background: transparent;
-  border: 1px solid var(--border);
-  color: var(--foreground);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  border-radius: 999px;
+  padding: 0.85rem 1.75rem;
+  font-weight: 600;
 }
 
 .btn-outline:hover {
-  background: var(--muted);
+  background: var(--primary);
+  color: var(--primary-foreground);
 }
 
 /* Cards */
@@ -401,8 +402,8 @@ a.logo span {
 
 /* Footer */
 .footer {
-  background: var(--card);
-  border-top: 1px solid var(--border);
+  background: var(--navy);
+  color: #fff;
   padding: 4rem 0 2rem;
 }
 
@@ -424,7 +425,7 @@ a.logo span {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 1rem;
-  color: var(--foreground);
+  color: var(--coral);
 }
 
 .footer-links {
@@ -437,19 +438,19 @@ a.logo span {
 
 .footer-links a {
   font-size: 0.875rem;
-  color: var(--muted-foreground);
+  color: rgba(255,255,255,0.7);
 }
 
 .footer-links a:hover {
-  color: var(--primary);
+  color: var(--coral);
 }
 
 .footer-bottom {
   padding-top: 2rem;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid rgba(255,255,255,0.1);
   text-align: center;
   font-size: 0.75rem;
-  color: var(--muted-foreground);
+  color: rgba(255,255,255,0.6);
 }
 
 /* Newsletter */
@@ -869,18 +870,18 @@ a.logo span {
 
 .footer-container .footer-links a {
   font-size: 0.875rem;
-  color: var(--muted-foreground);
+  color: rgba(255,255,255,0.7);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-container .footer-links a:hover {
-  color: var(--primary);
+  color: var(--coral);
 }
 
 .footer-container .copyright {
   font-size: 0.75rem;
-  color: var(--muted-foreground);
+  color: rgba(255,255,255,0.6);
 }
 
 /* Footer with columns (structured layout) */
@@ -898,7 +899,7 @@ a.logo span {
 }
 
 .footer-brand p {
-  color: var(--muted-foreground);
+  color: rgba(255,255,255,0.7);
   margin-top: 0.75rem;
 }
 
@@ -908,7 +909,7 @@ a.logo span {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 1rem;
-  color: var(--foreground);
+  color: var(--coral);
 }
 
 .footer-column ul {
@@ -921,9 +922,9 @@ a.logo span {
 
 .footer-column a {
   font-size: 0.875rem;
-  color: var(--muted-foreground);
+  color: rgba(255,255,255,0.7);
 }
 
 .footer-column a:hover {
-  color: var(--primary);
+  color: var(--coral);
 }
