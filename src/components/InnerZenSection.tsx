@@ -57,17 +57,29 @@ const InnerZenSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-14">
           {/* Left: woman with circle and lotus */}
           <div className="relative flex justify-center min-h-[500px]">
-            {/* Thick gradient ring */}
-            <div
+            {/* Thick gradient ring — crisp SVG */}
+            <svg
               aria-hidden="true"
-              className="absolute top-6 left-1/2 -translate-x-1/2 w-[340px] h-[340px] md:w-[420px] md:h-[420px] rounded-full z-0"
-              style={{
-                background:
-                  "conic-gradient(from 220deg, hsl(15 85% 72%), hsl(320 55% 72%), hsl(285 60% 72%), hsl(15 85% 72%))",
-                mask: "radial-gradient(circle, transparent 48%, black 50%, black 62%, transparent 64%)",
-                WebkitMask: "radial-gradient(circle, transparent 48%, black 50%, black 62%, transparent 64%)",
-              }}
-            />
+              viewBox="0 0 500 500"
+              className="absolute top-6 left-1/2 -translate-x-1/2 w-[340px] h-[340px] md:w-[440px] md:h-[440px] z-0"
+            >
+              <defs>
+                <linearGradient id="zenRing" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="hsl(15 88% 70%)" />
+                  <stop offset="50%" stopColor="hsl(325 60% 70%)" />
+                  <stop offset="100%" stopColor="hsl(285 60% 70%)" />
+                </linearGradient>
+              </defs>
+              <circle
+                cx="250"
+                cy="250"
+                r="220"
+                fill="none"
+                stroke="url(#zenRing)"
+                strokeWidth="34"
+                strokeLinecap="round"
+              />
+            </svg>
             {/* Lotus flowers behind woman on the right */}
             <img
               src={lotus}
