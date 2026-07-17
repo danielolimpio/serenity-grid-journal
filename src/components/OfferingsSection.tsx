@@ -111,24 +111,24 @@ const OfferingsSection = () => {
                 s.highlight
                   ? {
                       background:
-                        "linear-gradient(135deg, hsl(15 85% 72%) 0%, hsl(320 55% 72%) 55%, hsl(285 55% 70%) 100%)",
+                        "linear-gradient(135deg, hsl(15 88% 68%) 0%, hsl(325 60% 62%) 55%, hsl(280 55% 58%) 100%)",
                     }
                   : undefined
               }
             >
-              <div className={`mx-auto mb-4 flex justify-center ${s.highlight ? "text-white [&_svg]:stroke-white [&_text]:!fill-white" : ""}`}>
+              <div className={`mx-auto mb-4 flex justify-center ${s.highlight ? "[&_svg]:stroke-[hsl(50_100%_92%)] [&_text]:!fill-[hsl(50_100%_92%)]" : ""}`}>
                 {s.icon}
               </div>
-              <h3 className={`font-display font-bold text-xl mb-2 ${s.highlight ? "text-white" : "text-ink"}`}>
+              <h3 className={`font-display font-extrabold text-xl mb-1 tracking-tight ${s.highlight ? "text-white drop-shadow-sm" : "text-ink"}`}>
                 {s.title}
               </h3>
-              <p className={`text-sm mb-5 ${s.highlight ? "text-white/85" : "text-muted-foreground"}`}>
+              <p className={`text-sm mb-5 leading-relaxed ${s.highlight ? "text-[hsl(40_100%_96%)]/95" : "text-muted-foreground"}`}>
                 {s.desc}
               </p>
               <a
                 href="#"
                 className={`inline-flex items-center gap-1 text-xs font-bold tracking-[0.2em] uppercase border-b-2 pb-1 ${
-                  s.highlight ? "text-white border-white/70" : "text-primary border-primary/40 hover:border-primary"
+                  s.highlight ? "text-[hsl(48_100%_88%)] border-[hsl(48_100%_88%)]/80 hover:text-white" : "text-primary border-primary/40 hover:border-primary"
                 }`}
               >
                 Ler Mais <ChevronRight className="h-3 w-3" />

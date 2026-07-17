@@ -4,7 +4,10 @@ const HeroSection = () => {
   return (
     <section className="relative bg-hero-soft pt-28 md:pt-32 pb-0 overflow-hidden">
       <div className="container max-w-7xl px-6">
-        <p className="text-lg md:text-xl text-ink/70 font-body ml-2 md:ml-8 mb-2 md:mb-4 animate-fade-in">
+        <p
+          className="ml-2 md:ml-8 mb-2 md:mb-4 animate-fade-in text-3xl md:text-5xl text-ink/80 italic"
+          style={{ fontFamily: '"Cormorant Garamond", "Playfair Display", Georgia, serif', fontWeight: 500 }}
+        >
           Bem-vindo à
         </p>
 
@@ -38,9 +41,9 @@ const HeroSection = () => {
           {/* Gigantic ZEN YOGA behind the woman */}
           <h1
             aria-label="ZEN YOGA"
-            className="absolute inset-x-0 top-1/2 -translate-y-1/2 text-center font-display tracking-tighter leading-none pointer-events-none select-none"
+            className="absolute inset-x-0 top-1/2 -translate-y-1/2 text-center font-display tracking-tighter leading-none pointer-events-none select-none whitespace-nowrap px-6"
             style={{
-              fontSize: "clamp(6rem, 22vw, 22rem)",
+              fontSize: "clamp(4rem, 17vw, 17rem)",
               fontWeight: 900,
               WebkitTextStroke: "2px transparent",
             }}
@@ -67,7 +70,10 @@ const HeroSection = () => {
           />
         </div>
 
-        <p className="text-right text-lg md:text-2xl text-ink/80 max-w-md ml-auto -mt-6 md:-mt-10 pr-2 md:pr-8 pb-10 md:pb-16 leading-snug">
+        <p
+          className="text-right max-w-md ml-auto -mt-6 md:-mt-10 pr-2 md:pr-8 pb-10 md:pb-16 leading-tight italic text-ink/80 text-2xl md:text-4xl"
+          style={{ fontFamily: '"Cormorant Garamond", "Playfair Display", Georgia, serif', fontWeight: 500 }}
+        >
           Seu Santuário para <br />
           Bem-estar e Harmonia
         </p>

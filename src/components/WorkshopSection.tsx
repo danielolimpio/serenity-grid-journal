@@ -40,12 +40,12 @@ const WorkshopSection = () => {
           </div>
         </div>
 
-        <div className="relative flex justify-center md:justify-end self-end">
+        <div className="relative flex justify-center self-end">
           {/* Lotus lines directly behind the woman only */}
           <svg
             aria-hidden="true"
             viewBox="0 0 800 800"
-            className="absolute right-0 bottom-0 w-[520px] md:w-[720px] opacity-40 pointer-events-none z-0"
+            className="absolute left-1/2 -translate-x-1/2 bottom-0 w-[520px] md:w-[720px] opacity-40 pointer-events-none z-0"
           >
             <g fill="none" stroke="white" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
               {Array.from({ length: 12 }).map((_, i) => (

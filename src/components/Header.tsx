@@ -3,15 +3,15 @@ import { Link, useNavigate } from "react-router-dom";
 import { Menu, X, Search, Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import logo from "@/assets/logo.png";
+import logoAsset from "@/assets/logo-zen.png.asset.json";
 import SearchAutocomplete from "@/components/SearchAutocomplete";
 
 // Memoized logo component to prevent re-renders
 const Logo = memo(() => (
   <img 
-    src={logo} 
+    src={logoAsset.url} 
     alt="A Arte do Yoga" 
-    className="h-12 w-auto"
+    className="h-11 md:h-12 w-auto"
     loading="eager"
     decoding="async"
     style={{ contentVisibility: 'auto', minHeight: '48px', minWidth: '48px' }}

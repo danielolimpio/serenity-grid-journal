@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram, Facebook, Youtube, Twitter, Mail, Phone, MapPin, Clock } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logoAsset from "@/assets/logo-zen.png.asset.json";
 
 const Footer = () => {
   return (
@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <Link to="/" className="inline-block">
-              <img src={logo} alt="A Arte do Yoga" className="h-12 w-auto brightness-0 invert" />
+              <img src={logoAsset.url} alt="A Arte do Yoga" className="h-12 w-auto" />
             </Link>
             <p className="text-sm text-white/70 leading-relaxed">
               Explorando a jornada interior através da prática milenar do yoga. Filosofia, prática e bem-estar.
