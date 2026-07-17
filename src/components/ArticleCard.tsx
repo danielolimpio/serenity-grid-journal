@@ -1,4 +1,4 @@
-import { Calendar, ArrowRight } from "lucide-react";
+import { Calendar, MessageSquare } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface ArticleCardProps {
@@ -26,15 +26,14 @@ const ArticleCard = ({
     <a href={articleUrl} className="group" aria-label={`Ler artigo: ${title}`}>
       <article
         className={cn(
-          "h-full flex flex-col transition-editorial hover:scale-[1.02]",
-          featured ? "md:flex-row md:gap-8" : ""
+          "h-full flex flex-col rounded-2xl overflow-hidden bg-card shadow-subtle hover:shadow-medium transition-editorial",
+          featured ? "md:flex-row" : ""
         )}
       >
-        {/* Image */}
         <div
           className={cn(
             "relative overflow-hidden bg-muted",
-            featured ? "md:w-1/2 h-[400px]" : "h-[300px]"
+            featured ? "md:w-1/2 h-[320px] md:h-auto" : "h-[240px]"
           )}
         >
           <img
@@ -43,43 +42,43 @@ const ArticleCard = ({
             loading="lazy"
             className="w-full h-full object-cover transition-editorial group-hover:scale-105"
           />
-          <div className="absolute top-4 left-4">
-            <span className="inline-block px-3 py-1 text-xs font-body uppercase tracking-wider bg-background/90 backdrop-blur-sm text-foreground">
+          <div className="absolute top-4 right-4">
+            <span className="inline-block px-3 py-1 text-[11px] font-semibold uppercase tracking-wider rounded-md bg-coral text-coral-foreground shadow-subtle">
               {category}
             </span>
           </div>
         </div>
 
-        {/* Content */}
         <div
           className={cn(
-            "flex-1 flex flex-col justify-between p-6 bg-card",
-            featured ? "md:w-1/2 md:p-8" : ""
+            "flex-1 flex flex-col justify-between p-6 md:p-7",
+            featured ? "md:w-1/2 md:p-10" : ""
           )}
         >
-          <div className="space-y-4">
-            <div className="flex items-center gap-2 text-xs text-muted-foreground">
-              <Calendar className="h-3 w-3" />
-              <time dateTime={date}>{date}</time>
-            </div>
-
+          <div className="space-y-3">
             <h2
               className={cn(
-                "font-display font-light leading-tight text-balance group-hover:text-primary transition-editorial",
-                featured ? "text-4xl md:text-5xl" : "text-2xl md:text-3xl"
+                "font-display font-bold leading-snug text-ink text-balance group-hover:text-primary transition-editorial",
+                featured ? "text-3xl md:text-4xl" : "text-xl md:text-2xl"
               )}
             >
               {title}
             </h2>
 
-            <p className="text-muted-foreground leading-relaxed line-clamp-3">
+            <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
               {excerpt}
             </p>
           </div>
 
-          <div className="flex items-center gap-2 text-sm font-body text-primary mt-6 group-hover:gap-4 transition-editorial">
-            Ler artigo
-            <ArrowRight className="h-4 w-4" />
+          <div className="flex items-center gap-4 text-xs text-muted-foreground mt-6 pt-4 border-t border-border">
+            <span className="flex items-center gap-1.5">
+              <Calendar className="h-3.5 w-3.5 text-coral" />
+              <time dateTime={date}>{date}</time>
+            </span>
+            <span className="flex items-center gap-1.5">
+              <MessageSquare className="h-3.5 w-3.5 text-coral" />
+              No Comments
+            </span>
           </div>
         </div>
       </article>

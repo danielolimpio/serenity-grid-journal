@@ -1,6 +1,6 @@
 import { useState, useEffect, memo } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Menu, X, Search } from "lucide-react";
+import { Menu, X, Search, Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import logo from "@/assets/logo.png";
@@ -11,14 +11,10 @@ const Logo = memo(() => (
   <img 
     src={logo} 
     alt="A Arte do Yoga" 
-    className="h-16 w-auto"
+    className="h-12 w-auto"
     loading="eager"
     decoding="async"
-    style={{ 
-      contentVisibility: 'auto',
-      minHeight: '64px',
-      minWidth: '64px'
-    }}
+    style={{ contentVisibility: 'auto', minHeight: '48px', minWidth: '48px' }}
   />
 ));
 
@@ -69,35 +65,44 @@ const Header = () => {
       <header
         className={cn(
           "fixed top-0 w-full z-50 transition-editorial",
-          isScrolled ? "bg-background/95 backdrop-blur-sm shadow-subtle" : "bg-transparent"
+          isScrolled ? "bg-background/95 backdrop-blur-md shadow-subtle" : "bg-transparent"
         )}
       >
-        <div className="container-editorial">
-          <nav className="flex items-center justify-between py-6">
-            {/* Logo */}
+        <div className="container max-w-7xl px-6">
+          <nav className="flex items-center justify-between py-4">
             <Link to="/" className="flex items-center">
               <Logo />
             </Link>
 
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden md:flex items-center gap-8">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
-                  className="text-base font-body font-semibold tracking-wide text-foreground/80 hover:text-primary transition-editorial"
+                  className="text-sm font-body font-semibold text-ink hover:text-primary transition-editorial"
                 >
                   {link.name}
                 </Link>
               ))}
             </div>
 
-            {/* Search & Mobile Menu */}
-            <div className="flex items-center space-x-4">
-              <Button 
-                variant="ghost" 
-                size="icon" 
-                className="text-foreground/60 hover:text-primary"
+            <div className="flex items-center gap-2">
+              <div className="hidden lg:flex items-center gap-2 mr-2">
+                {[Facebook, Twitter, Instagram, Youtube].map((Icon, i) => (
+                  <a
+                    key={i}
+                    href="#"
+                    className="w-8 h-8 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-editorial"
+                    aria-label="social"
+                  >
+                    <Icon className="h-3.5 w-3.5" />
+                  </a>
+                ))}
+              </div>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="text-ink hover:text-primary"
                 onClick={() => setIsSearchOpen(true)}
                 title="Buscar (Ctrl+K)"
               >
@@ -107,7 +112,7 @@ const Header = () => {
               <Button
                 variant="ghost"
                 size="icon"
-                className="md:hidden text-foreground/60 hover:text-primary"
+                className="md:hidden text-ink hover:text-primary"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
               >
                 {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -115,29 +120,18 @@ const Header = () => {
             </div>
           </nav>
 
-          {/* Mobile Menu */}
           {isMenuOpen && (
-            <div className="md:hidden pb-6 space-y-4 animate-fade-in">
+            <div className="md:hidden pb-6 space-y-4 animate-fade-in bg-background rounded-b-2xl px-2">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
-                  className="block text-lg font-body font-semibold text-foreground/80 hover:text-primary transition-editorial"
+                  className="block text-base font-body font-semibold text-ink hover:text-primary transition-editorial"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.name}
                 </Link>
               ))}
-              <button
-                onClick={() => {
-                  setIsMenuOpen(false);
-                  navigate("/busca");
-                }}
-                className="flex items-center gap-2 text-lg font-body font-semibold text-foreground/80 hover:text-primary transition-editorial"
-              >
-                <Search className="h-5 w-5" />
-                Buscar
-              </button>
             </div>
           )}
         </div>
