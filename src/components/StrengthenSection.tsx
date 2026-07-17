@@ -5,7 +5,7 @@ import leaves from "@/assets/green-leaves.png";
 
 const StrengthenSection = () => {
   return (
-    <section className="relative py-20 md:py-28 bg-background overflow-hidden">
+    <section className="relative pt-20 md:pt-28 pb-0 bg-background overflow-hidden">
       <div className="container max-w-7xl px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-14 items-center">
           {/* Left: text */}
@@ -81,15 +81,15 @@ const StrengthenSection = () => {
           </div>
         </div>
 
-        {/* Discover Harmony giant caption */}
-        <div className="relative mt-24 md:mt-32 text-center">
-          <h2
-            className="font-display font-black text-ink/[0.06] tracking-tight leading-none select-none"
-            style={{ fontSize: "clamp(3.5rem, 11vw, 11rem)" }}
-          >
-            Descubra Harmonia
-          </h2>
-        </div>
+      </div>
+      {/* Discover Harmony giant caption sitting on the section edge */}
+      <div className="relative mt-24 md:mt-32 text-center overflow-hidden">
+        <h2
+          className="font-display font-black text-ink/[0.07] tracking-tighter leading-[0.85] select-none whitespace-nowrap px-4 -mb-[0.15em]"
+          style={{ fontSize: "clamp(3rem, 13vw, 13rem)" }}
+        >
+          Descubra Harmonia
+        </h2>
       </div>
     </section>
   );

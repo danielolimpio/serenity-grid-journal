@@ -1,51 +1,82 @@
 import { ChevronRight } from "lucide-react";
 
-const stroke = "hsl(320 55% 65%)";
+const stroke = "hsl(320 55% 62%)";
+const common = {
+  viewBox: "0 0 64 64",
+  className: "w-14 h-14",
+  fill: "none",
+  stroke,
+  strokeWidth: 1.3,
+  strokeLinecap: "round" as const,
+  strokeLinejoin: "round" as const,
+};
 
+// Anxiety Relief — Om inside 8-point star + lotus petals
 const Icon1 = () => (
-  <svg viewBox="0 0 64 64" className="w-14 h-14" fill="none" stroke={stroke} strokeWidth="1.4">
+  <svg {...common}>
     {[0, 45, 90, 135, 180, 225, 270, 315].map((r) => (
-      <path key={r} d="M32 32 C 28 22 28 14 32 8 C 36 14 36 22 32 32 Z" transform={`rotate(${r} 32 32)`} />
+      <path key={`s-${r}`} d="M32 8 L 34 26 L 32 32 L 30 26 Z" transform={`rotate(${r} 32 32)`} />
     ))}
-    <circle cx="32" cy="32" r="7" />
-    <text x="32" y="35" textAnchor="middle" fontSize="7" fill={stroke} stroke="none" fontFamily="serif">ॐ</text>
+    {[22.5, 67.5, 112.5, 157.5, 202.5, 247.5, 292.5, 337.5].map((r) => (
+      <path key={`p-${r}`} d="M32 32 C 30 22 30 16 32 12 C 34 16 34 22 32 32 Z" transform={`rotate(${r} 32 32)`} />
+    ))}
+    <circle cx="32" cy="32" r="8" />
+    <text x="32" y="36" textAnchor="middle" fontSize="10" fill={stroke} stroke="none" fontFamily="serif" fontWeight="bold">ॐ</text>
   </svg>
 );
+// Life Balancing — layered lotus
 const Icon2 = () => (
-  <svg viewBox="0 0 64 64" className="w-14 h-14" fill="none" stroke={stroke} strokeWidth="1.4">
-    <path d="M32 12c-5 6-9 12-9 18a9 9 0 0018 0c0-6-4-12-9-18z" />
-    <path d="M14 34c4-2 10-2 14 2M50 34c-4-2-10-2-14 2" />
-    <path d="M18 46c6-2 22-2 28 0" />
+  <svg {...common}>
+    <path d="M32 46 C 20 46 12 38 12 30 C 20 30 26 34 32 46 Z" />
+    <path d="M32 46 C 44 46 52 38 52 30 C 44 30 38 34 32 46 Z" />
+    <path d="M32 46 C 24 44 18 36 20 24 C 26 28 30 34 32 46 Z" />
+    <path d="M32 46 C 40 44 46 36 44 24 C 38 28 34 34 32 46 Z" />
+    <path d="M32 46 C 28 40 26 28 30 16 C 32 22 34 32 32 46 Z" />
+    <path d="M32 46 C 36 40 38 28 34 16 C 32 22 30 32 32 46 Z" />
+    <path d="M14 46 L 50 46" />
   </svg>
 );
+// Reduce Stress — meditating woman with candle
 const Icon3 = () => (
-  <svg viewBox="0 0 64 64" className="w-14 h-14" fill="none" stroke={stroke} strokeWidth="1.4">
-    <rect x="16" y="14" width="20" height="24" rx="10" />
-    <path d="M36 20c6 0 8 4 8 8s-2 8-8 8" />
-    <path d="M20 42c-2 4-2 8 6 8h12c8 0 8-4 6-8" />
-    <path d="M22 12c1-3 3-3 4 0M28 12c1-3 3-3 4 0" />
+  <svg {...common}>
+    <circle cx="22" cy="20" r="3" />
+    <path d="M22 23 C 20 27 20 31 22 34" />
+    <path d="M16 32 C 14 34 14 36 16 38 L 20 36" />
+    <path d="M12 44 C 16 38 26 38 30 44 Z" />
+    <path d="M38 44 L 46 44 L 44 30 L 40 30 Z" />
+    <path d="M42 30 C 42 26 41 24 42 22 C 43 24 42 26 42 30" />
   </svg>
 );
+// Flexible Time — coffee cup with steam
 const Icon4 = () => (
-  <svg viewBox="0 0 64 64" className="w-14 h-14" fill="none" stroke={stroke} strokeWidth="1.4">
-    <circle cx="32" cy="32" r="20" />
-    <path d="M32 18v14l10 6" strokeLinecap="round" />
+  <svg {...common}>
+    <path d="M14 26 L 14 40 C 14 46 20 50 26 50 L 34 50 C 40 50 46 46 46 40 L 46 26 Z" />
+    <path d="M46 30 C 52 30 54 34 54 38 C 54 42 52 46 46 46" />
+    <path d="M14 26 L 46 26" />
+    <path d="M22 20 C 24 18 22 14 24 12" />
+    <path d="M30 20 C 32 18 30 14 32 12" />
+    <path d="M38 20 C 40 18 38 14 40 12" />
   </svg>
 );
+// Ayurveda — bowl with herbs
 const Icon5 = () => (
-  <svg viewBox="0 0 64 64" className="w-14 h-14" fill="none" stroke={stroke} strokeWidth="1.4">
-    <path d="M18 40c4-6 10-8 14-8s10 2 14 8" />
-    <path d="M22 40c2-4 6-6 10-6s8 2 10 6" />
-    <ellipse cx="32" cy="32" rx="6" ry="3" />
-    <path d="M18 44h28" />
+  <svg {...common}>
+    <path d="M10 34 L 54 34 C 52 44 44 50 32 50 C 20 50 12 44 10 34 Z" />
+    <path d="M8 34 L 56 34" />
+    <path d="M24 32 C 20 26 20 20 24 14 C 28 20 28 26 24 32 Z" />
+    <path d="M32 32 C 28 26 28 18 32 10 C 36 18 36 26 32 32 Z" />
+    <path d="M40 32 C 36 26 36 20 40 14 C 44 20 44 26 40 32 Z" />
   </svg>
 );
+// Health Tips — stacked stones with leaf
 const Icon6 = () => (
-  <svg viewBox="0 0 64 64" className="w-14 h-14" fill="none" stroke={stroke} strokeWidth="1.4">
-    <path d="M22 40c-2 0-4-2-4-4s2-4 4-4h20c2 0 4 2 4 4s-2 4-4 4z" />
-    <path d="M24 40v6c0 2 2 4 4 4h8c2 0 4-2 4-4v-6" />
-    <path d="M28 30c-2-4 0-8 4-10 4 2 6 6 4 10" />
-    <path d="M30 20c-1-3-4-3-5 0M34 20c1-3 4-3 5 0" />
+  <svg {...common}>
+    <ellipse cx="32" cy="46" rx="18" ry="4" />
+    <path d="M16 42 C 16 36 22 34 32 34 C 42 34 48 36 48 42" />
+    <ellipse cx="32" cy="30" rx="12" ry="3" />
+    <path d="M20 28 C 20 24 24 22 32 22 C 40 22 44 24 44 28" />
+    <ellipse cx="32" cy="18" rx="8" ry="2.5" />
+    <path d="M38 14 C 40 10 44 8 48 8 C 48 12 46 16 42 18" />
   </svg>
 );
 
@@ -74,9 +105,7 @@ const OfferingsSection = () => {
             <article
               key={s.title}
               className={`rounded-2xl p-8 text-center transition-editorial shadow-subtle hover:shadow-medium ${
-                s.highlight
-                  ? "text-white"
-                  : "bg-card text-ink"
+                s.highlight ? "text-white" : "bg-card text-ink"
               }`}
               style={
                 s.highlight
@@ -87,7 +116,7 @@ const OfferingsSection = () => {
                   : undefined
               }
             >
-              <div className={`mx-auto mb-4 flex justify-center ${s.highlight ? "text-white [&_svg]:stroke-white" : ""}`}>
+              <div className={`mx-auto mb-4 flex justify-center ${s.highlight ? "text-white [&_svg]:stroke-white [&_text]:!fill-white" : ""}`}>
                 {s.icon}
               </div>
               <h3 className={`font-display font-bold text-xl mb-2 ${s.highlight ? "text-white" : "text-ink"}`}>
@@ -99,9 +128,7 @@ const OfferingsSection = () => {
               <a
                 href="#"
                 className={`inline-flex items-center gap-1 text-xs font-bold tracking-[0.2em] uppercase border-b-2 pb-1 ${
-                  s.highlight
-                    ? "text-white border-white/70"
-                    : "text-primary border-primary/40 hover:border-primary"
+                  s.highlight ? "text-white border-white/70" : "text-primary border-primary/40 hover:border-primary"
                 }`}
               >
                 Ler Mais <ChevronRight className="h-3 w-3" />

@@ -1,4 +1,4 @@
-import heroWomanAsset from "@/assets/hero-woman.png.asset.json";
+import heroWomanAsset from "@/assets/pink-woman.png.asset.json";
 
 const HeroSection = () => {
   return (
@@ -9,34 +9,40 @@ const HeroSection = () => {
         </p>
 
         <div className="relative flex items-end justify-center">
-          {/* Decorative mandala */}
+          {/* Lotus flower lines behind woman */}
           <svg
             aria-hidden="true"
-            viewBox="0 0 600 600"
-            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] md:w-[720px] opacity-40 pointer-events-none"
+            viewBox="0 0 800 800"
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[560px] md:w-[820px] opacity-80 pointer-events-none"
           >
-            <g fill="none" stroke="hsl(15 82% 82%)" strokeWidth="1.2">
-              {Array.from({ length: 16 }).map((_, i) => (
-                <ellipse
-                  key={i}
-                  cx="300"
-                  cy="300"
-                  rx="120"
-                  ry="260"
-                  transform={`rotate(${(i * 360) / 16} 300 300)`}
+            <g fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              {Array.from({ length: 12 }).map((_, i) => (
+                <path
+                  key={`p1-${i}`}
+                  d="M400 400 C 340 260 340 160 400 80 C 460 160 460 260 400 400 Z"
+                  transform={`rotate(${(i * 360) / 12} 400 400)`}
                 />
               ))}
-              <circle cx="300" cy="300" r="90" />
-              <circle cx="300" cy="300" r="60" />
+              {Array.from({ length: 12 }).map((_, i) => (
+                <path
+                  key={`p2-${i}`}
+                  d="M400 400 C 360 300 360 220 400 160 C 440 220 440 300 400 400 Z"
+                  transform={`rotate(${(i * 360) / 12 + 15} 400 400)`}
+                />
+              ))}
+              <circle cx="400" cy="400" r="80" />
+              <circle cx="400" cy="400" r="50" />
             </g>
           </svg>
 
           {/* Gigantic ZEN YOGA behind the woman */}
           <h1
             aria-label="ZEN YOGA"
-            className="absolute inset-x-0 top-1/2 -translate-y-1/2 text-center font-display font-black tracking-tight leading-none pointer-events-none select-none"
+            className="absolute inset-x-0 top-1/2 -translate-y-1/2 text-center font-display tracking-tighter leading-none pointer-events-none select-none"
             style={{
-              fontSize: "clamp(6rem, 20vw, 20rem)",
+              fontSize: "clamp(6rem, 22vw, 22rem)",
+              fontWeight: 900,
+              WebkitTextStroke: "2px transparent",
             }}
           >
             <span
