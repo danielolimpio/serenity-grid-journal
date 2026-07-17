@@ -1,5 +1,6 @@
 import HeroSection from "@/components/HeroSection";
 import ArticleCard from "@/components/ArticleCard";
+import CategoryCircles from "@/components/CategoryCircles";
 import CategoryGrid from "@/components/CategoryGrid";
 import StrengthenSection from "@/components/StrengthenSection";
 import HarmonyIconsSection from "@/components/HarmonyIconsSection";
@@ -42,6 +43,7 @@ const featuredArticles = [
 const Index = () => {
   return (
     <main>
+      <CategoryCircles />
       <HeroSection />
 
       {/* Featured Articles */}

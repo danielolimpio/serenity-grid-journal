@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import meditationImage from "@/assets/meditation.jpg";
 import philosophyImage from "@/assets/philosophy.jpg";
 import wellnessImage from "@/assets/wellness.jpg";
+import ayurvedaImage from "@/assets/asanas-costas.jpg";
+import programasImage from "@/assets/yoga-maos-punhos.jpg";
 
 const categories = [
   {
@@ -21,6 +23,18 @@ const categories = [
     description: "Mindfulness, meditação e práticas para uma vida mais equilibrada",
     image: wellnessImage,
     slug: "bem-estar",
+  },
+  {
+    name: "Ayurveda",
+    description: "A ciência milenar indiana do equilíbrio: doshas, alimentação e rotinas terapêuticas",
+    image: ayurvedaImage,
+    slug: "ayurveda",
+  },
+  {
+    name: "Programas",
+    description: "Programas guiados de yoga e bem-estar para acompanhar sua jornada",
+    image: programasImage,
+    slug: "programas",
   },
 ];
 
