@@ -53,6 +53,17 @@ export default {
         cream: "hsl(var(--cream))",
         sand: "hsl(var(--sand))",
         stone: "hsl(var(--stone))",
+        coral: {
+          DEFAULT: "hsl(var(--coral))",
+          foreground: "hsl(var(--coral-foreground))",
+        },
+        navy: {
+          DEFAULT: "hsl(var(--navy))",
+          foreground: "hsl(var(--navy-foreground))",
+        },
+        lavender: "hsl(var(--lavender))",
+        blush: "hsl(var(--blush))",
+        ink: "hsl(var(--ink))",
       },
       fontFamily: {
         display: "var(--font-display)",
