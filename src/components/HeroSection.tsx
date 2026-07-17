@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroPose from "@/assets/hero-yoga-pose.png.asset.json";
+import heroPose from "@/assets/hero-yoga-pose.png";
 
 const HeroSection = () => {
   return (
@@ -36,7 +36,7 @@ const HeroSection = () => {
           </div>
           <div className="relative flex justify-center animate-fade-in">
             <img
-              src={heroPose.url}
+              src={heroPose}
               alt="Prática de yoga - pose de meditação"
               className="max-h-[520px] w-auto object-contain"
               loading="eager"
