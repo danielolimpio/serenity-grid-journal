@@ -1,6 +1,12 @@
 import HeroSection from "@/components/HeroSection";
 import ArticleCard from "@/components/ArticleCard";
 import CategoryGrid from "@/components/CategoryGrid";
+import StrengthenSection from "@/components/StrengthenSection";
+import HarmonyIconsSection from "@/components/HarmonyIconsSection";
+import VideoPresenceSection from "@/components/VideoPresenceSection";
+import InnerZenSection from "@/components/InnerZenSection";
+import OfferingsSection from "@/components/OfferingsSection";
+import WorkshopSection from "@/components/WorkshopSection";
 import meditationImage from "@/assets/meditation.jpg";
 import philosophyImage from "@/assets/philosophy.jpg";
 import asanasCostasImage from "@/assets/asanas-costas.jpg";
@@ -55,27 +61,12 @@ const Index = () => {
 
       <CategoryGrid />
 
-      {/* Newsletter CTA */}
-      <section className="section-spacing bg-card">
-        <div className="container-editorial max-w-3xl text-center space-y-6">
-          <h2 className="font-display text-4xl md:text-5xl font-light">
-            Receba Inspiração Semanal
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            Insights sobre yoga, meditação e bem-estar direto na sua caixa de entrada
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto pt-4">
-            <input
-              type="email"
-              placeholder="Seu melhor e-mail"
-              className="flex-1 px-4 py-3 bg-background border border-border/50 focus:border-primary focus:outline-none transition-editorial"
-            />
-            <button className="px-8 py-3 bg-primary text-primary-foreground font-body tracking-wide hover:bg-primary/90 transition-editorial">
-              Inscrever
-            </button>
-          </div>
-        </div>
-      </section>
+      <StrengthenSection />
+      <HarmonyIconsSection />
+      <VideoPresenceSection />
+      <InnerZenSection />
+      <OfferingsSection />
+      <WorkshopSection />
     </main>
   );
 };
