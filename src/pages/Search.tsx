@@ -1,5 +1,6 @@
 import { useSearchParams } from "react-router-dom";
 import { useMemo } from "react";
+import { Helmet } from "react-helmet-async";
 import { Search as SearchIcon, FileText, Folder } from "lucide-react";
 import { Link } from "react-router-dom";
 import SearchAutocomplete from "@/components/SearchAutocomplete";
@@ -19,6 +20,12 @@ const Search = () => {
 
   return (
     <main className="pt-32 pb-16 min-h-screen">
+      <Helmet>
+        <title>{query ? `Busca: ${query} | A Arte do Yoga` : "Buscar | A Arte do Yoga"}</title>
+        <meta name="description" content={query ? `Resultados de busca para "${query}" em A Arte do Yoga: artigos e categorias sobre yoga, meditação e bem-estar.` : "Busque artigos e categorias de A Arte do Yoga sobre yoga, filosofia, meditação e bem-estar integral."} />
+        <link rel="canonical" href="https://theartofyoga.org/busca" />
+        <meta name="robots" content="noindex,follow" />
+      </Helmet>
       <div className="container-editorial">
         {/* Search Header */}
         <div className="max-w-2xl mx-auto mb-12">
