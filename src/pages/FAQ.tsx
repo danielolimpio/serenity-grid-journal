@@ -18,6 +18,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const FAQ = () => {
   const faqCategories = [
@@ -183,6 +184,13 @@ const FAQ = () => {
 
   return (
     <main className="pt-32">
+      <Helmet>
+        <title>Perguntas Frequentes | A Arte do Yoga</title>
+        <meta name="description" content="Respostas para as dúvidas mais comuns sobre yoga, meditação, nossa plataforma e como podemos ajudar em sua jornada de bem-estar." />
+        <link rel="canonical" href="https://theartofyoga.org/faq" />
+        <meta property="og:title" content="Perguntas Frequentes | A Arte do Yoga" />
+        <meta property="og:url" content="https://theartofyoga.org/faq" />
+      </Helmet>
       {/* Hero Section */}
       <section className="py-12 md:py-16 bg-gradient-to-b from-muted/50 to-background animate-fade-in">
         <div className="container-editorial text-center space-y-6">

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const Sitemap = () => {
   const currentDate = new Date();
@@ -47,6 +48,13 @@ const Sitemap = () => {
 
   return (
     <main className="pt-32">
+      <Helmet>
+        <title>Sitemap | A Arte do Yoga</title>
+        <meta name="description" content="Mapa do site do A Arte do Yoga: navegue por todas as páginas, categorias e artigos publicados sobre yoga e bem-estar." />
+        <link rel="canonical" href="https://theartofyoga.org/sitemap" />
+        <meta property="og:title" content="Sitemap | A Arte do Yoga" />
+        <meta property="og:url" content="https://theartofyoga.org/sitemap" />
+      </Helmet>
       {/* Hero */}
       <section className="section-spacing">
         <div className="container-editorial text-center space-y-6">

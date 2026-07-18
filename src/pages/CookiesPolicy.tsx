@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { 
   Cookie, 
   Shield, 
@@ -142,6 +143,13 @@ const CookiesPolicy = () => {
 
   return (
     <main className="pt-32">
+        <Helmet>
+          <title>Política de Cookies | A Arte do Yoga</title>
+          <meta name="description" content="Política de Cookies do A Arte do Yoga. Saiba como utilizamos cookies e tecnologias semelhantes para melhorar sua experiência." />
+          <link rel="canonical" href="https://theartofyoga.org/cookies" />
+          <meta property="og:title" content="Política de Cookies | A Arte do Yoga" />
+          <meta property="og:url" content="https://theartofyoga.org/cookies" />
+        </Helmet>
         {/* Hero Section */}
         <section className="py-12 md:py-16 bg-gradient-to-b from-muted/50 to-background animate-fade-in">
           <div className="container-editorial text-center space-y-6">

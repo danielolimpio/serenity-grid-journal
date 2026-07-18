@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { 
   FileText, 
   Scale, 
@@ -150,6 +151,13 @@ const TermsOfUse = () => {
 
   return (
     <main className="pt-32">
+        <Helmet>
+          <title>Termos de Uso | A Arte do Yoga</title>
+          <meta name="description" content="Termos de Uso do A Arte do Yoga. Leia os termos e condições que regem o uso do nosso site, conteúdos e serviços." />
+          <link rel="canonical" href="https://theartofyoga.org/termos" />
+          <meta property="og:title" content="Termos de Uso | A Arte do Yoga" />
+          <meta property="og:url" content="https://theartofyoga.org/termos" />
+        </Helmet>
         {/* Hero Section */}
         <section className="py-12 md:py-16 bg-gradient-to-b from-muted/50 to-background animate-fade-in">
           <div className="container-editorial text-center space-y-6">

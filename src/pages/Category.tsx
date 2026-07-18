@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import ArticleCard from "@/components/ArticleCard";
 import { articles as allArticles } from "@/data/searchData";
+import { Helmet } from "react-helmet-async";
 
 const categoryData: Record<string, { name: string; description: string }> = {
   pratica: {
@@ -40,6 +41,13 @@ const Category = () => {
 
   return (
     <main className="pt-32">
+      <Helmet>
+        <title>{`${category.name} | Artigos de Yoga | A Arte do Yoga`}</title>
+        <meta name="description" content={`${category.description}. Explore artigos da categoria ${category.name} em A Arte do Yoga.`} />
+        <link rel="canonical" href={`https://theartofyoga.org/categoria/${slug ?? ""}`} />
+        <meta property="og:title" content={`${category.name} | A Arte do Yoga`} />
+        <meta property="og:url" content={`https://theartofyoga.org/categoria/${slug ?? ""}`} />
+      </Helmet>
       {/* Category Header */}
       <section className="section-spacing bg-muted/30">
         <div className="container-editorial text-center space-y-4">

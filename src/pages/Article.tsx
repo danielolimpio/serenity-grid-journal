@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { Calendar, Clock, Share2 } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import meditationImage from "@/assets/meditation.jpg";
 
@@ -47,6 +48,14 @@ const Article = () => {
 
   return (
     <main className="pt-24">
+      <Helmet>
+        <title>{`${article.title} | A Arte do Yoga`}</title>
+        <meta name="description" content={`${article.title} — artigo sobre ${article.category.toLowerCase()} em A Arte do Yoga. Leitura de ${article.readTime}.`} />
+        <link rel="canonical" href={`https://theartofyoga.org/artigo/${slug ?? ""}`} />
+        <meta property="og:title" content={article.title} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={`https://theartofyoga.org/artigo/${slug ?? ""}`} />
+      </Helmet>
       {/* Hero Image */}
       <div className="relative h-[60vh] min-h-[500px]">
         <img

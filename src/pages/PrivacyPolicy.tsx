@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { 
   Shield, 
   FileText, 
@@ -144,6 +145,13 @@ const PrivacyPolicy = () => {
 
   return (
     <main className="pt-32">
+        <Helmet>
+          <title>Política de Privacidade | A Arte do Yoga</title>
+          <meta name="description" content="Política de Privacidade do A Arte do Yoga. Saiba como coletamos, usamos e protegemos suas informações pessoais em nossa plataforma." />
+          <link rel="canonical" href="https://theartofyoga.org/politica-privacidade" />
+          <meta property="og:title" content="Política de Privacidade | A Arte do Yoga" />
+          <meta property="og:url" content="https://theartofyoga.org/politica-privacidade" />
+        </Helmet>
         {/* Hero Section */}
         <section className="py-12 md:py-16 bg-gradient-to-b from-muted/50 to-background animate-fade-in">
           <div className="container-editorial text-center space-y-6">

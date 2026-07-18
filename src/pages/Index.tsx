@@ -1,4 +1,5 @@
 import HeroSection from "@/components/HeroSection";
+import { Helmet } from "react-helmet-async";
 import ArticleCard from "@/components/ArticleCard";
 import CategoryCircles from "@/components/CategoryCircles";
 import CategoryGrid from "@/components/CategoryGrid";
@@ -43,6 +44,13 @@ const featuredArticles = [
 const Index = () => {
   return (
     <main>
+      <Helmet>
+        <title>A Arte do Yoga | Blog de Yoga, Meditação e Bem-Estar</title>
+        <meta name="description" content="Explore a filosofia, prática e bem-estar através do yoga. Conteúdo editorial premium sobre mindfulness, movimento e transformação interior." />
+        <link rel="canonical" href="https://theartofyoga.org/" />
+        <meta property="og:title" content="A Arte do Yoga | Blog de Yoga, Meditação e Bem-Estar" />
+        <meta property="og:url" content="https://theartofyoga.org/" />
+      </Helmet>
       <CategoryCircles />
       <HeroSection />
 
