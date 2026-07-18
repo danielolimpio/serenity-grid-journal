@@ -1,8 +1,16 @@
+import { Helmet } from "react-helmet-async";
 import meditationImage from "@/assets/meditation.jpg";
 
 const About = () => {
   return (
     <main className="pt-32">
+      <Helmet>
+        <title>Sobre | A Arte do Yoga</title>
+        <meta name="description" content="Conheça A Arte do Yoga: um espaço dedicado à exploração profunda do yoga como filosofia de vida, prática e caminho para o bem-estar integral." />
+        <link rel="canonical" href="https://theartofyoga.org/sobre" />
+        <meta property="og:title" content="Sobre | A Arte do Yoga" />
+        <meta property="og:url" content="https://theartofyoga.org/sobre" />
+      </Helmet>
       {/* Hero */}
       <section className="section-spacing">
         <div className="container-editorial text-center space-y-6">
