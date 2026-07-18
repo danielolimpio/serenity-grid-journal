@@ -18,6 +18,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const FAQ = () => {
   const faqCategories = [
