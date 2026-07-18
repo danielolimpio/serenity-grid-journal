@@ -83,6 +83,13 @@ const Contact = () => {
 
   return (
     <main className="pt-32">
+      <Helmet>
+        <title>Contato | A Arte do Yoga</title>
+        <meta name="description" content="Entre em contato com A Arte do Yoga. Envie sua mensagem, dúvida ou sugestão. Respondemos em até 24-48 horas úteis." />
+        <link rel="canonical" href="https://theartofyoga.org/contato" />
+        <meta property="og:title" content="Contato | A Arte do Yoga" />
+        <meta property="og:url" content="https://theartofyoga.org/contato" />
+      </Helmet>
       {/* Hero Section */}
       <section className="py-12 md:py-16 bg-gradient-to-b from-muted/50 to-background animate-fade-in">
         <div className="container-editorial text-center space-y-6">
