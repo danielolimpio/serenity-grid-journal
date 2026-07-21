@@ -12,7 +12,7 @@ const Footer = () => {
             <Link to="/" className="inline-block">
               <img src={logoAsset.url} alt="A Arte do Yoga" className="h-12 w-auto" />
             </Link>
-            <p className="text-sm text-white/70 leading-relaxed">
+            <p className="text-sm text-white/90 leading-relaxed">
               Explorando a jornada interior através da prática milenar do yoga. Filosofia, prática e bem-estar.
             </p>
           </div>
@@ -20,7 +20,7 @@ const Footer = () => {
           {/* Yoga Studio */}
           <div className="space-y-4">
             <h4 className="font-display text-lg font-bold text-coral">Navegação</h4>
-            <ul className="space-y-3 text-sm text-white/70">
+            <ul className="space-y-3 text-sm text-white/90">
               <li><Link to="/" className="hover:text-coral transition-editorial">Início</Link></li>
               <li><Link to="/sobre" className="hover:text-coral transition-editorial">Sobre</Link></li>
               <li><Link to="/contato" className="hover:text-coral transition-editorial">Contato</Link></li>
@@ -32,7 +32,7 @@ const Footer = () => {
           {/* Categorias */}
           <div className="space-y-4">
             <h4 className="font-display text-lg font-bold text-coral">Categorias</h4>
-            <ul className="space-y-3 text-sm text-white/70">
+            <ul className="space-y-3 text-sm text-white/90">
               <li><Link to="/categoria/pratica" className="hover:text-coral transition-editorial">Prática</Link></li>
               <li><Link to="/categoria/filosofia" className="hover:text-coral transition-editorial">Filosofia</Link></li>
               <li><Link to="/categoria/bem-estar" className="hover:text-coral transition-editorial">Bem-Estar</Link></li>
@@ -43,7 +43,7 @@ const Footer = () => {
           {/* Contato */}
           <div className="space-y-4">
             <h4 className="font-display text-lg font-bold text-coral">Contato</h4>
-            <ul className="space-y-3 text-sm text-white/70">
+            <ul className="space-y-3 text-sm text-white/90">
               <li className="flex items-start gap-2">
                 <Mail className="h-4 w-4 text-coral shrink-0 mt-0.5" />
                 <span>contato@theartofyoga.org</span>
@@ -68,7 +68,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/60">
+        <div className="pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/85">
           <p>© 2025 A Arte do Yoga. Todos os direitos reservados.</p>
           <div className="flex gap-4">
             <Link to="/politica-privacidade" className="hover:text-coral transition-editorial">Privacidade</Link>
