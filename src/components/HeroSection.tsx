@@ -64,7 +64,7 @@ const HeroSection = () => {
         </div>
 
         <p
-          className="text-right max-w-md ml-auto -mt-6 md:-mt-10 pr-2 md:pr-8 pb-10 md:pb-16 leading-tight italic text-ink/80 text-2xl md:text-4xl"
+          className="text-right max-w-md ml-auto -mt-6 md:-mt-10 pr-2 md:pr-8 pb-10 md:pb-16 leading-tight italic text-ink text-2xl md:text-4xl"
           style={{ fontFamily: '"Cormorant Garamond", "Playfair Display", Georgia, serif', fontWeight: 500 }}
         >
           Seu Santuário para <br />
