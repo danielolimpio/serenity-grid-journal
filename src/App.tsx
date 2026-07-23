@@ -17,6 +17,8 @@ import CookiesPolicy from "./pages/CookiesPolicy";
 import Search from "./pages/Search";
 import QuizIndex from "./pages/QuizIndex";
 import QuizQuestion from "./pages/QuizQuestion";
+import GlossaryIndex from "./pages/GlossaryIndex";
+import GlossaryTerm from "./pages/GlossaryTerm";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -42,6 +44,8 @@ const App = () => (
             <Route path="/busca" element={<Search />} />
             <Route path="/quizz" element={<QuizIndex />} />
             <Route path="/quizz/:quizSlug/:questionSlug" element={<QuizQuestion />} />
+            <Route path="/glossario" element={<GlossaryIndex />} />
+            <Route path="/glossario/:slug" element={<GlossaryTerm />} />
           </Route>
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

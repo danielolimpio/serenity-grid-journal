@@ -1,79 +1,115 @@
-## Objetivo
 
-Refazer 100% do layout visual do site "A Arte do Yoga" clonando o tema **Zenyoga** (imagens enviadas), mantendo:
-- Logomarca atual
-- Categorias existentes (Prática, Filosofia, Bem-Estar, Meditação)
-- Artigos existentes e suas URLs
-- Estrutura de rotas atual (SPA React + páginas estáticas em `/public`)
+# Hub de Glossário Premium — A Arte do Yoga
 
-Apenas o **visual (cores, fontes, componentes, layout, ícones, botões, cards, backgrounds, bordas)** será substituído pelo estilo Zenyoga.
+Vou construir um Glossário completo em português, integrado ao blog, com URLs `/glossario/o-que-e-[termo]`, arquitetura escalável, SEO técnico completo e design premium alinhado ao layout Zenyoga atual.
 
-## Direção visual clonada do Zenyoga
+## 1. Escopo de conteúdo
 
-**Paleta de cores** (extraída das imagens):
-- Fundo geral: branco puro `#FFFFFF`
-- Fundo hero/seções suaves: rosa muito claro / lavanda `#FBF3F5` → `#F3EEF7` (gradiente sutil)
-- Rodapé: azul-marinho profundo `#1E1E2C`
-- Accent principal (badges, ícones, botões secundários): coral/salmão `#F4A28C`
-- Accent secundário (botões CTA, links ativos): roxo `#5B2C91`
-- Título de destaque: gradiente coral → lavanda-rosa (usado em "News & Article", "FAQ", "Contact us")
-- Texto principal: cinza-escuro `#2D2D3A`
-- Texto secundário: cinza `#6B6B7B`
+Corpus inicial de **60 verbetes** cobrindo os pilares do blog (Prática, Filosofia, Bem-Estar, Ayurveda, Meditação, Programas). Exemplos: Yoga, Asana, Pranayama, Chakra, Mantra, Mudra, Dharma, Karma, Samadhi, Ahimsa, Ayurveda, Dosha, Vata, Pitta, Kapha, Prana, Kundalini, Vinyasa, Hatha, Ashtanga, Iyengar, Bhakti, Jnana, Namaste, Om, Surya Namaskar, Savasana, Mudra, Bandha, Nadi, Ida, Pingala, Sushumna, Yamas, Niyamas, Samsara, Moksha, Guru, Sadhana, Sattva, Rajas, Tamas, Meditação, Mindfulness, Zen, Yoga Nidra, Reiki, Mantra japa, Trataka, Yin Yoga, Kriya, Satsang, Puja, Tapas, Svadhyaya, Ishvara Pranidhana, Samkhya, Vedanta, Upanishads, Bhagavad Gita, Patanjali.
 
-**Tipografia**:
-- Títulos: fonte sans-serif pesada e moderna (padrão Zenyoga — semelhante a **"Plus Jakarta Sans" / "DM Sans" Bold/ExtraBold**)
-- Corpo: sans-serif humanista leve (**"Inter" / "DM Sans" Regular**)
-- Substituir a Cormorant Garamond atual — o Zenyoga é 100% sans-serif
+Cada verbete tem: categoria, sinônimos, termos relacionados, tempo de leitura, data de publicação/atualização, autor.
 
-**Componentes visuais a clonar**:
-- Header branco com logo à esquerda, menu horizontal centralizado/direita, ícones sociais redondos roxos à direita
-- Hero de página interna: fundo rosa/lavanda claro, título grande com palavra em gradiente coral, subtítulo cinza centralizado, muito espaço vertical
-- Cards de artigos: imagem topo com badge coral arredondada ("categoria"), corpo branco com título bold, resumo cinza, rodapé com data + "No Comments"
-- Grid de artigos 3 colunas em desktop
-- FAQ: cards com header em gradiente rosa/lavanda, ícone chevron/plus à direita
-- Botões primários: pílula roxa `#5B2C91` com texto branco
-- Rodapé: bg azul-marinho, 4 colunas (marca + descrição, Yoga Studio/endereço, Opening Hours com ícone coral, Photo Gallery com miniaturas grid 3x2), copyright na base com ícones sociais redondos escuros
+## 2. Arquitetura técnica
 
-## Escopo de arquivos
+Projeto é **100% estático** (regra do memory). Portanto:
 
-**Design tokens (base para tudo)**
-- `src/index.css`: substituir toda paleta HSL, fontes, sombras, radius pelo sistema Zenyoga
-- `tailwind.config.ts`: registrar novas fontes (Plus Jakarta Sans / DM Sans / Inter) e cores semânticas adicionais (coral, lavender, navy, ink)
-- `index.html`: trocar `<link>` de Google Fonts para as novas famílias
+- Fonte única: `src/data/glossary/terms.ts` (dados dos 60 verbetes tipados).
+- Rotas SPA (React Router) para preview: `/glossario`, `/glossario/o-que-e-:slug`.
+- **Geração estática** via script `scripts/generate-glossary.ts` executado no `predev`/`prebuild`, criando:
+  - `public/glossario/index.html` (hub)
+  - `public/glossario/o-que-e-<slug>/index.html` (verbete)
+  - Entradas no `public/sitemap.xml`
+- Atualiza `scripts/generate-sitemap.ts` existente (se houver) ou o `public/sitemap.xml` diretamente.
+- Usa o mesmo `public/static-styles.css` + estilos específicos do glossário.
 
-**Componentes SPA (React)**
-- `src/components/Header.tsx` — novo header estilo Zenyoga
-- `src/components/Footer.tsx` — novo footer navy 4 colunas
-- `src/components/HeroSection.tsx` — hero home com título gradiente + imagem yoga pose (usar `user-uploads://img_1.png`)
-- `src/components/ArticleCard.tsx` — card estilo Zenyoga com badge coral
-- `src/components/CategoryGrid.tsx` — grid de categorias com ícones circulares coral
-- `src/pages/Index.tsx`, `Category.tsx`, `Article.tsx`, `About.tsx`, `Contact.tsx`, `FAQ.tsx`, `Search.tsx`, `Sitemap.tsx`, `PrivacyPolicy.tsx`, `TermsOfUse.tsx`, `CookiesPolicy.tsx` — aplicar novo layout (hero + seções) sem alterar dados/conteúdo/rotas
+## 3. Página Hub `/glossario` (Landing Premium Plus)
 
-**Páginas estáticas (public/*.html)**
-- `public/static-styles.css`: reescrever tokens/CSS para bater exatamente com o novo design (header, footer, hero, cards, FAQ, formulários)
-- Os arquivos HTML em `public/**` mantêm estrutura/rotas; apenas o CSS externo é substituído, então recebem o novo visual automaticamente
-- Ajustes pontuais nos HTMLs somente onde a marcação precisar de novas classes (badge coral em cards, gradiente em títulos)
+- Hero contemplativo com título, subtítulo e busca instantânea (client-side, JS puro nos HTMLs estáticos, React no SPA).
+- Índice **A–Z fixo lateral** (desktop) / barra horizontal sticky (mobile).
+- Grid de cards de verbetes com filtros por categoria (chips).
+- Blocos: Termos em Destaque, Mais Pesquisados, Recentes, Categorias Relacionadas.
+- Breadcrumbs, JSON-LD `WebSite` + `CollectionPage` + `BreadcrumbList`.
 
-**Imagens**
-- Registrar `user-uploads://img_1.png` como asset via `lovable-assets` para uso em hero/seções
+## 4. Página do Verbete `/glossario/o-que-e-<slug>`
 
-## O que NÃO muda
+Estrutura HTML5 semântica (`<article>` / `<section>` / `<aside>`):
 
-- Logomarca (`/assets/logo.png` e `/favicon.png`)
-- Rotas, URLs canônicas e sitemap
-- Conteúdo textual dos artigos, categorias e páginas
-- Estrutura estática (páginas HTML em `/public/artigo/...`, `/public/categoria/...`)
-- Meta tags SEO existentes
-- GA/GTM e `.htaccess`
+1. Breadcrumbs (Início › Glossário › [Categoria] › Termo)
+2. **H1**: apenas o termo
+3. Meta: categoria badge, tempo de leitura, atualização, autor
+4. **H2**: "O que é [Termo]?" → parágrafo de 40–60 palavras (definição objetiva, otimizada para Featured Snippet/AI Overview) marcado com `data-speakable`
+5. Resumo Rápido (callout)
+6. Definição Completa
+7. Como Funciona
+8. Exemplo Prático
+9. Por que isso é importante
+10. Principais Vantagens (lista com ícones)
+11. Possíveis Desvantagens (quando aplicável)
+12. Erros Comuns
+13. Curiosidades
+14. FAQ (accordions, JSON-LD `FAQPage`)
+15. Termos Relacionados (cards)
+16. Leitura Recomendada / Artigos do blog
+17. Referências
+18. Footer do artigo: Autor, Datas, Compartilhar, Copiar link, Imprimir
+19. Navegação Anterior / Próximo
 
-## Detalhes técnicos
+JSON-LD combinado: `DefinedTerm`, `DefinedTermSet`, `Article`, `BreadcrumbList`, `FAQPage`, `WebPage`, `Speakable`, `Organization`, `Person`, `ImageObject`.
 
-- Todas as cores são gravadas como HSL em `:root` de `index.css` e referenciadas via tokens Tailwind (`bg-background`, `text-primary`, `bg-coral`, `bg-navy`, etc.) — nunca hex hardcoded em componentes.
-- Duas fontes carregadas via Google Fonts com `display=swap` para evitar FOUT.
-- O gradiente dos títulos é implementado como utilitário `.text-gradient-coral` em `@layer utilities`.
-- `static-styles.css` (usado por todas as páginas HTML) usa as mesmas variáveis CSS para consistência entre SPA e estático.
-- Layout responsivo preservado: grid de 3 colunas → 2 em tablet → 1 em mobile.
+## 5. SEO técnico
 
-## Entregável desta etapa
+- `<title>` e `<meta description>` únicos por verbete (padrão: "O que é [Termo]? Significado, Origem e Prática | A Arte do Yoga").
+- Canonical self-referencing, Open Graph, Twitter Card, `robots: index,follow`.
+- Sitemap.xml atualizado com todos os 60 + hub.
+- Internal linking: função utilitária que varre artigos e substitui a primeira ocorrência de cada termo por link para o verbete (implementada no componente de renderização de artigos + documentada para posts estáticos).
+- Paginação SEO-friendly com `rel=prev/next` quando ultrapassar 30 verbetes/página.
 
-Layout Zenyoga aplicado a todo o site (home, categorias, artigos, sobre, contato, FAQ, políticas, sitemap, busca), em SPA e páginas estáticas, com paleta rosa/coral/roxo/navy e tipografia sans-serif moderna. Nas próximas mensagens você envia mais imagens para refinar seções específicas.
+## 6. Design (alinhado ao layout Zenyoga)
+
+Cores: coral, navy, lavender, blush já no design system. Tipografia: Plus Jakarta Sans (display) + Inter (body). Elementos: cards com bordas suaves, sombras, badges coral, ícones lucide, accordions shadcn, callouts com barra lateral coral. Totalmente responsivo, WCAG AA.
+
+## 7. Rodapé
+
+Adiciona item **"Glossário"** na navegação do `Footer.tsx` apontando para `/glossario`.
+
+## 8. Estrutura de arquivos
+
+```text
+src/
+  data/glossary/
+    terms.ts              # 60 verbetes com todos os campos
+    categories.ts
+    utils.ts              # slugify, related, search, autolink
+  components/glossary/
+    GlossaryHero.tsx
+    GlossarySearch.tsx
+    AlphabetIndex.tsx
+    CategoryFilter.tsx
+    TermCard.tsx
+    TermArticle.tsx       # layout do verbete (usado no SPA)
+    FaqAccordion.tsx
+    ShareBar.tsx
+    RelatedTerms.tsx
+    PrevNextNav.tsx
+    Breadcrumbs.tsx
+  pages/
+    GlossaryIndex.tsx
+    GlossaryTerm.tsx
+scripts/
+  generate-glossary.ts    # gera public/glossario/**/*.html + injeta sitemap
+public/
+  glossario/index.html    # gerado
+  glossario/o-que-e-*/index.html  # gerados
+```
+
+Rotas adicionadas em `src/App.tsx`.
+
+## 9. Entrega em fases dentro deste turno
+
+1. Dados dos 60 verbetes + utilitários.
+2. Componentes React + páginas SPA.
+3. Script gerador estático + hook nos npm scripts.
+4. Atualização do sitemap, footer, robots e link building.
+5. Verificação de build + amostra de HTML gerado.
+
+Se aprovado, começo imediatamente pela camada de dados e sigo a lista acima sem novas perguntas.
