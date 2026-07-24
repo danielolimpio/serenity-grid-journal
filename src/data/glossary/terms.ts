@@ -1,4 +1,5 @@
 import type { GlossaryTerm } from "./types";
+import { EXTENDED_TERMS } from "./terms-extended";
 
 // Helper to reduce boilerplate: fills sensible defaults.
 const t = (data: Partial<GlossaryTerm> & Pick<GlossaryTerm,
