@@ -1,4 +1,5 @@
 import type { GlossaryTerm } from "./types";
+import { EXTENDED_TERMS } from "./terms-extended";
 
 // Helper to reduce boilerplate: fills sensible defaults.
 const t = (data: Partial<GlossaryTerm> & Pick<GlossaryTerm,
@@ -1142,6 +1143,7 @@ export const TERMS: GlossaryTerm[] = [
     advantages: ["Foco profundo"],
     disadvantages: ["Não recomendada para epilepsia fotossensível"],
   }),
+  ...EXTENDED_TERMS,
 ];
 
 export type { GlossaryTerm } from "./types";
