@@ -1143,6 +1143,7 @@ export const TERMS: GlossaryTerm[] = [
     advantages: ["Foco profundo"],
     disadvantages: ["Não recomendada para epilepsia fotossensível"],
   }),
+  ...EXTENDED_TERMS,
 ];
 
 export type { GlossaryTerm } from "./types";
