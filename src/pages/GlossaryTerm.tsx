@@ -31,6 +31,7 @@ import {
   termUrl,
   TERMS,
 } from "@/data/glossary/utils";
+import { articles as ALL_ARTICLES, type Article } from "@/data/searchData";
 
 const SITE = "https://theartofyoga.org";
 
@@ -47,6 +48,8 @@ const GlossaryTerm = () => {
   const related = term.related
     .map((s) => TERMS.find((t) => t.slug === s))
     .filter(Boolean) as typeof TERMS;
+
+  const recommendedArticles = pickRecommendedArticles(term);
 
   const title = `O que é ${term.term}? Significado, Origem e Prática | A Arte do Yoga`;
   const description = term.shortDefinition.slice(0, 158);
@@ -285,6 +288,44 @@ const GlossaryTerm = () => {
             </Section>
           )}
 
+          {recommendedArticles.length > 0 && (
+            <Section title="Artigos Recomendados">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {recommendedArticles.map((a) => (
+                  <a
+                    key={a.slug}
+                    href={`/artigo/${a.slug}/`}
+                    className="group rounded-2xl overflow-hidden bg-white border border-navy/10 hover:border-coral hover:shadow-medium transition-editorial flex flex-col"
+                    aria-label={`Ler artigo: ${a.title}`}
+                  >
+                    <div className="relative aspect-[16/10] overflow-hidden bg-muted">
+                      <img
+                        src={a.image}
+                        alt={`Capa do artigo: ${a.title}`}
+                        width={640}
+                        height={400}
+                        loading="lazy"
+                        decoding="async"
+                        className="w-full h-full object-cover transition-editorial group-hover:scale-105"
+                      />
+                      <span className="absolute top-3 left-3 inline-block px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider rounded-md bg-coral text-coral-foreground shadow-subtle">
+                        {a.category}
+                      </span>
+                    </div>
+                    <div className="p-4 flex-1 flex flex-col">
+                      <h3 className="font-display font-bold text-navy text-base leading-snug group-hover:text-coral transition-editorial line-clamp-2">
+                        {a.title}
+                      </h3>
+                      <p className="text-xs text-muted-foreground mt-2 line-clamp-3">
+                        {a.excerpt}
+                      </p>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </Section>
+          )}
+
           {term.references && term.references.length > 0 && (
             <Section title="Referências">
               <ul className="space-y-2 text-sm text-muted-foreground">
@@ -351,5 +392,78 @@ const Section = ({ title, children }: { title: string; children: React.ReactNode
     {children}
   </section>
 );
+
+const STOPWORDS = new Set([
+  "a","o","as","os","um","uma","de","da","do","das","dos","e","em","no","na","nos","nas",
+  "para","por","com","sem","que","se","ao","aos","à","às","é","ser","seu","sua","seus","suas",
+  "the","of","and","to","in","on","for","with","this","that","yoga","como","mais","você","voce",
+  "sobre","entre","pela","pelo","ou","não","nao","tambem","também","muito","seus"
+]);
+
+const normalize = (s: string) =>
+  s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+const tokenize = (s: string) =>
+  normalize(s)
+    .split(/[^a-z0-9]+/)
+    .filter((w) => w.length > 2 && !STOPWORDS.has(w));
+
+const CATEGORY_TO_ARTICLE: Record<string, string[]> = {
+  filosofia: ["filosofia"],
+  asana: ["pratica"],
+  pranayama: ["pratica", "meditacao"],
+  meditacao: ["meditacao"],
+  mudra: ["pratica"],
+  bandha: ["pratica"],
+  mantra: ["meditacao"],
+  chakra: ["filosofia", "bem-estar"],
+  anatomia: ["bem-estar"],
+  ayurveda: ["bem-estar"],
+  estilo: ["pratica"],
+  texto: ["filosofia"],
+  divindade: ["filosofia"],
+  conceito: ["filosofia"],
+  saude: ["bem-estar"],
+  publico: ["bem-estar"],
+};
+
+function pickRecommendedArticles(term: {
+  term: string;
+  synonyms?: string[];
+  shortDefinition: string;
+  quickSummary?: string;
+  category: string;
+}) {
+  const termTokens = new Set([
+    ...tokenize(term.term),
+    ...tokenize((term.synonyms || []).join(" ")),
+    ...tokenize(term.shortDefinition),
+    ...tokenize(term.quickSummary || ""),
+  ]);
+  const preferredCats = new Set(CATEGORY_TO_ARTICLE[term.category] || []);
+
+  const scored = ALL_ARTICLES.map((a: Article) => {
+    const articleTokens = new Set([
+      ...tokenize(a.title),
+      ...tokenize(a.excerpt),
+      ...tokenize(a.category),
+    ]);
+    let score = 0;
+    termTokens.forEach((t) => {
+      if (articleTokens.has(t)) score += 2;
+    });
+    if (preferredCats.has(a.categorySlug)) score += 1;
+    return { a, score };
+  }).sort((x, y) => y.score - x.score);
+
+  const top = scored.filter((s) => s.score > 0).slice(0, 3).map((s) => s.a);
+  if (top.length < 3) {
+    for (const s of scored) {
+      if (top.length >= 3) break;
+      if (!top.includes(s.a)) top.push(s.a);
+    }
+  }
+  return top;
+}
 
 export default GlossaryTerm;
