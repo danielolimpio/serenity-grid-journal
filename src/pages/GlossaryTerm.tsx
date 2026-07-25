@@ -31,6 +31,7 @@ import {
   termUrl,
   TERMS,
 } from "@/data/glossary/utils";
+import { articles as ALL_ARTICLES, type Article } from "@/data/searchData";
 
 const SITE = "https://theartofyoga.org";
 
@@ -47,6 +48,8 @@ const GlossaryTerm = () => {
   const related = term.related
     .map((s) => TERMS.find((t) => t.slug === s))
     .filter(Boolean) as typeof TERMS;
+
+  const recommendedArticles = pickRecommendedArticles(term);
 
   const title = `O que é ${term.term}? Significado, Origem e Prática | A Arte do Yoga`;
   const description = term.shortDefinition.slice(0, 158);
@@ -280,6 +283,44 @@ const GlossaryTerm = () => {
                       {r.shortDefinition}
                     </p>
                   </Link>
+                ))}
+              </div>
+            </Section>
+          )}
+
+          {recommendedArticles.length > 0 && (
+            <Section title="Artigos Recomendados">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {recommendedArticles.map((a) => (
+                  <a
+                    key={a.slug}
+                    href={`/artigo/${a.slug}/`}
+                    className="group rounded-2xl overflow-hidden bg-white border border-navy/10 hover:border-coral hover:shadow-medium transition-editorial flex flex-col"
+                    aria-label={`Ler artigo: ${a.title}`}
+                  >
+                    <div className="relative aspect-[16/10] overflow-hidden bg-muted">
+                      <img
+                        src={a.image}
+                        alt={`Capa do artigo: ${a.title}`}
+                        width={640}
+                        height={400}
+                        loading="lazy"
+                        decoding="async"
+                        className="w-full h-full object-cover transition-editorial group-hover:scale-105"
+                      />
+                      <span className="absolute top-3 left-3 inline-block px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider rounded-md bg-coral text-coral-foreground shadow-subtle">
+                        {a.category}
+                      </span>
+                    </div>
+                    <div className="p-4 flex-1 flex flex-col">
+                      <h3 className="font-display font-bold text-navy text-base leading-snug group-hover:text-coral transition-editorial line-clamp-2">
+                        {a.title}
+                      </h3>
+                      <p className="text-xs text-muted-foreground mt-2 line-clamp-3">
+                        {a.excerpt}
+                      </p>
+                    </div>
+                  </a>
                 ))}
               </div>
             </Section>
