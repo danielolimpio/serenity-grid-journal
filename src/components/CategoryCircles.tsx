@@ -29,7 +29,12 @@ const CategoryCircles = () => {
                   <img
                     src={c.image}
                     alt={c.name}
-                    loading="lazy"
+                    width={96}
+                    height={96}
+                    loading="eager"
+                    decoding="async"
+                    // @ts-ignore fetchpriority is a valid HTML attribute
+                    fetchpriority="high"
                     className="w-full h-full object-cover rounded-full"
                   />
                 </span>

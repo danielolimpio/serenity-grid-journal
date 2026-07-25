@@ -58,7 +58,12 @@ const HeroSection = () => {
           <img
             src={heroWomanAsset.url}
             alt="Mulher em pose de yoga"
+            width={800}
+            height={1000}
             loading="eager"
+            decoding="async"
+            // @ts-ignore fetchpriority is a valid HTML attribute
+            fetchpriority="high"
             className="relative z-10 max-h-[520px] md:max-h-[640px] w-auto object-contain drop-shadow-xl animate-fade-in"
           />
         </div>
