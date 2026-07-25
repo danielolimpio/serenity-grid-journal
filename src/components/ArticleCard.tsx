@@ -39,7 +39,12 @@ const ArticleCard = ({
           <img
             src={image}
             alt={`Capa do artigo: ${title}`}
-            loading="lazy"
+            width={featured ? 1200 : 800}
+            height={featured ? 800 : 480}
+            loading={featured ? "eager" : "lazy"}
+            decoding="async"
+            // @ts-ignore fetchpriority is a valid HTML attribute
+            fetchpriority={featured ? "high" : "auto"}
             className="w-full h-full object-cover transition-editorial group-hover:scale-105"
           />
           <div className="absolute top-4 right-4">
