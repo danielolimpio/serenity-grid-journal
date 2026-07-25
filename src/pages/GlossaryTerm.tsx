@@ -393,4 +393,77 @@ const Section = ({ title, children }: { title: string; children: React.ReactNode
   </section>
 );
 
+const STOPWORDS = new Set([
+  "a","o","as","os","um","uma","de","da","do","das","dos","e","em","no","na","nos","nas",
+  "para","por","com","sem","que","se","ao","aos","à","às","é","ser","seu","sua","seus","suas",
+  "the","of","and","to","in","on","for","with","this","that","yoga","como","mais","você","voce",
+  "sobre","entre","pela","pelo","ou","não","nao","tambem","também","muito","seus"
+]);
+
+const normalize = (s: string) =>
+  s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+const tokenize = (s: string) =>
+  normalize(s)
+    .split(/[^a-z0-9]+/)
+    .filter((w) => w.length > 2 && !STOPWORDS.has(w));
+
+const CATEGORY_TO_ARTICLE: Record<string, string[]> = {
+  filosofia: ["filosofia"],
+  asana: ["pratica"],
+  pranayama: ["pratica", "meditacao"],
+  meditacao: ["meditacao"],
+  mudra: ["pratica"],
+  bandha: ["pratica"],
+  mantra: ["meditacao"],
+  chakra: ["filosofia", "bem-estar"],
+  anatomia: ["bem-estar"],
+  ayurveda: ["bem-estar"],
+  estilo: ["pratica"],
+  texto: ["filosofia"],
+  divindade: ["filosofia"],
+  conceito: ["filosofia"],
+  saude: ["bem-estar"],
+  publico: ["bem-estar"],
+};
+
+function pickRecommendedArticles(term: {
+  term: string;
+  synonyms?: string[];
+  shortDefinition: string;
+  quickSummary?: string;
+  category: string;
+}) {
+  const termTokens = new Set([
+    ...tokenize(term.term),
+    ...tokenize((term.synonyms || []).join(" ")),
+    ...tokenize(term.shortDefinition),
+    ...tokenize(term.quickSummary || ""),
+  ]);
+  const preferredCats = new Set(CATEGORY_TO_ARTICLE[term.category] || []);
+
+  const scored = ALL_ARTICLES.map((a: Article) => {
+    const articleTokens = new Set([
+      ...tokenize(a.title),
+      ...tokenize(a.excerpt),
+      ...tokenize(a.category),
+    ]);
+    let score = 0;
+    termTokens.forEach((t) => {
+      if (articleTokens.has(t)) score += 2;
+    });
+    if (preferredCats.has(a.categorySlug)) score += 1;
+    return { a, score };
+  }).sort((x, y) => y.score - x.score);
+
+  const top = scored.filter((s) => s.score > 0).slice(0, 3).map((s) => s.a);
+  if (top.length < 3) {
+    for (const s of scored) {
+      if (top.length >= 3) break;
+      if (!top.includes(s.a)) top.push(s.a);
+    }
+  }
+  return top;
+}
+
 export default GlossaryTerm;
