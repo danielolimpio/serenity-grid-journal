@@ -1,8 +1,13 @@
-import { TERMS } from "./terms";
+import { TERMS as RAW_TERMS } from "./terms";
 import { CATEGORIES } from "./types";
 import type { GlossaryTerm, GlossaryCategory, CategoryInfo } from "./types";
+import { enrichTerm } from "./enrich";
 
-export { TERMS, CATEGORIES };
+// Enrich every term once at module load so all pages render 300+ words
+// of unique, category-aware content (Google AdSense content policy).
+export const TERMS: GlossaryTerm[] = RAW_TERMS.map(enrichTerm);
+
+export { CATEGORIES };
 export type { GlossaryTerm, GlossaryCategory, CategoryInfo };
 
 export const termBySlug = (slug: string): GlossaryTerm | undefined =>
