@@ -296,7 +296,7 @@ const CLOSING: Record<GlossaryCategory, string[]> = {
 // ————— Composition
 
 const compose = (template: string, term: GlossaryTerm) =>
-  template.replaceAll("{term}", term.term);
+  template.split("{term}").join(term.term);
 
 const composeParagraphs = (banks: string[], term: GlossaryTerm, seed: number, n = 2) =>
   pickN(banks, seed, n).map((p) => compose(p, term)).join("\n\n");
