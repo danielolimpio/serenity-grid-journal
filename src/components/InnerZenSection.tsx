@@ -1,5 +1,5 @@
 import womanAsset from "@/assets/hero-woman.png.asset.json";
-import lotus from "@/assets/lotus-flowers.png";
+import lotus from "@/assets/lotus-flowers.webp";
 
 const MeditationIcon = () => (
   <svg viewBox="0 0 48 48" className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">

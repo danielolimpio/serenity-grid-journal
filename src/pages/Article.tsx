@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { Calendar, Clock, Share2 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
-import meditationImage from "@/assets/meditation.jpg";
+import meditationImage from "@/assets/meditation.webp";
 
 const Article = () => {
   const { slug } = useParams();

@@ -9,9 +9,9 @@ import VideoPresenceSection from "@/components/VideoPresenceSection";
 import InnerZenSection from "@/components/InnerZenSection";
 import OfferingsSection from "@/components/OfferingsSection";
 import WorkshopSection from "@/components/WorkshopSection";
-import meditationImage from "@/assets/meditation.jpg";
-import philosophyImage from "@/assets/philosophy.jpg";
-import asanasCostasImage from "@/assets/asanas-costas.jpg";
+import meditationImage from "@/assets/meditation.webp";
+import philosophyImage from "@/assets/philosophy.webp";
+import asanasCostasImage from "@/assets/asanas-costas.webp";
 
 const featuredArticles = [
   {
