@@ -1,8 +1,8 @@
-import meditationImage from "@/assets/meditation.jpg";
-import philosophyImage from "@/assets/philosophy.jpg";
-import wellnessImage from "@/assets/wellness.jpg";
-import asanasCostasImage from "@/assets/asanas-costas.jpg";
-import yogaMaosPunhosImage from "@/assets/yoga-maos-punhos.jpg";
+import meditationImage from "@/assets/meditation.webp";
+import philosophyImage from "@/assets/philosophy.webp";
+import wellnessImage from "@/assets/wellness.webp";
+import asanasCostasImage from "@/assets/asanas-costas.webp";
+import yogaMaosPunhosImage from "@/assets/yoga-maos-punhos.webp";
 
 export interface Article {
   title: string;

@@ -2,48 +2,31 @@ import { useParams } from "react-router-dom";
 import { Calendar, Clock, Share2 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
-import meditationImage from "@/assets/meditation.jpg";
+import { articles } from "@/data/searchData";
+import { articleContent } from "@/data/articleContent";
+import NotFound from "./NotFound";
 
 const Article = () => {
   const { slug } = useParams();
 
-  // Mock data - em produção viria de uma API ou CMS
+  const meta = articles.find((a) => a.slug === slug);
+  if (!meta) return <NotFound />;
+
+  const content = articleContent[slug ?? ""] ?? `
+    <p>${meta.excerpt}</p>
+    <p>Este artigo faz parte da nossa coleção editorial sobre <strong>${meta.category}</strong>. Continue explorando outros artigos relacionados no blog A Arte do Yoga.</p>
+  `;
+
+  const words = content.replace(/<[^>]+>/g, " ").trim().split(/\s+/).length;
+  const readTime = `${Math.max(3, Math.ceil(words / 200))} min`;
+
   const article = {
-    title: "A Prática Diária de Yoga: Transformando Corpo e Mente",
-    category: "Prática",
-    date: "15 de Novembro, 2024",
-    readTime: "8 min",
-    image: meditationImage,
-    content: `
-      <p>A jornada do yoga não se limita ao tapete. É uma prática que permeia todos os aspectos da nossa existência, convidando-nos a despertar para a presença plena em cada momento.</p>
-
-      <h2>O Despertar da Consciência</h2>
-      <p>Estabelecer uma prática diária de yoga é como plantar uma semente de transformação. Com paciência e dedicação, essa semente floresce em maior consciência corporal, clareza mental e equilíbrio emocional.</p>
-
-      <blockquote>
-        "Yoga é a jornada do eu, através do eu, para o eu." — Bhagavad Gita
-      </blockquote>
-
-      <h2>Construindo Sua Prática</h2>
-      <p>Não é necessário dedicar horas ao tapete. Mesmo 15 minutos diários podem criar mudanças profundas. O segredo está na consistência e na intenção que você traz para cada movimento, cada respiração.</p>
-
-      <h3>Elementos Essenciais</h3>
-      <p>Uma prática equilibrada integra diferentes aspectos:</p>
-      <ul>
-        <li><strong>Asanas:</strong> As posturas físicas que fortalecem e flexibilizam o corpo</li>
-        <li><strong>Pranayama:</strong> Técnicas de respiração que acalmam a mente</li>
-        <li><strong>Meditação:</strong> Momentos de quietude interior e observação</li>
-        <li><strong>Intenção:</strong> O propósito que guia sua prática</li>
-      </ul>
-
-      <h2>Transformação Além do Físico</h2>
-      <p>O verdadeiro poder do yoga reside não apenas nos benefícios físicos, mas na transformação sutil da consciência. À medida que sua prática se aprofunda, você começa a perceber mudanças em como responde ao estresse, como se relaciona consigo mesmo e com os outros.</p>
-
-      <p>Esta jornada é profundamente pessoal. Não se trata de perfeição ou de alcançar posturas avançadas. Trata-se de cultivar presença, compaixão e uma conexão mais profunda com sua essência.</p>
-
-      <h2>O Convite</h2>
-      <p>Que sua prática seja um refúgio diário, um espaço sagrado onde você pode simplesmente ser. Comece onde você está, use o que você tem, faça o que você pode. O tapete sempre espera, sem julgamentos, apenas com o convite silencioso para retornar a si mesmo.</p>
-    `,
+    title: meta.title,
+    category: meta.category,
+    date: meta.date,
+    readTime,
+    image: meta.image,
+    content,
   };
 
   return (

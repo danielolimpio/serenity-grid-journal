@@ -1,5 +1,5 @@
 import { Play } from "lucide-react";
-import bg from "@/assets/dark-leaves-bg.jpg";
+import bg from "@/assets/dark-leaves-bg.webp";
 
 const VideoPresenceSection = () => {
   return (

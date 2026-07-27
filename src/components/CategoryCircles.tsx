@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import practicaImg from "@/assets/meditation.jpg";
-import philosophyImg from "@/assets/philosophy.jpg";
-import wellnessImg from "@/assets/wellness.jpg";
-import ayurvedaImg from "@/assets/asanas-costas.jpg";
-import programasImg from "@/assets/yoga-maos-punhos.jpg";
+import practicaImg from "@/assets/meditation.webp";
+import philosophyImg from "@/assets/philosophy.webp";
+import wellnessImg from "@/assets/wellness.webp";
+import ayurvedaImg from "@/assets/asanas-costas.webp";
+import programasImg from "@/assets/yoga-maos-punhos.webp";
 
 const circles = [
   { name: "Prática", slug: "pratica", image: practicaImg },

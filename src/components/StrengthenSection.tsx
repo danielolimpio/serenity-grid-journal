@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { MessageSquare, Star } from "lucide-react";
 import womanYoga from "@/assets/woman-doing-yoga.jpg.asset.json";
-import leaves from "@/assets/green-leaves.png";
+import leaves from "@/assets/green-leaves.webp";
 
 const StrengthenSection = () => {
   return (

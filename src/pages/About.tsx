@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import meditationImage from "@/assets/meditation.jpg";
+import meditationImage from "@/assets/meditation.webp";
 
 const About = () => {
   return (

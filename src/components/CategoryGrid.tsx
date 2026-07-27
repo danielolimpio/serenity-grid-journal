@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import meditationImage from "@/assets/meditation.jpg";
-import philosophyImage from "@/assets/philosophy.jpg";
-import wellnessImage from "@/assets/wellness.jpg";
-import ayurvedaImage from "@/assets/asanas-costas.jpg";
-import programasImage from "@/assets/yoga-maos-punhos.jpg";
+import meditationImage from "@/assets/meditation.webp";
+import philosophyImage from "@/assets/philosophy.webp";
+import wellnessImage from "@/assets/wellness.webp";
+import ayurvedaImage from "@/assets/asanas-costas.webp";
+import programasImage from "@/assets/yoga-maos-punhos.webp";
 
 const categories = [
   {
