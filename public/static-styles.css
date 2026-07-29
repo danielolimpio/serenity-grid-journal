@@ -928,3 +928,183 @@ a.logo span {
 .footer-column a:hover {
   color: var(--coral);
 }
+
+/* ============= Article Rich Content Styles ============= */
+
+/* Article header meta */
+.article-content .article-header h1 {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.15;
+  margin: 0 0 1.5rem;
+}
+
+.article-meta .category-tag {
+  display: inline-block;
+  background: hsl(var(--secondary));
+  color: hsl(var(--primary));
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+}
+.article-meta .category-tag:hover { background: hsl(var(--primary)); color: #fff; }
+
+.article-meta .date,
+.article-meta .read-time {
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+}
+
+/* Article intro / lead */
+.article-intro {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: var(--muted-foreground);
+  margin: 1rem 0 2rem;
+  font-weight: 400;
+  border-left: 3px solid hsl(var(--accent));
+  padding-left: 1.25rem;
+}
+
+/* Inline hero image inside .article-content */
+.article-content .hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin: 0 0 2.5rem;
+  box-shadow: 0 16px 40px rgba(30,30,44,0.08);
+}
+
+/* Body links */
+.article-body a { color: hsl(var(--primary)); text-decoration: underline; text-underline-offset: 3px; }
+.article-body a:hover { color: hsl(var(--accent)); }
+
+.article-body strong { color: hsl(var(--foreground)); font-weight: 600; }
+.article-body ol { margin: 1.5rem 0; padding-left: 1.5rem; }
+.article-body ol li { margin-bottom: 0.5rem; line-height: 1.7; }
+
+/* Cards used inside articles */
+.article-body .cta-card,
+.article-body .tip-card,
+.article-body .warning-card,
+.article-body .personal-note,
+.article-body .asana-card,
+.article-body .exercise-card,
+.article-body .routine-card {
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+  margin: 2rem 0;
+  background: hsl(var(--secondary));
+  border-left: 4px solid hsl(var(--primary));
+}
+
+.article-body .cta-card {
+  background: linear-gradient(135deg, hsl(340 60% 97%), hsl(285 40% 95%));
+  border-left-color: hsl(var(--primary));
+  text-align: center;
+}
+
+.article-body .tip-card {
+  background: hsl(285 35% 96%);
+  border-left-color: hsl(var(--accent));
+}
+
+.article-body .warning-card {
+  background: hsl(15 82% 96%);
+  border-left-color: hsl(15 82% 60%);
+}
+
+.article-body .personal-note {
+  background: hsl(300 20% 97%);
+  border-left-color: hsl(285 40% 70%);
+  font-style: italic;
+}
+
+.article-body .asana-card,
+.article-body .exercise-card,
+.article-body .routine-card {
+  background: #fff;
+  border: 1px solid hsl(var(--border));
+  border-left: 4px solid hsl(var(--primary));
+  box-shadow: 0 4px 14px rgba(30,30,44,0.04);
+  padding: 1.75rem 2rem;
+}
+
+.article-body .asana-card h3,
+.article-body .exercise-card h3,
+.article-body .routine-card h3 {
+  margin-top: 0;
+  color: hsl(var(--primary));
+}
+
+.article-body .subtitle {
+  color: var(--muted-foreground);
+  font-size: 1rem;
+  font-style: italic;
+  margin: -0.5rem 0 1rem;
+}
+
+.article-body .duration-badge {
+  display: inline-block;
+  background: hsl(var(--muted));
+  color: hsl(var(--foreground));
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: 0.75rem;
+}
+
+/* Lists inside cards */
+.article-body .benefits-list,
+.article-body .errors-list {
+  margin: 1rem 0;
+  padding-left: 1.25rem;
+}
+.article-body .benefits-list li,
+.article-body .errors-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* FAQ inside articles */
+.article-body .faq-section {
+  margin: 3rem 0;
+}
+.article-body .faq-section .faq-item {
+  background: #fff;
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+}
+.article-body .faq-section .faq-item h3 {
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem;
+  color: hsl(var(--primary));
+}
+.article-body .faq-section .faq-item p {
+  margin: 0;
+  color: var(--muted-foreground);
+}
+
+/* Blockquote cite */
+.article-body blockquote cite {
+  display: block;
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  font-style: normal;
+  color: hsl(var(--primary));
+}
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  .article-content { padding: 4.5rem 1.25rem 2rem; }
+  .article-content .article-header h1 { font-size: 2rem; }
+  .article-intro { font-size: 1.05rem; }
+}
