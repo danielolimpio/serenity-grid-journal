@@ -182,6 +182,26 @@ a.logo span {
   justify-self: end;
 }
 
+.header-container::after {
+  content: "f 𝕏 ◎ ▶ ⌕";
+  display: none;
+  justify-self: end;
+  align-items: center;
+  justify-content: center;
+  min-width: 10rem;
+  color: var(--primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.85rem;
+  white-space: nowrap;
+}
+
+@media (min-width: 1024px) {
+  .header-container::after {
+    display: flex;
+  }
+}
+
 .header-socials,
 .footer-socials {
   display: flex;
