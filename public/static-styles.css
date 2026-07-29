@@ -1102,8 +1102,8 @@ a.logo span {
 
 .article-meta .category-tag {
   display: inline-block;
-  background: hsl(var(--secondary));
-  color: hsl(var(--primary));
+  background: var(--secondary);
+  color: var(--primary);
   padding: 0.25rem 0.75rem;
   border-radius: 999px;
   font-size: 0.75rem;
@@ -1112,7 +1112,7 @@ a.logo span {
   letter-spacing: 0.08em;
   text-decoration: none;
 }
-.article-meta .category-tag:hover { background: hsl(var(--primary)); color: #fff; }
+.article-meta .category-tag:hover { background: var(--primary); color: #fff; }
 
 .article-meta .date,
 .article-meta .read-time {
@@ -1127,7 +1127,7 @@ a.logo span {
   color: var(--muted-foreground);
   margin: 1rem 0 2rem;
   font-weight: 400;
-  border-left: 3px solid hsl(var(--accent));
+  border-left: 3px solid var(--coral);
   padding-left: 1.25rem;
 }
 
@@ -1144,10 +1144,10 @@ a.logo span {
 }
 
 /* Body links */
-.article-body a { color: hsl(var(--primary)); text-decoration: underline; text-underline-offset: 3px; }
-.article-body a:hover { color: hsl(var(--accent)); }
+.article-body a { color: var(--primary); text-decoration: underline; text-underline-offset: 3px; }
+.article-body a:hover { color: var(--coral); }
 
-.article-body strong { color: hsl(var(--foreground)); font-weight: 600; }
+.article-body strong { color: var(--foreground); font-weight: 600; }
 .article-body ol { margin: 1.5rem 0; padding-left: 1.5rem; }
 .article-body ol li { margin-bottom: 0.5rem; line-height: 1.7; }
 
@@ -1162,19 +1162,19 @@ a.logo span {
   border-radius: var(--radius);
   padding: 1.5rem 1.75rem;
   margin: 2rem 0;
-  background: hsl(var(--secondary));
-  border-left: 4px solid hsl(var(--primary));
+  background: var(--secondary);
+  border-left: 4px solid var(--primary);
 }
 
 .article-body .cta-card {
   background: linear-gradient(135deg, hsl(340 60% 97%), hsl(285 40% 95%));
-  border-left-color: hsl(var(--primary));
+  border-left-color: var(--primary);
   text-align: center;
 }
 
 .article-body .tip-card {
   background: hsl(285 35% 96%);
-  border-left-color: hsl(var(--accent));
+  border-left-color: var(--coral);
 }
 
 .article-body .warning-card {
@@ -1192,8 +1192,8 @@ a.logo span {
 .article-body .exercise-card,
 .article-body .routine-card {
   background: #fff;
-  border: 1px solid hsl(var(--border));
-  border-left: 4px solid hsl(var(--primary));
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
   box-shadow: 0 4px 14px rgba(30,30,44,0.04);
   padding: 1.75rem 2rem;
 }
@@ -1202,7 +1202,7 @@ a.logo span {
 .article-body .exercise-card h3,
 .article-body .routine-card h3 {
   margin-top: 0;
-  color: hsl(var(--primary));
+  color: var(--primary);
 }
 
 .article-body .subtitle {
@@ -1214,8 +1214,8 @@ a.logo span {
 
 .article-body .duration-badge {
   display: inline-block;
-  background: hsl(var(--muted));
-  color: hsl(var(--foreground));
+  background: var(--muted);
+  color: var(--foreground);
   padding: 0.35rem 0.85rem;
   border-radius: 999px;
   font-size: 0.8rem;
@@ -1240,7 +1240,7 @@ a.logo span {
 }
 .article-body .faq-section .faq-item {
   background: #fff;
-  border: 1px solid hsl(var(--border));
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1.25rem 1.5rem;
   margin-bottom: 1rem;
@@ -1248,7 +1248,7 @@ a.logo span {
 .article-body .faq-section .faq-item h3 {
   font-size: 1.1rem;
   margin: 0 0 0.5rem;
-  color: hsl(var(--primary));
+  color: var(--primary);
 }
 .article-body .faq-section .faq-item p {
   margin: 0;
@@ -1261,7 +1261,7 @@ a.logo span {
   margin-top: 0.75rem;
   font-size: 0.875rem;
   font-style: normal;
-  color: hsl(var(--primary));
+  color: var(--primary);
 }
 
 /* Responsive tweaks */
