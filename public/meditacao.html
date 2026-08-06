@@ -32,7 +32,7 @@
     <header class="header">
     <div class="header-container">
       <a href="/" class="logo">
-        <img src="/assets/logo.png" alt="A Arte do Yoga" height="48" width="125">
+        <img src="/assets/logo-zen.png" alt="A Arte do Yoga" height="48" width="125" loading="eager" decoding="async">
       </a>
       <nav class="nav-desktop">
         <a href="/">Início</a>
@@ -41,8 +41,21 @@
         <a href="/faq/">FAQ</a>
         <a href="/contato/">Contato</a>
       </nav>
+      <div class="header-socials" aria-label="Redes sociais">
+        <a class="social-icon" href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a><a class="social-icon" href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 12.3 3 6c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a><a class="social-icon" href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg></a><a class="social-icon" href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.5 6.4a3 3 0 0 0-2.1-2.1C18.6 3.8 12 3.8 12 3.8s-6.6 0-8.4.5A3 3 0 0 0 1.5 6.4 31 31 0 0 0 1 12a31 31 0 0 0 .5 5.6 3 3 0 0 0 2.1 2.1c1.8.5 8.4.5 8.4.5s6.6 0 8.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23 12a31 31 0 0 0-.5-5.6z"/><polygon points="9.8,15.3 15.5,12 9.8,8.7"/></svg></a><a class="search-icon" href="/busca/" aria-label="Buscar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></a>
+      </div>
     </div>
   </header>
+
+    <section class="category-circles">
+    <ul>
+      <li><a href="/categoria/pratica/" aria-label="Categoria Prática"><span class="circle-ring"><img src="/assets/meditation.webp" alt="Prática" width="96" height="96" loading="eager" decoding="async"></span><span class="circle-label">Prática</span></a></li>
+      <li><a href="/categoria/filosofia/" aria-label="Categoria Filosofia"><span class="circle-ring"><img src="/assets/philosophy.webp" alt="Filosofia" width="96" height="96" loading="eager" decoding="async"></span><span class="circle-label">Filosofia</span></a></li>
+      <li><a href="/categoria/bem-estar/" aria-label="Categoria Bem-Estar"><span class="circle-ring"><img src="/assets/wellness.webp" alt="Bem-Estar" width="96" height="96" loading="eager" decoding="async"></span><span class="circle-label">Bem-Estar</span></a></li>
+      <li><a href="/categoria/ayurveda/" aria-label="Categoria Ayurveda"><span class="circle-ring"><img src="/assets/asanas-costas.webp" alt="Ayurveda" width="96" height="96" loading="eager" decoding="async"></span><span class="circle-label">Ayurveda</span></a></li>
+      <li><a href="/categoria/programas/" aria-label="Categoria Programas"><span class="circle-ring"><img src="/assets/yoga-maos-punhos.webp" alt="Programas" width="96" height="96" loading="eager" decoding="async"></span><span class="circle-label">Programas</span></a></li>
+    </ul>
+  </section>
 
     <main>
         <section class="hero">
@@ -106,11 +119,11 @@
     <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div>
-          <a href="/" class="logo" style="margin-bottom:1rem;">
-            <img src="/assets/logo.png" alt="A Arte do Yoga" height="40">
+        <div class="footer-brand">
+          <a href="/" class="logo footer-logo">
+            <img src="/assets/logo-zen.png" alt="A Arte do Yoga" height="40">
           </a>
-          <p style="font-size:.875rem;color:rgba(255,255,255,.9);margin-top:1rem;line-height:1.6;">Explorando a jornada interior através da prática milenar do yoga. Filosofia, prática e bem-estar.</p>
+          <p>Explorando a jornada interior através da prática milenar do yoga. Filosofia, prática e bem-estar.</p>
         </div>
         <div>
           <h4 class="footer-title">Navegação</h4>
@@ -135,13 +148,19 @@
         <div>
           <h4 class="footer-title">Contato</h4>
           <ul class="footer-links">
-            <li>contato@theartofyoga.org</li>
-            <li>Seg – Sáb: 10h às 17h</li>
+            <li class="footer-contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><span>contato@theartofyoga.org</span></li>
+            <li class="footer-contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Seg – Sáb: 10h às 17h</span></li>
           </ul>
+          <div class="footer-socials"><a class="social-icon" href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a><a class="social-icon" href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 12.3 3 6c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a><a class="social-icon" href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg></a><a class="social-icon" href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.5 6.4a3 3 0 0 0-2.1-2.1C18.6 3.8 12 3.8 12 3.8s-6.6 0-8.4.5A3 3 0 0 0 1.5 6.4 31 31 0 0 0 1 12a31 31 0 0 0 .5 5.6 3 3 0 0 0 2.1 2.1c1.8.5 8.4.5 8.4.5s6.6 0 8.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23 12a31 31 0 0 0-.5-5.6z"/><polygon points="9.8,15.3 15.5,12 9.8,8.7"/></svg></a></div>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2025 A Arte do Yoga. Todos os direitos reservados. · <a href="/politica-privacidade/" style="color:inherit;">Privacidade</a> · <a href="/termos/" style="color:inherit;">Termos</a> · <a href="/cookies/" style="color:inherit;">Cookies</a></p>
+        <p>© 2025 A Arte do Yoga. Todos os direitos reservados.</p>
+        <div class="footer-legal">
+          <a href="/politica-privacidade/">Privacidade</a>
+          <a href="/termos/">Termos</a>
+          <a href="/cookies/">Cookies</a>
+        </div>
       </div>
     </div>
   </footer>
