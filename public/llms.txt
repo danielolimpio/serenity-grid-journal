@@ -1,0 +1,53 @@
+# A Arte do Yoga
+
+> Blog editorial premium de yoga, meditação e bem-estar em português. Artigos práticos, glossário completo, quizz interativo e conteúdo para transformar corpo e mente.
+
+A Arte do Yoga publica conteúdo aprofundado sobre a prática, filosofia e estilo de vida do yoga. O site combina artigos editoriais, um glossário com centenas de verbetes, categorias temáticas e um quizz para ajudar leitores a descobrirem seu caminho no yoga.
+
+## Pages
+
+- [Início](/): Página inicial com destaques, categorias e artigos recentes.
+- [Sobre](/sobre/): Quem somos e nossa missão editorial.
+- [FAQ](/faq/): Perguntas frequentes sobre yoga e meditação.
+- [Contato](/contato/): Formas de entrar em contato com a equipe.
+- [Busca](/busca/): Busca interna de artigos, categorias e termos do glossário.
+- [Glossário](/glossario): Índice completo de verbetes de yoga, ayurveda e meditação.
+- [Quizz](/quizz): Quizz interativo para descobrir seu caminho no yoga.
+- [Sitemap](/sitemap/): Mapa de páginas do site.
+
+## Categories
+
+- [Prática](/categoria/pratica/): Posturas, sequências e técnicas para aprofundar a prática.
+- [Filosofia](/categoria/filosofia/): Ensinamentos ancestrais e sabedoria do yoga.
+- [Bem-Estar](/categoria/bem-estar/): Dicas para uma vida mais equilibrada e saudável.
+- [Meditação](/categoria/meditacao/): Técnicas de meditação para acalmar a mente.
+
+## Articles
+
+- [A Prática Diária de Yoga: Transformando Corpo e Mente](/artigo/pratica-diaria-yoga/): Como estabelecer uma rotina consistente de yoga.
+- [Os Oito Membros do Yoga: Um Guia Completo](/artigo/os-oito-membros-do-yoga/): O caminho óctuplo de Patanjali explicado passo a passo.
+- [Mindfulness no Cotidiano: Práticas Simples](/artigo/mindfulness-cotidiano/): Técnicas de atenção plena para o dia a dia.
+- [Meditação para Iniciantes: Primeiros Passos](/artigo/meditacao-para-iniciantes/): Guia completo para quem deseja começar a meditar.
+- [Despertar Através da Respiração Consciente](/artigo/despertar-atraves-da-respiracao-consciente/): O poder transformador da respiração.
+- [Yoga e Alimentação Consciente](/artigo/yoga-e-alimentacao-consciente/): Como a filosofia do yoga se estende à nutrição.
+- [Asanas Essenciais para Aliviar a Tensão nas Costas](/artigo/asanas-essenciais-para-aliviar-a-tensao-nas-costas/): Posturas eficazes para aliviar dores nas costas.
+- [Yoga para Mãos e Punhos: Exercícios para Aliviar o Estresse Digital](/artigo/yoga-para-maos-e-punhos-exercicios-para-aliviar-o-estresse-digital/): Sequências para relaxar mãos e punhos.
+
+## Glossary
+
+- [Índice do Glossário](/glossario): Todos os verbetes de yoga, ayurveda e meditação.
+- [O que é Yoga](/glossario/o-que-e-yoga): Conceito fundamental e origem do yoga.
+- [O que é Asana](/glossario/o-que-e-asana): Postura física no yoga.
+- [O que é Pranayama](/glossario/o-que-e-pranayama): Técnicas de respiração e controle da energia vital.
+- [O que é Chakra](/glossario/o-que-e-chakra): Centros energéticos do corpo sutil.
+- [O que é Meditação](/glossario/o-que-e-meditacao): Prática de concentração e presença mental.
+- [O que é Mindfulness](/glossario/o-que-e-mindfulness): Atenção plena ao momento presente.
+- [O que é Ayurveda](/glossario/o-que-e-ayurveda): Medicina tradicional indiana e ciência da vida.
+- [O que é Hatha Yoga](/glossario/o-que-e-hatha-yoga): Estilo clássico e equilíbrio entre sol e lua.
+- [O que é Vinyasa](/glossario/o-que-e-vinyasa): Fluxo dinâmico de posturas sincronizadas com a respiração.
+
+## Legal
+
+- [Política de Privacidade](/politica-privacidade/): Como coletamos, usamos e protegemos seus dados.
+- [Termos de Uso](/termos/): Condições de uso do conteúdo e serviços do site.
+- [Política de Cookies](/cookies/): Uso de cookies e tecnologias de rastreamento.
