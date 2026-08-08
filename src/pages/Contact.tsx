@@ -88,6 +88,7 @@ const Contact = () => {
         <meta name="description" content="Entre em contato com A Arte do Yoga. Envie sua mensagem, dúvida ou sugestão. Respondemos em até 24-48 horas úteis." />
         <link rel="canonical" href="https://theartofyoga.org/contato" />
         <meta property="og:title" content="Contato | A Arte do Yoga" />
+        <meta property="og:description" content="Entre em contato com A Arte do Yoga. Envie sua mensagem, dúvida ou sugestão. Respondemos em até 24-48 horas úteis." />
         <meta property="og:url" content="https://theartofyoga.org/contato" />
         <meta property="og:image" content="https://theartofyoga.org/assets/og-image.jpg" />
         <meta property="og:site_name" content="A Arte do Yoga" />

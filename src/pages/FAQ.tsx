@@ -189,6 +189,7 @@ const FAQ = () => {
         <meta name="description" content="Respostas para as dúvidas mais comuns sobre yoga, meditação, nossa plataforma e como podemos ajudar em sua jornada de bem-estar." />
         <link rel="canonical" href="https://theartofyoga.org/faq" />
         <meta property="og:title" content="Perguntas Frequentes | A Arte do Yoga" />
+        <meta property="og:description" content="Respostas para as dúvidas mais comuns sobre yoga, meditação, nossa plataforma e como podemos ajudar em sua jornada de bem-estar." />
         <meta property="og:url" content="https://theartofyoga.org/faq" />
         <meta property="og:image" content="https://theartofyoga.org/assets/og-image.jpg" />
         <meta property="og:site_name" content="A Arte do Yoga" />

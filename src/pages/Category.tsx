@@ -46,7 +46,14 @@ const Category = () => {
         <meta name="description" content={`${category.description}. Explore artigos da categoria ${category.name} em A Arte do Yoga.`} />
         <link rel="canonical" href={`https://theartofyoga.org/categoria/${slug ?? ""}`} />
         <meta property="og:title" content={`${category.name} | A Arte do Yoga`} />
+        <meta property="og:description" content={`${category.description}. Explore artigos da categoria ${category.name} em A Arte do Yoga.`} />
         <meta property="og:url" content={`https://theartofyoga.org/categoria/${slug ?? ""}`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://theartofyoga.org/assets/og-image.jpg" />
+        <meta property="og:site_name" content="A Arte do Yoga" />
+        <meta property="og:locale" content="pt_BR" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://theartofyoga.org/assets/og-image.jpg" />
       </Helmet>
       {/* Category Header */}
       <section className="section-spacing bg-muted/30">

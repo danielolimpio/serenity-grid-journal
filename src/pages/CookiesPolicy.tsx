@@ -148,6 +148,7 @@ const CookiesPolicy = () => {
           <meta name="description" content="Política de Cookies do A Arte do Yoga. Saiba como utilizamos cookies e tecnologias semelhantes para melhorar sua experiência." />
           <link rel="canonical" href="https://theartofyoga.org/cookies" />
           <meta property="og:title" content="Política de Cookies | A Arte do Yoga" />
+          <meta property="og:description" content="Política de Cookies do A Arte do Yoga. Saiba como utilizamos cookies e tecnologias semelhantes para melhorar sua experiência." />
           <meta property="og:url" content="https://theartofyoga.org/cookies" />
           <meta property="og:image" content="https://theartofyoga.org/assets/og-image.jpg" />
           <meta property="og:site_name" content="A Arte do Yoga" />

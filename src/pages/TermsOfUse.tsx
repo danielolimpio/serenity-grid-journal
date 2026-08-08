@@ -156,6 +156,7 @@ const TermsOfUse = () => {
           <meta name="description" content="Termos de Uso do A Arte do Yoga. Leia os termos e condições que regem o uso do nosso site, conteúdos e serviços." />
           <link rel="canonical" href="https://theartofyoga.org/termos" />
           <meta property="og:title" content="Termos de Uso | A Arte do Yoga" />
+          <meta property="og:description" content="Termos de Uso do A Arte do Yoga. Leia os termos e condições que regem o uso do nosso site, conteúdos e serviços." />
           <meta property="og:url" content="https://theartofyoga.org/termos" />
           <meta property="og:image" content="https://theartofyoga.org/assets/og-image.jpg" />
           <meta property="og:site_name" content="A Arte do Yoga" />

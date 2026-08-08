@@ -150,6 +150,7 @@ const PrivacyPolicy = () => {
           <meta name="description" content="Política de Privacidade do A Arte do Yoga. Saiba como coletamos, usamos e protegemos suas informações pessoais em nossa plataforma." />
           <link rel="canonical" href="https://theartofyoga.org/politica-privacidade" />
           <meta property="og:title" content="Política de Privacidade | A Arte do Yoga" />
+          <meta property="og:description" content="Política de Privacidade do A Arte do Yoga. Saiba como coletamos, usamos e protegemos suas informações pessoais em nossa plataforma." />
           <meta property="og:url" content="https://theartofyoga.org/politica-privacidade" />
           <meta property="og:image" content="https://theartofyoga.org/assets/og-image.jpg" />
           <meta property="og:site_name" content="A Arte do Yoga" />

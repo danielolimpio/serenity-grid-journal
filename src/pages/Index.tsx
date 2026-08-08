@@ -22,7 +22,9 @@ const Index = () => {
         <meta name="description" content="Explore a filosofia, prática e bem-estar através do yoga. Conteúdo editorial premium sobre mindfulness, movimento e transformação interior." />
         <link rel="canonical" href="https://theartofyoga.org/" />
         <meta property="og:title" content="A Arte do Yoga | Blog de Yoga, Meditação e Bem-Estar" />
+        <meta property="og:description" content="Explore a filosofia, prática e bem-estar através do yoga. Conteúdo editorial premium sobre mindfulness, movimento e transformação interior." />
         <meta property="og:url" content="https://theartofyoga.org/" />
+        <meta property="og:type" content="website" />
         <meta property="og:image" content="https://theartofyoga.org/assets/og-image.jpg" />
         <meta property="og:site_name" content="A Arte do Yoga" />
         <meta property="og:locale" content="pt_BR" />

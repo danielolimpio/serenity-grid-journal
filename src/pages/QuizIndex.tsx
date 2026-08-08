@@ -12,6 +12,15 @@ const QuizIndex = () => {
           content="Faça nosso quizz de yoga com 10 perguntas e receba orientações personalizadas de estilo de prática, filosofia e bem-estar."
         />
         <link rel="canonical" href="https://theartofyoga.org/quizz" />
+        <meta property="og:title" content="Quizz de Yoga: descubra seu caminho | A Arte do Yoga" />
+        <meta property="og:description" content="Faça nosso quizz de yoga com 10 perguntas e receba orientações personalizadas de prática, filosofia e bem-estar." />
+        <meta property="og:url" content="https://theartofyoga.org/quizz" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://theartofyoga.org/assets/og-image.jpg" />
+        <meta property="og:site_name" content="A Arte do Yoga" />
+        <meta property="og:locale" content="pt_BR" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://theartofyoga.org/assets/og-image.jpg" />
       </Helmet>
       <div className="container max-w-3xl px-6 text-center space-y-6">
         <p className="text-xs font-bold tracking-[0.3em] text-coral uppercase">Quizz</p>
