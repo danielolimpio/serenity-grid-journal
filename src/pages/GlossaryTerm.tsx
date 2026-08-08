@@ -119,6 +119,11 @@ const GlossaryTerm = () => {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:url" content={url} />
+        <meta property="og:image" content="https://theartofyoga.org/assets/og-image.jpg" />
+        <meta property="og:site_name" content="A Arte do Yoga" />
+        <meta property="og:locale" content="pt_BR" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://theartofyoga.org/assets/og-image.jpg" />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large" />

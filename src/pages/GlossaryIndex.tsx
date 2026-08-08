@@ -84,6 +84,11 @@ const GlossaryIndex = () => {
         <meta property="og:title" content="Glossário de Yoga | A Arte do Yoga" />
         <meta property="og:description" content="Termos essenciais de yoga, filosofia, ayurveda e meditação em um hub premium." />
         <meta property="og:url" content={`${SITE}/glossario`} />
+        <meta property="og:image" content="https://theartofyoga.org/assets/og-image.jpg" />
+        <meta property="og:site_name" content="A Arte do Yoga" />
+        <meta property="og:locale" content="pt_BR" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://theartofyoga.org/assets/og-image.jpg" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
