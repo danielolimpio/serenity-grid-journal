@@ -189,7 +189,13 @@ const FAQ = () => {
         <meta name="description" content="Respostas para as dúvidas mais comuns sobre yoga, meditação, nossa plataforma e como podemos ajudar em sua jornada de bem-estar." />
         <link rel="canonical" href="https://theartofyoga.org/faq" />
         <meta property="og:title" content="Perguntas Frequentes | A Arte do Yoga" />
+        <meta property="og:description" content="Respostas para as dúvidas mais comuns sobre yoga, meditação, nossa plataforma e como podemos ajudar em sua jornada de bem-estar." />
         <meta property="og:url" content="https://theartofyoga.org/faq" />
+        <meta property="og:image" content="https://theartofyoga.org/assets/og-image.jpg" />
+        <meta property="og:site_name" content="A Arte do Yoga" />
+        <meta property="og:locale" content="pt_BR" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://theartofyoga.org/assets/og-image.jpg" />
       </Helmet>
       {/* Hero Section */}
       <section className="py-12 md:py-16 bg-gradient-to-b from-muted/50 to-background animate-fade-in">

@@ -53,7 +53,13 @@ const Sitemap = () => {
         <meta name="description" content="Mapa do site do A Arte do Yoga: navegue por todas as páginas, categorias e artigos publicados sobre yoga e bem-estar." />
         <link rel="canonical" href="https://theartofyoga.org/sitemap" />
         <meta property="og:title" content="Sitemap | A Arte do Yoga" />
+        <meta property="og:description" content="Mapa do site do A Arte do Yoga: navegue por todas as páginas, categorias e artigos publicados sobre yoga e bem-estar." />
         <meta property="og:url" content="https://theartofyoga.org/sitemap" />
+        <meta property="og:image" content="https://theartofyoga.org/assets/og-image.jpg" />
+        <meta property="og:site_name" content="A Arte do Yoga" />
+        <meta property="og:locale" content="pt_BR" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://theartofyoga.org/assets/og-image.jpg" />
       </Helmet>
       {/* Hero */}
       <section className="section-spacing">
